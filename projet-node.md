@@ -41,7 +41,7 @@
     - `PORT=3000`
     - `PG_URL=postgres://nomdatabase:motdepasse@localhost:5432/nomdatabase`
     </details>
-9.  Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
+9. Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
 10. Création du .gitignore :
     <details><summary>Dossiers / fichiers obligatoirement ignorés</summary>
 
@@ -65,7 +65,37 @@
     - Lancement du serveur avec fallback de secours dans l'index.js : `const port = process.env.PORT || 3000;` // process.env.PARAM permet de faire appel à tout paramètre défini dans le .env
     - Mise en place de l'écoute de serveur dans l'index.js : ``app.listen(port, () => { console.log(`Server started at http://localhost:${port}`); });``
     </details>
-12. Création fichier router.js
+12. Création fichier router.js :
+    <details><summary>Étapes de création</summary>
+
+    ```js
+    // Import du système de router
+    import { Router } from "express";
+
+    // PRE-REQUIS=CONTROLLERS - Import des méthodes de controlleurs 
+    import * as mainController from "./controllers/main.controller.js";
+    import * as promoController from "./controllers/promos.controller.js";
+    import * as studentController from "./controllers/students.controller.js";
+
+    // Créer un routeur
+    const router = Router();
+
+    // Exemples de configurations du routeur
+    router.get("/", mainController.renderHomePage);
+
+    router.get("/admin/promos/add", promoController.renderPromoCreationPage);
+    router.post("/admin/promos/add", promoController.handlePromoForm);
+
+    // 404 Middleware - APRES les routes (possibilité de l'ajouter dans l'index.js APRES le routeur)
+    router.use((req, res) => {
+      res.status(404).render("404");
+    });
+
+    // Exporter le router
+    export default router;
+    ```
+
+    </details>
 13. Création fichier database-client.js :
     <details><summary>Configuration de base</summary>
 
