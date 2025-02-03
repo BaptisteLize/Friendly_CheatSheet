@@ -4,7 +4,7 @@
 2. Installation des dépendances souhaitées : `npm i express ejs pg dotenv`
 3. Installation des dev dependencies (-D) : `npm i eslint -D`
 4. Vérification du fichier package.json : `"type": "module"` doit être présent
-5. Vérification des scripts de base dans le package.json : 
+5. Vérification des scripts de base dans le package.json :
    <details><summary>Scripts</summary>
 
     `"start": "node index.js"`
@@ -36,7 +36,12 @@
     </details>
 7. Création du fichier .env à la racine
 8. Définition du PORT et du PG_URL dans le fichier .env
-9. Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
+   <details><summary>Exemples de données</summary>
+
+    `PORT=3000`
+    `PG_URL=postgres://trombi:mdpàremplacer@localhost:5432/trombi`
+    </details>
+9.  Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
 10. Création du .gitignore :
     <details><summary>Dossiers / fichiers obligatoirement ignorés</summary>
 
