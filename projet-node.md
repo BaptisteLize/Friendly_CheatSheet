@@ -7,8 +7,8 @@
 5. Vérification des scripts de base dans le package.json :
    <details><summary>Scripts</summary>
 
-    `"start": "node index.js"`
-    `"dev": "node --watch index.js"`
+    - `"start": "node index.js"`
+    - `"dev": "node --watch index.js"`
     </details>
 6. Création du fichier eslint.config.js :
     <details><summary>Configuration de base</summary>
@@ -38,8 +38,8 @@
 8. Définition du PORT et du PG_URL dans le fichier .env
    <details><summary>Exemples de données</summary>
 
-    `PORT=3000`
-    `PG_URL=postgres://trombi:mdpàremplacer@localhost:5432/trombi`
+    - `PORT=3000`
+    - `PG_URL=postgres://nomdatabase:motdepasse@localhost:5432/nomdatabase`
     </details>
 9.  Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
 10. Création du .gitignore :
@@ -52,10 +52,10 @@
     <details><summary>Étapes de création</summary>
 
     - Importation des fonctions obligatoires pour le fonctionnement dans l'index.js :
-       `import "dotenv/config";`
-       `import express from "express";`
-       `import path from "node:path";`
-       `import router from "./router.js";`
+       - `import "dotenv/config";`
+       - `import express from "express";`
+       - `import path from "node:path";`
+       - `import router from "./router.js";`
     - Création du serveur de l'app dans l'index.js : `const app = express();`
     - Configuration du moteur de rendu (view engine) dans l'index.js : `app.set("view engine", "ejs");`
     - Configuration de la localisation du dossier des vues dans l'index.js : `app.set("views", path.join(import.meta.dirname, "views"));`
