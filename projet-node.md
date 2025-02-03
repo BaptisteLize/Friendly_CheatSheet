@@ -1,22 +1,16 @@
 # Projet Node.js (Express, EJS, Postgres)
 
-1. Création du .gitignore :
-   <details><summary>Dossiers / fichiers obligatoirement ignorés</summary>
-
-      - node_modules/
-      - .env
-    </details>
-2. Initilisation du projet : `npm init -y`
-3. Installation des dépendances souhaitées : `npm i express ejs pg dotenv`
-4. Installation des dev dependencies (-D) : `npm i eslint -D`
-5. Vérification du fichier package.json : `"type": "module"` doit être présent
-6. Vérification des scripts de base dans le package.json : 
+1. Initilisation du projet : `npm init -y`
+2. Installation des dépendances souhaitées : `npm i express ejs pg dotenv`
+3. Installation des dev dependencies (-D) : `npm i eslint -D`
+4. Vérification du fichier package.json : `"type": "module"` doit être présent
+5. Vérification des scripts de base dans le package.json : 
    <details><summary>Scripts</summary>
 
     `"start": "node index.js"`
     `"dev": "node --watch index.js"`
     </details>
-7. Création du fichier eslint.config.js :
+6. Création du fichier eslint.config.js :
     <details><summary>Configuration de base</summary>
 
     ```js
@@ -40,9 +34,15 @@
     ```
 
     </details>
-8. Création du fichier .env à la racine
-9. Définition du PORT et du PG_URL dans le fichier .env
-10. Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
+7. Création du fichier .env à la racine
+8. Définition du PORT et du PG_URL dans le fichier .env
+9. Création du fichier .env.example pour la DX (dev exp) / Pour copier ce fichier si existant : `cp .env.example .env`
+10. Création du .gitignore :
+    <details><summary>Dossiers / fichiers obligatoirement ignorés</summary>
+
+      - node_modules/
+      - .env
+    </details>
 11. Création fichier index.js
     <details><summary>Étapes de création</summary>
 
@@ -58,7 +58,7 @@
     - Configuration bodyparser pour express (rendre le req.body récupérable) dans l'index.js : `app.use(express.urlencoded({ extended: true }));`
     - Utilisation du router dans l'index.js : `app.use(router);`
     - Lancement du serveur avec fallback de secours dans l'index.js : `const port = process.env.PORT || 3000;` // process.env.PARAM permet de faire appel à tout paramètre défini dans le .env
-    -  Mise en place de l'écoute de serveur dans l'index.js : ``app.listen(port, () => { console.log(`Server started at http://localhost:${port}`); });``
+    - Mise en place de l'écoute de serveur dans l'index.js : ``app.listen(port, () => { console.log(`Server started at http://localhost:${port}`); });``
     </details>
 12. Création fichier router.js
 13. Création fichier database-client.js :
