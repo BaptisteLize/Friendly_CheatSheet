@@ -3,6 +3,8 @@
 - Se connecter à Postgres via PSQL : 
   - `sudo -i -u postgres psql`
   - `psql -d nomdedatabase -U nomdeuser`
+- Lister les database existantes :
+  -  `\l`
 - Créer un utilisateur de base de données
   - `CREATE USER pokemon WITH LOGIN PASSWORD 'pokemon';`
 - Créer une base de données nommée
