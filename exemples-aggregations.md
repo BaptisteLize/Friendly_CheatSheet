@@ -1,4 +1,4 @@
-# Exercice aggregation
+# Exemples aggregations
 
 1. Le nombre de Pokémons qui possèdent une évolution.
 
