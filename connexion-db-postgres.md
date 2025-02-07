@@ -1,4 +1,4 @@
-## Aide memo connexion BDD 
+## Aide memo gestion DATABASE 
 
 - Se connecter à Postgres via PSQL : 
   - `sudo -i -u postgres psql`
