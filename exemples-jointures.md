@@ -1,4 +1,4 @@
-# Exercice jointures
+# Exemples jointures
 
 1. Récupérer les restaurants et leur ville associée
       +
