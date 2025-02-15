@@ -31,3 +31,17 @@ app.use((req,res,next) => {
 });
 
 ```
+Test pour vérifier que la session est bien fonctionnelle et conservée en mémoire :
+
+```js
+
+app.get('/test-session', (req, res) => {
+  if (!req.session.views) {
+    req.session.views = 1;
+  } else {
+    req.session.views++;
+  }
+  res.send(`Vous avez visité cette page ${req.session.views} fois`);
+});
+
+```
