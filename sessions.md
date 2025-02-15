@@ -45,6 +45,15 @@ app.get('/test-session', (req, res) => {
 });
 
 ```
+Voir l'objet session : 
+```js
+
+app.use((req,res,next) => {
+  console.log(req.session);
+  next();  
+});
+
+```
 
 Permettre l'utilisation de req.session dans toutes les vues :
 
