@@ -16,12 +16,13 @@ const store = new pgSession({
 app.use(session({
   store,
   secret: process.env.SESSION_SECRET,
-  resave: true, 
-  saveUninitialized: true,
+  resave: false,  // Sauvegarde uniquement si modifié
+  saveUninitialized: false, // Crée une session seulement si nécessaire
   cookie: {
-    secure: false,
-    maxAge: 30 * 24 * 60 * 60 * 1000 // Conservé 1 mois
-  } 
+    secure: false,  // Passer à `true` en production avec HTTPS
+    httpOnly: true, // Protection contre les attaques XSS
+    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 jours
+  }
 }));
 
 app.use((req,res,next) => {
