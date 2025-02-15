@@ -2,7 +2,7 @@ Penser à installer :
 
 npm i express-session connect-pg-simple
 
-Définir la SESSION_SECRET dans le .env pour l'utiliser
+Définir la SESSION_SECRET dans le .env pour l'utiliser *pré-requis : dépendance dotenv*
 
 ```js
 
