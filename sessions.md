@@ -45,3 +45,14 @@ app.get('/test-session', (req, res) => {
 });
 
 ```
+
+Permettre l'utilisation de req.session dans toutes les vues :
+
+```js
+
+app.use((req, res, next) => {
+  res.locals.session = req.session;
+  next();
+});
+
+```
