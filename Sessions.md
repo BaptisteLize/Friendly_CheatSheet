@@ -1,6 +1,6 @@
 Penser à installer :
 
-npm i express-session connect-pg-simple
+npm i express-session connect-pg-simple | *connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions*
 
 Définir la SESSION_SECRET dans le .env pour l'utiliser | *pré-requis : dépendance dotenv*
 
