@@ -8,7 +8,7 @@ Définir la SESSION_SECRET dans le .env pour l'utiliser | *pré-requis : dépend
 
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
-  pool: db,
+  pool: db, // nom donné au dataClient lors de l'import dans le fichier js de l'app
   tableName: "user_sessions",
   createTableIfMissing: true
 });
