@@ -1,3 +1,4 @@
+```html
 <!-- Formulaire de filtrage amélioré -->
     <form id="filter-form" action="/search/categorie" method="GET">
         <fieldset>
@@ -16,6 +17,7 @@
             </div>
         </fieldset>
     </form>
+```
 
 ```css    
 /* ✅ Conteneur du formulaire */
