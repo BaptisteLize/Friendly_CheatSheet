@@ -1,4 +1,4 @@
-# Projet Node.js (Express, EJS, Postgres)
+# Projet Node.js (Express, EJS, PostgreSQL)
 
 1. Initilisation du projet : `npm init -y`
 2. Installation des dépendances souhaitées : `npm i express ejs pg dotenv`
