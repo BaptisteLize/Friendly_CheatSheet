@@ -12,5 +12,5 @@
   - `CREATE DATABASE nom-data-base WITH OWNER nom-de-user;`
 - Se déplacer sur la base de données :
   - `\c nom-data-base nom-user`
-- Exécuter le script de création de tables sur cette base 
+- Exécuter le script de création des tables sur cette base 
   - `\i <drag_and_drop_le_fichier_du_dossier_data/create_db.sql>`
