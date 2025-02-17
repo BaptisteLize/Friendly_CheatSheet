@@ -1,8 +1,9 @@
 ## Aide memo gestion DATABASE 
 
-- Se connecter à Postgres via PSQL : 
+- Se connecter à Postgres : 
   - `sudo -i -u postgres psql`
-  - `psql -d nom-data-base -U nom-de-user`
+    - Connexion nommée :
+      - `psql -d nom-data-base -U nom-de-user`
 - Lister les database existantes :
   -  `\l`
 - Créer un utilisateur de base de données
