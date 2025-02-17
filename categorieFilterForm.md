@@ -18,14 +18,14 @@
     </form>
 
 ```css    
-/* ✅ Conteneur du formulaire /
+/* ✅ Conteneur du formulaire */
 #filter-form {
   display: flex;
   justify-content: center;
   margin-bottom: var(--spacing-lg);
 }
 
-/ ✅ Style du fieldset /
+/* ✅ Style du fieldset */
 #filter-form fieldset {
   border: 2px solid var(--bulma-primary);
   border-radius: 10px;
@@ -37,7 +37,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/ ✅ Légende du formulaire /
+/* ✅ Légende du formulaire */
 #filter-form legend {
   font-size: 1.2rem;
   font-weight: bold;
@@ -47,7 +47,7 @@
   border-radius: 5px;
 }
 
-/ ✅ Conteneur des options /
+/* ✅ Conteneur des options */
 .filter-options {
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
   margin-top: var(--spacing-sm);
 }
 
-/ ✅ Select /
+/* ✅ Select */
 .filter-options select {
   flex: 1;
   padding: 10px;
@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 
-/ ✅ Bouton de filtrage /
+/* ✅ Bouton de filtrage */
 .filter-options .btn-primary {
   background: var(--bulma-primary);
   color: white;
@@ -84,7 +84,7 @@
   background: var(--bulma-text);
 }
 
-/ 📌 Responsive */
+/* 📌 Responsive */
 @media (max-width: 768px) {
   .filter-options {
       flex-direction: column;
