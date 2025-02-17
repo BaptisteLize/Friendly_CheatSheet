@@ -14,6 +14,7 @@ const store = new pgSession({
   createTableIfMissing: true
 });
 
+// OBLIGATOIRE => Middleware déclencheur de la session
 app.use(session({
   store,
   secret: process.env.SESSION_SECRET,
