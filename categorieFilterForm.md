@@ -16,6 +16,8 @@
             </div>
         </fieldset>
     </form>
+
+```css    
 /* ✅ Conteneur du formulaire /
 #filter-form {
   display: flex;
@@ -93,3 +95,4 @@
       width: 100%;
   }
 }
+```
