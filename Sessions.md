@@ -29,11 +29,6 @@ app.use(session({
   }
 }));
 
-app.use((req,res,next) => {
-  console.log(req.session);
-  next();  
-});
-
 ```
 Test pour vérifier que la session est bien fonctionnelle et conservée en mémoire :
 
