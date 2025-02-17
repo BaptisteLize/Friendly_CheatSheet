@@ -1,4 +1,4 @@
-middleware accessController  :
+middleware controller - ACCESS :
 
 ```js
 
@@ -22,7 +22,29 @@ export default access;
 
 ```
 
-middleware mainController - Gestion du formulaire de connexion/enregistrement : 
+middleware controller - Charger la page avec le ou les formulaires :
+
+```js
+async renderLoginPage(req,res) {
+    try {
+      const users = await dataMapper.getAllUsers();
+      if(!users) {
+        res.status(404).render("404");
+      }
+      const isDenied = req.query.denied === "true";
+      const isAllowed = req.query.allowed === "true";
+      const isValid = req.query.valid === "true";
+      const isTaken = req.query.taken === "true";
+      res.render("login", { users, isDenied, isAllowed, isValid, isTaken });
+    } catch (error) {
+      console.error(error);
+      res.status(500).render("500");
+    }
+    
+  },
+```
+
+middleware controller - Gestion du formulaire de connexion/enregistrement : 
 
 ```js
 async handleLoginForm(req,res) {
