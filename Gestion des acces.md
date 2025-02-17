@@ -1,3 +1,5 @@
+PRÉ-REQUIS POUR FONCTIONNEMENT : GESTION DES SESSIONS CF [SESSIONS](/sessions.md)
+
 middleware controller - ACCESS :
 
 ```js
