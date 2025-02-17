@@ -83,3 +83,16 @@ async handleLoginForm(req,res) {
     }
   },
 ```
+
+Exemples d'utilisation dans le router :
+
+```js
+
+// ADMIN
+router.get("/admin/manage", access.isAdmin, adminController.renderAdminManagePage);
+router.post("/admin/manage", access.isAdmin, adminController.handleCoffeeForm);
+
+// AUTHENTICATED USER
+router.get("/profile", access.isAuthenticated, mainController.renderProfilePage);
+router.post("/profile", access.isAuthenticated, mainController.handleProfileForm);
+```
