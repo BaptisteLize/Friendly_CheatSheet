@@ -2,14 +2,14 @@
 
 - Se connecter à Postgres via PSQL : 
   - `sudo -i -u postgres psql`
-  - `psql -d nomdedatabase -U nomdeuser`
+  - `psql -d nom-data-base -U nom-de-user`
 - Lister les database existantes :
   -  `\l`
 - Créer un utilisateur de base de données
-  - `CREATE USER pokemon WITH LOGIN PASSWORD 'pokemon';`
+  - `CREATE USER nom-de-user WITH LOGIN PASSWORD 'password';`
 - Créer une base de données nommée
-  - `CREATE DATABASE pokemon WITH OWNER pokemon;`
+  - `CREATE DATABASE nom-data-base WITH OWNER nom-de-user;`
 - Se déplacer sur la base de données :
-  - `\c pokemon pokemon`
+  - `\c nom-data-base nom-user`
 - Exécuter le script de création de tables sur cette base 
-  - `\i <drag_and_drop_le_fichier_du_dossier_data/create_pokemon_db.sql>`
+  - `\i <drag_and_drop_le_fichier_du_dossier_data/create_db.sql>`
