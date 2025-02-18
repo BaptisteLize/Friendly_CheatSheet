@@ -1,14 +1,27 @@
-Pour intégrer Tailwind CSS dans un projet Express, voici les étapes à suivre :
-Installer Tailwind CSS et PostCSS via npm : npm install tailwindcss postcss @tailwindcss/postcss postcss-cli
-Créer une vue pour les tests, ainsi qu'un dossier public contenant un sous-dossier styles avec deux fichiers : style.css et tailwind.css.
-Dans le fichier tailwind.css, ajouter : @import "tailwindcss";
-Créer un fichier postcss.config.js avec le contenu suivant:
+# Intégrer Tailwind CSS en local
+
+Installer Tailwind CSS et PostCSS via npm : 
+
+```bash
+npm install tailwindcss postcss @tailwindcss/postcss postcss-cli
+```
+
+Créer :
+- index.html / pour les tests
+- style.css et tailwind.css / pour les imports
+
+Dans le fichier tailwind.css, ajouter : `@import "tailwindcss";`
+
+Créer un fichier postcss.config.js avec cette config :
+```bash
  export default {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 };
-Créer un fichier tailwind.config.js avec la configuration suivante :
+```
+Créer un fichier tailwind.config.js avec cette config :
+```bash
 export default {
   content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -16,38 +29,12 @@ export default {
   },
   plugins: [],
 };
-Configurer le serveur Express :
-import express from "express";
-import path from "path";
+```
 
-const app = express();
-
-app.set("view engine", "ejs");
-app.set("views", "./views");
-
-app.use(express.static(path.join(import.meta.dirname, "public")));
-
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Server started at 
-http://localhost
-:${port}`);
-});
-Lancer le serveur avec la commande suivante :
-node --watch index.js
-Dans un autre terminal, exécuter la commande suivante pour générer le fichier CSS final :
-npx tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/style.css --watch
-Et voilà, le tour est joué ! :tada:
-Pour tester, insérez le code suivant dans votre vue EJS :
-<h1 class="text-3xl uppercase underline">Hello world!</h1>
-Le titre devrait s'afficher avec un soulignement, indiquant que Tailwind CSS est correctement intégré.
-À vous de jouer !
-
-------
+Éxécuter la commande suivante pour générer le fichier CSS final :
+```bash
+npx tailwindcss -i tailwind.css -o style.css --watch
+```
 
 🚀 Installation Rapide de Tailwind CSS avec npm
 
