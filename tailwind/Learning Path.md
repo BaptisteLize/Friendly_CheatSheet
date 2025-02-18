@@ -5,6 +5,7 @@ L'idée serait de structurer ça en plusieurs étapes, comme une série de petit
 ## Phase 1 : Comprendre et Appliquer les Bases
 
 🏁 Objectif : Savoir utiliser Tailwind pour styliser une page simple.
+
 📌 Exercices :
 Installer et configurer Tailwind sur un projet minimal (on pourra le faire ensemble).
 Comprendre la philosophie "utility-first" (on prendra un design simple et on l'intégrera).
@@ -14,6 +15,7 @@ Refaire une maquette simple fournie en Tailwind.
 ## Phase 2 : Structurer son CSS avec Tailwind
 
 🏁 Objectif : Construire des composants réutilisables et bien organiser son code.
+
 📌 Exercices :
 Utiliser les variantes (responsive, hover, focus…).
 Gérer les breakpoints et le mobile-first avec Tailwind.
@@ -23,6 +25,7 @@ Apprendre les concepts de "composition" et de "réutilisation" en Tailwind.
 ## Phase 3 : Construire un projet Tailwind de A à Z
 
 🏁 Objectif : Être capable d'intégrer un design réaliste avec Tailwind.
+
 📌 Exercices :
 Reproduire une maquette plus avancée.
 Ajouter de l’interactivité (avec Alpine.js ou simplement avec Tailwind).
@@ -32,6 +35,7 @@ Optimiser la production (purge des classes inutiles, meilleures pratiques).
 ## Phase 4 : Niveau Avancé et Optimisation
 
 🏁 Objectif : Devenir autonome et performant avec Tailwind.
+
 📌 Exercices :
 Creuser les plugins et l’extension du config Tailwind.
 Créer ses propres composants UI optimisés.
