@@ -14,13 +14,15 @@ mkdir tailwind-test && cd tailwind-test
 ```bash
 npm init -y
 ```
+
 Ça va créer un package.json pour gérer les dépendances.
 
 3️⃣ Installer Tailwind CSS
-bash
-Copier
-Modifier
+
+```bash
 npm install -D tailwindcss postcss autoprefixer
+```
+
 Puis, génère le fichier de configuration Tailwind :
 
 ```bash
