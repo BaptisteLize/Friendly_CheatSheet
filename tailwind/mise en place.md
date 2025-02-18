@@ -30,8 +30,10 @@ npx tailwindcss init -p
 ```
 
 Ça va créer :
-tailwind.config.js (config de Tailwind)
-postcss.config.js (pour PostCSS, on touche pas pour l’instant)
+
+- tailwind.config.js (config de Tailwind)
+- postcss.config.js (pour PostCSS, on touche pas pour l’instant)
+
 4️⃣ Configurer Tailwind
 Ouvre tailwind.config.js et remplace le contenu par :
 
