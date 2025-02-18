@@ -9,7 +9,7 @@ Création des tables (avec drop inclus) :
 ```bash
 "db:create": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/create-db.sql'",
 ```
-Populate des tables (remplissage avec échantillonage fictif) : 
+Populate des tables - remplissage avec échantillonage fictif (avec truncate inclus) : 
 ```bash
 "db:populate": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/populate-db.sql'",
 ```
