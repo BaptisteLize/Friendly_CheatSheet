@@ -4,15 +4,15 @@
 1️⃣ Créer un dossier de test
 Dans ton terminal, place-toi où tu veux et lance :
 
-bash
-Copier
-Modifier
+```bash
 mkdir tailwind-test && cd tailwind-test
+```
+
 2️⃣ Initialiser un projet Node.js
-bash
-Copier
-Modifier
+
+```bash
 npm init -y
+```
 Ça va créer un package.json pour gérer les dépendances.
 
 3️⃣ Installer Tailwind CSS
@@ -22,20 +22,17 @@ Modifier
 npm install -D tailwindcss postcss autoprefixer
 Puis, génère le fichier de configuration Tailwind :
 
-bash
-Copier
-Modifier
+```bash
 npx tailwindcss init -p
-Ça va créer :
+```
 
+Ça va créer :
 tailwind.config.js (config de Tailwind)
 postcss.config.js (pour PostCSS, on touche pas pour l’instant)
 4️⃣ Configurer Tailwind
 Ouvre tailwind.config.js et remplace le contenu par :
 
-js
-Copier
-Modifier
+```js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./*.html"],
@@ -44,32 +41,31 @@ export default {
   },
   plugins: [],
 };
+```
 Cette ligne content: ["./*.html"] permet à Tailwind de scanner les fichiers HTML et d’inclure uniquement les classes utilisées.
 
 5️⃣ Ajouter Tailwind dans un fichier CSS
 Crée un fichier styles.css et ajoute dedans :
 
-css
-Copier
-Modifier
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
 6️⃣ Compiler Tailwind
 Lance cette commande :
 
-bash
-Copier
-Modifier
+```bash
 npx tailwindcss -i ./styles.css -o ./output.css --watch
+```
+
 Ça génère un fichier output.css qui contient toutes les classes nécessaires. --watch permet de mettre à jour le fichier en temps réel.
 
 7️⃣ Tester Tailwind dans un fichier HTML
 Crée un fichier index.html et mets ce contenu :
 
-html
-Copier
-Modifier
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -82,4 +78,6 @@ Modifier
     <h1 class="text-3xl font-bold text-blue-500">Hello Tailwind 🚀</h1>
 </body>
 </html>
+```
+
 Ouvre index.html dans ton navigateur, et tu devrais voir le texte "Hello Tailwind 🚀" en bleu et bien stylisé !
