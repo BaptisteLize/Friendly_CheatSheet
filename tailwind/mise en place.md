@@ -1,4 +1,5 @@
 🚀 Installation Rapide de Tailwind CSS avec npm
+
 💡 Objectif : Installer Tailwind proprement et tester une classe basique. Temps estimé : 15-20 min max.
 
 1️⃣ Créer un dossier de test
