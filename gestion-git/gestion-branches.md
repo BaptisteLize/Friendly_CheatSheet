@@ -16,3 +16,16 @@
 - Savoir sur quelle branche on est : 
   - `git branch` puis `Q` pour quitter
   - `git branch --show-current`
+ 
+- Merger une branche dans une autre : 
+  - Retourner sur la branche cible 
+    - `git checkout main`
+  - Merger la branche choisie dans la branche courante :
+    - `git merge NOM_BRANCHE`
+
+  - Supprimer une branche
+  - en local : `git branch -D NOM_BRANCHE`
+    - attention, s'assurer que cette branche ne serve plus
+  - sur GitHub : voir dans l'interface pour supprimer la branche
+    - en général, on fait le nettoyage automatiquement au moment du merge
+
