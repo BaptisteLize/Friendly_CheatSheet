@@ -2,6 +2,7 @@
 // ===== DEMONSTRATION (de cours) des méthodes Sequelize ====
 // Note : ESM = top level await = on peut utiliser "await" sans être dans une fonction
 
+import { Op } from "sequelize";
 import { Level } from "./Level.js";
 
 
@@ -76,6 +77,18 @@ console.log(JSON.stringify(fiveFirstLevels, null, 2));
 
 
 // Exemple : récupérer tous les niveaux qui contienne la lettre "e"
+const levelsContainingLetterE = await Level.findAll({
+  where: {
+    name: {
+      [Op.iLike]: '%e%'
+    }
+  }
+});
+
+// SELECT * FROM "level" WHERE "name" ILIKE '%e%';
+console.log(
+  levelsContainingLetterE.map(level => level.name)
+);
 
 
 ```
