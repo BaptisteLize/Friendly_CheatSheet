@@ -90,5 +90,7 @@ console.log(
   levelsContainingLetterE.map(level => level.name)
 );
 
+Potentielles jointures :
 
+include: "nom_de_table"
 ```
