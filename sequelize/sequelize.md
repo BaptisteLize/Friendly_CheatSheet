@@ -33,6 +33,19 @@ https://sequelize.org/
 
 ```
 
+### Types courant pour Sequelize
+
+[Documentation complète](https://sequelize.org/docs/v7/models/data-types/)
+
+| Postgres     | Sequelize   | Explication                         |
+| ------------ | ----------- | ----------------------------------- |
+| `TEXT`       | `TEXT`      | chaine de caractère illimité        |
+| `VARCHAR(N)` | `STRING(N)` | chaine de caractère de maximum N    |
+| `CHAR(N)`    | `CHAR(N)`   | chaine de caractère de exactement N |
+| `INTEGER`    | `INTEGER`   | entier                              |
+| `BOOLEAN`    | `BOOLEAN`   |                                     |
+
+
 ## Recap' S10
 
 - Gestion de projet
