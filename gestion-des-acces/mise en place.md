@@ -1,4 +1,4 @@
-PRÉ-REQUIS POUR FONCTIONNEMENT : GESTION DES SESSIONS CF [SESSIONS](./sessions/mise en place.md)
+PRÉ-REQUIS POUR FONCTIONNEMENT : GESTION DES SESSIONS CF [SESSIONS](/sessions/mise en place.md)
 
 middleware controller - ACCESS :
 
