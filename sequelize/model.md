@@ -25,8 +25,8 @@ Level.init({
   sequelize, // on fourni l'instance de connexion Sequelize
   tableName: "level", // dans le cadre de ce projet, puisque l'on connecte nos modèles à une BDD déjà existante, on précise vers quelle table ce modèle pointe
 
-  createdAt: "created_at", // faire correspondre le champs createdAt (Sequelize) au champ created_at (notre BDD)
-  updatedAt: "updated_at" // faire correspondre le champs updatedAt (Sequelize) au champ updated_at (notre BDD)
+  // createdAt: "created_at", permettrait de faire correspondre le champs createdAt (Sequelize) au champ created_at (notre BDD) dans le cas où ce ne serait pas géré dans le client
+  // updatedAt: "updated_at" permettrait de faire correspondre le champs updatedAt (Sequelize) au champ updated_at (notre BDD) dans le cas où ce ne serait pas géré dans le client
 });
 
 // TESTER NOTRE MODÈLE
