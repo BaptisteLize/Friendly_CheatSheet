@@ -18,7 +18,7 @@
   - `git branch --show-current`
  
 - Merger une branche dans une autre : 
-  - Retourner sur la branche cible 
+  - Retourner sur la branche cible/receveuse 
     - `git checkout main`
   - Merger la branche choisie dans la branche courante :
     - `git merge NOM_BRANCHE`
