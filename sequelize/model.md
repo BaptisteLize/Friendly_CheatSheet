@@ -32,4 +32,5 @@ Level.init({
 // TESTER NOTRE MODÈLE
 // const levels = await Level.findAll();
 // console.log(levels);
+
 ```
