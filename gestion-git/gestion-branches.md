@@ -23,7 +23,7 @@
   - Merger la branche choisie dans la branche courante :
     - `git merge NOM_BRANCHE`
 
-  - Supprimer une branche
+- Supprimer une branche
   - en local : `git branch -D NOM_BRANCHE`
     - attention, s'assurer que cette branche ne serve plus
   - sur GitHub : voir dans l'interface pour supprimer la branche
