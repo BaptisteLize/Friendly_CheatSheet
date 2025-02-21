@@ -8,7 +8,7 @@
 
     PORT=3000
     PG_URL=postgres://user:password@localhost:5432/databasename
-    SESSION_SECRET=testT!Ocoffee*
+    SESSION_SECRET=testT!Blabla!*
     NODE_ENV=production
     ```
 
