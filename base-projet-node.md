@@ -117,20 +117,17 @@
     ```
 
     </details>
-14. Création fichier data-mapper.js avec le client : `import client from "./database-client.js";`
-15. Création dossier public
+14. Création dossier public
     <details><summary>Sous dossiers / fichiers</summary>
 
       - dossier css
       - dossier images
       - fichier favicon.ico
     </details>
-16. Création dossier views
+15. Création dossier views
     <details><summary>Sous dossiers / fichiers</summary>
 
       - dossier partials
       - fichiers views
     </details>
-17. Création dossier data
-18. Création dossier controllers
-19. Création dossier docs
+17. Création dossier controllers : ex mainController.js
