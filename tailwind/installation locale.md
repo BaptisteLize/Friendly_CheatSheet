@@ -7,12 +7,6 @@
 "devDependencies": {
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "pg": "^8.13.3"
   }
 ```
 
