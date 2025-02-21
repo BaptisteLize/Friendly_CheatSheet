@@ -6,6 +6,6 @@
 
  Bisous bisous
 
- ## Boilers 
+## Boilers
 
 [Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/tailwind-boiler)

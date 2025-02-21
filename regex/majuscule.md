@@ -1,4 +1,5 @@
-Mettre en majuscule la première lettre du mot :
+# Mettre en majuscule la première lettre du mot
+
 ```js
 
 .replace(/\b\w/, x => x.toUpperCase()`

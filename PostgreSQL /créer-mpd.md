@@ -1,25 +1,29 @@
-Exemple de création :
+# Exemple de création
 
-```js
+```sql
+
+BEGIN; -- DEMARRE LA TRANSACTION
+
+SET client_encoding TO 'UTF8';
 
 -- VERIFICATION SI TABLE EXISTANTE OU NON
 
-DROP TABLE IF EXISTS coffee, category;
+DROP TABLE IF EXISTS "coffee", "category";
 
 -- CREATION DE LA TABLE
-CREATE TABLE users (
+CREATE TABLE "users" (
     "id" SERIAL PRIMARY KEY,
     "username" VARCHAR(50) UNIQUE NOT NULL,
     "password" VARCHAR(50) NOT NULL,
     "role" VARCHAR(50)
 ); 
 
-CREATE TABLE category (
+CREATE TABLE "category" (
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE coffee (
+CREATE TABLE "coffee" (
     "id" SERIAL PRIMARY KEY,
     "name" VARCHAR(50) NOT NULL,
     "description" TEXT NOT NULL,
@@ -32,7 +36,7 @@ CREATE TABLE coffee (
 
 -- REMPLISSAGE
 
-INSERT INTO category ("name")
+INSERT INTO "category" ("name")
 VALUES 
 ('Corsé'),
 ('Acide'),
@@ -41,7 +45,7 @@ VALUES
 ('Épicé'),
 ('Chocolaté');
 
-INSERT INTO coffee ("name", "description", "reference", "origin", "price", "category_id", "available")
+INSERT INTO "coffee" ("name", "description", "reference", "origin", "price", "category_id", "available")
 VALUES
 ('Espresso', 'Café fort et concentré préparé en faisant passer de l''eau chaude à travers du café finement moulu.', 100955890, 'Italie', 20.99, 1, true),
 ('Columbian', 'Café moyennement corsé avec une acidité vive et une saveur riche.', 100955894, 'Colombie', 18.75, 2, true),
@@ -59,5 +63,7 @@ VALUES
 ('Peruvian Arabica', 'Café équilibré avec des notes de chocolat, une acidité modérée et un corps velouté.', 954589100, 'Pérou', 19.40, 6, false),
 ('Hawaiian Kona', 'Café rare au goût riche, une acidité douce et des nuances subtiles.', 958090105, 'Hawaï', 55.75, 4, false),
 ('Nicaraguan Maragogipe', 'Café avec des notes de fruits, une acidité vive et un corps plein.', 691550753, 'Nicaragua', 28.60, 3, false);
+
+COMMIT;
 
 ```

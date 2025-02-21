@@ -1,6 +1,6 @@
-# Se connecter à une base de données postgreSQL 
+# Se connecter à une base de données postgreSQL
 
-- Se connecter à Postgres : 
+- Se connecter à Postgres :
   - `sudo -i -u postgres psql`
     OU
     - Connexion nommée :
@@ -15,5 +15,5 @@
 - Se déplacer sur la base de données :
   - `\c nom-data-base nom-user`
 
-- Exécuter le script de création des tables sur cette base 
+- Exécuter le script de création des tables sur cette base
   - `\i <drag_and_drop_le_fichier_du_dossier_data/create_db.sql>`

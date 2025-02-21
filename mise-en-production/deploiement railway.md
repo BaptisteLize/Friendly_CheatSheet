@@ -3,13 +3,17 @@
 - architecture du projet
 - repository public
 - fichier `.env.example` paramétré comme suit :
+
   - ```bash
+
     PORT=3000
     PG_URL=postgres://user:password@localhost:5432/databasename
     SESSION_SECRET=testT!Ocoffee*
     NODE_ENV=production
     ```
+
 - fichier de démarrage de l'application (server.js | index.js | app.js) paramétré comme suit :
+  
   - ```js
     import "dotenv/config";
     import express from "express";

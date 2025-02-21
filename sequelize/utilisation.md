@@ -1,3 +1,5 @@
+# Exemple d'utilisation de sequelize
+
 ```js
 // ===== DEMONSTRATION (de cours) des méthodes Sequelize ====
 // Note : ESM = top level await = on peut utiliser "await" sans être dans une fonction
@@ -90,7 +92,4 @@ console.log(
   levelsContainingLetterE.map(level => level.name)
 );
 
-Potentielles jointures :
-
-include: "nom_de_table"
 ```

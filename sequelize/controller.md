@@ -1,3 +1,5 @@
+# Exemple controller avec sequelize
+
 ```js
 // import dataMapper from "../database/data-mapper.js"; // (DATAMAPPER)
 // import { Level } from "../models/V2/Level.js";       // (ACTIVE RECORD MAISON)

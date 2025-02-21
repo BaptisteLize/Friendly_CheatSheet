@@ -7,7 +7,7 @@
 - Changer de branche 
   - `git checkout NOM_BRANCHE`
   - note : on retrouve le code dans l'état de la branche que l'on vise
- 
+
 - Push une nouvelle branche sur le dépôt Github
   - `git push --set-upstream origin NOM_BRANCHE`
   - note : `git push` suffit les fois suivantes
@@ -28,4 +28,3 @@
     - attention, s'assurer que cette branche ne serve plus
   - sur GitHub : voir dans l'interface pour supprimer la branche
     - en général, on fait le nettoyage automatiquement au moment du merge
-
