@@ -36,6 +36,14 @@ export const plugins = [];
 ```
 
 Éxécuter le script suivant pour générer le fichier CSS final (choisissez le nom de votre futur fichier) :
-```bash
-npx tailwindcss -i tailwind.css -o nom_du_fichier_ici.css --watch
+```json
+"tailwind": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/styles.css --watch"
 ```
+
+Utiliser ce nouveau fichier généré dans le head de votre html comme link stylesheet.
+
+Conseil d'utilisation :
+
+Pour permettre à tailwindcss de fonctionner correction, lancer le script dans une console qui restera ouverte tout le temps du travail sur le projet sans y toucher et travailler avec une autre console pour toutes les autres manipulations.
+
+Si tailwindcss ne peut pas compiler, il ne fonctionne pas.
