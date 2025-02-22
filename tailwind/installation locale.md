@@ -42,8 +42,8 @@ export const plugins = [];
 
 Utiliser ce nouveau fichier généré dans le head de votre html comme link stylesheet.
 
-Conseil d'utilisation :
+*Conseil d'utilisation :
 
 Pour permettre à tailwindcss de fonctionner correction, lancer le script dans une console qui restera ouverte tout le temps du travail sur le projet sans y toucher et travailler avec une autre console pour toutes les autres manipulations.
 
-Si tailwindcss ne peut pas compiler, il ne fonctionne pas.
+Si tailwindcss ne peut pas compiler, il ne fonctionne pas.*
