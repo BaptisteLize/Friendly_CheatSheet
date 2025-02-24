@@ -69,4 +69,28 @@ const order1 = await Order.findByPk(1, {
   });
   return order1;
 }
+
+// Retourne uniquement les surnoms des elfes ayant un chapeau vert,
+// Utilise un système de gestion des tableau pour la lecture directe à la place d'un tableau d'objet
+
+const greenHatElves = await Elf.findAll({
+    where: {
+      hat_color: "green"
+    },
+    attributes: ["surname"]
+  });
+  return greenHatElves.map(elf => elf.surname);
+}
+
+// Opérateur de comparaison, ici retourne uniquement les cadeaux
+// dont le temps de fabriquation est supérieur à cinq jours
+// CF : [Doc. Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
+
+const fiveDaysPresent = await Present.findAll({
+    where: {
+      craft_time_in_days: { [Op.gt]: 5 }
+    }
+  });
+  return fiveDaysPresent;
+}
 ```
