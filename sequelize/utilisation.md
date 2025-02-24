@@ -132,4 +132,17 @@ const question = await Question.findByPk(11, {
   ]
 });
 console.log(question.toJSON());
+
+// Je veux récupérer l'utilisateur n°1 mais seulement son nom et prénom
+const user1 = await User.findByPk(1, {
+  attributes: ["firstname", "lastname"]
+}); // SQL : SELECT "firstname", "lastname" FROM "user" WHERE "id" = 1;
+console.log(user1.toJSON());
+
+// Je veux récupérer le quiz n°7 (juste son title et description), son auteur (mais seulement le nom et prénom de l'auteur)
+const quiz7 = await Quiz.findByPk(7, {
+  attributes: ["title", "description"],
+  include: { association: "author", attributes: ["firstname", "lastname"] }
+});
+console.log(quiz7.toJSON());
 ```
