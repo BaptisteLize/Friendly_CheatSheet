@@ -93,3 +93,43 @@ console.log(
 );
 
 ```
+## Usage avec **include**
+
+```js
+import { Question, Quiz, User } from "./associations.js";
+
+// Je veux récupérer le quiz n°4, avec son auteur, mais également ses tags
+const quiz4 = await Quiz.findByPk(4, {
+  include: ["author", "tags"],
+});
+
+console.log(quiz4.toJSON()); // { id, title, description, created_at, updated_at, author: {}, tags: [{}] }
+console.log(quiz4.author.firstname); // Philippe
+quiz4.tags.forEach(tag => { console.log(tag.name); }); // Cinema
+
+// Je veux récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quizz
+const chuck = await User.findOne({
+  where: { firstname: "Chuck" },
+  include: { association: "quizzes", include: "questions" }
+});
+console.log(chuck.toJSON(), "\n\n");
+
+console.log(chuck.firstname);
+chuck.quizzes.forEach(quiz => {
+  console.log("- " + quiz.title);
+  quiz.questions.forEach(question => {
+    console.log("  - " + question.description);
+  });
+});
+
+
+// Récupérer la question n°11, ses réponses, son niveau, son quiz, ainsi que l'auteur du quiz
+const question = await Question.findByPk(11, {
+  include: [
+    { association: "answers" },
+    { association: "level" },
+    { association: "quiz", include: "author" }
+  ]
+});
+console.log(question.toJSON());
+```
