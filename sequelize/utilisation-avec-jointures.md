@@ -54,7 +54,7 @@ console.log(quiz7.toJSON());
 
 ## Exemples supplémentaires, syntaxe différente
 
-````js
+```js
 // Retourne le bon de commande n°1 avec : 
   // - son lutin responsable (seulement son surnom) !
   // - la liste des cadeaux associés (seulement leur nom)
@@ -81,8 +81,13 @@ const greenHatElves = await Elf.findAll({
   });
   return greenHatElves.map(elf => elf.surname);
 }
+```
+## Opérateurs de comparaison
 
-// Opérateur de comparaison, ici retourne uniquement les cadeaux
+[Documentation pour Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
+
+```js
+// , ici retourne uniquement les cadeaux
 // dont le temps de fabriquation est supérieur à cinq jours
 // CF : [Doc. Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
 
