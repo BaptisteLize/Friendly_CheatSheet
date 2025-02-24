@@ -27,7 +27,7 @@ const easylevel = await Level.create({ name: "easy" });
 await easylevel.update({ name: "Very easy !"});
 
 
-// ==== Supprimer un enregisterme// ==== Modifier un enregistrement (méthode 1) ====
+// ==== Supprimer un enregistrement // ==== Modifier un enregistrement (méthode 1) ====
 const hardLevel = await Level.create({ name: "hard" });
 hardLevel.name = "Hard Core";
 await hardLevel.save();
