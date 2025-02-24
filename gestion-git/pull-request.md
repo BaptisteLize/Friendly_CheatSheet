@@ -21,6 +21,8 @@ Voilà la logique régulièrement utilisée :
 
 - On MERGE la PR avec un bouton sur l'interface GitHub
 
-- Puis on retourne sur la branche principale pour récupérer les commits mergés : 
-  - `git checkout main`
-  - `git pull`
+- Puis on met à jour la branche principale en local, 
+  - on retourne sur la branche principale :
+    - `git checkout main`
+  - on récupère les commits mergés : 
+    - `git pull`
