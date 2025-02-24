@@ -1,3 +1,4 @@
+```js
 import { Answer } from "./Answer.js";
 import { Question } from "./Question.js";
 import { Quiz } from "./Quiz.js";
@@ -84,3 +85,5 @@ B.belongsToMany(A, {
 
 
 export { User, Quiz, Tag, Level, Answer, Question };
+
+```
