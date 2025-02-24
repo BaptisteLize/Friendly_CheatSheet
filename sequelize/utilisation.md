@@ -1,4 +1,4 @@
-# Exemple d'utilisation de sequelize
+# Exemple d'utilisation
 
 ```js
 // ===== DEMONSTRATION (de cours) des méthodes Sequelize ====
