@@ -55,6 +55,11 @@ console.log(quiz7.toJSON());
 ## Exemples supplémentaires, syntaxe différente
 
 ````js
+// Retourne le bon de commande n°1 avec : 
+  // - son lutin responsable (seulement son surnom) !
+  // - la liste des cadeaux associés (seulement leur nom)
+  //   - pour chaque cadeau la liste des labels associés (seulement leurs noms)
+
 const order1 = await Order.findByPk(1, {
     include: [
       {association: "elf", attributes: ["surname"]},
@@ -63,9 +68,5 @@ const order1 = await Order.findByPk(1, {
     ]
   });
   return order1;
-  // Retourne le bon de commande n°1 avec : 
-  // - son lutin responsable (seulement son surnom) !
-  // - la liste des cadeaux associés (seulement leur nom)
-  //   - pour chaque cadeau la liste des labels associés (seulement leurs noms)
 }
 ```
