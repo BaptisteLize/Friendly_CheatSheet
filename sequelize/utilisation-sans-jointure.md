@@ -1,4 +1,4 @@
-# Exemple d'utilisation sans jointure
+# Exemples d'utilisation sans jointure
 
 ```js
 // ===== DEMONSTRATION (de cours) des méthodes Sequelize ====
