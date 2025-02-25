@@ -14,7 +14,7 @@
 
 - [Mise en production](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/mise-en-production)
 
-- [Objets JS](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/objets-js)
+- [Objets Méthodes JS](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/3798a67a67cd724b0dd7343a1408b7af934e5393/objets-methodes)
 
 - [Regex](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/regex)
 
