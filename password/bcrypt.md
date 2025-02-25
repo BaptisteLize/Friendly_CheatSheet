@@ -19,3 +19,31 @@ const hashPassword = async (password) => {
 export default hashPassword;
 
 ```
+
+Contexte d'utilisation :
+
+```js
+
+async handleSignupForm(req,res){
+    try {
+      const { firstname, lastname, email, password } = req.body;
+
+      const hashedPassword = await hashPassword(password);
+      
+      const newUser = await User.create({firstname, lastname, email, password: hashedPassword});
+      
+      req.session.user = {
+        id: newUser.id,
+        firstname: newUser.firstname,
+        lastname: newUser.lastname,
+        email: newUser.email
+      },
+
+      res.redirect("/signup/?success=true");
+    } catch (error) {
+      console.error(error);
+      res.redirect("/signup/?fail=true");
+    }
+  },
+
+```
