@@ -1,5 +1,7 @@
 # Bcrypt
 
+[Documentation](https://www.bcrypt.io/)
+
 Middleware
 ```js
 
