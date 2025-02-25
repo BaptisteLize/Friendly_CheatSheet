@@ -28,6 +28,8 @@
 
 - [TailwindCss](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/tailwind)
 
+- [Password](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/1bac39d2fd34eff2b3226e955ab7be01d0317a25/password)
+
 ### Boilers
 
 [Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/tailwind-boiler)
