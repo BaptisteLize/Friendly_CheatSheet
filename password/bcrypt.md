@@ -1,7 +1,6 @@
 # Bcrypt
 
-Middleware Bcrypt 
-
+Middleware
 ```js
 
 import bcrypt from "bcrypt";
