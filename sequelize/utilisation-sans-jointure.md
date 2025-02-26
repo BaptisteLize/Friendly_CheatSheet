@@ -4,9 +4,9 @@
 import { Op } from "sequelize";
 import { Level } from "./Level.js";
 
-// ===== Créer un enregistrement (méthode 1) ====
-const level1 = new Level({ name: "Facile" }); // pas encore dans la BDD
-await level1.save(); // enregistré en BDD
+===== Créer un enregistrement (méthode 1) ====
+const level1 = new Level({ name: "Facile" });
+await level1.save();
 
 // ===== Créer un enregistrement (méthode 2) ====
 const level2 = await Level.create({ name: "Moyen" });
