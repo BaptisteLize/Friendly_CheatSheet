@@ -17,7 +17,7 @@ function controllerWrapper(middlewareFunction) {
 ```js
 router.get("/tests", controllerWrapper(nomController.renderAllTestsPage));
 router.get("/tests/:id", controllerWrapper(nomController.renderTestPage));
-router.post("/blablas", json(), controllerWrapper(nomController.renderAllBlablasPage));
-router.patch("/blablas/:id", json(), controllerWrapper(nomController.renderBlablaPage));
 
+router.get("/blablas", json(), controllerWrapper(nomController.renderAllBlablasPage));
+router.get("/blablas/:id", json(), controllerWrapper(nomController.renderBlablaPage));
 ```
