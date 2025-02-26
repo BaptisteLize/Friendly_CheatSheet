@@ -130,8 +130,7 @@ for (const question of quiz.questions) {
       }
 ```
 
-Autre option, via JS directement 
-cf : [Méthode sort](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/blob/df223f9744205c23a472affe53eba17de0abbc70/objets-methodes/sort.md)
+Autre option, via JS directement - cf : [Méthode sort](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/blob/df223f9744205c23a472affe53eba17de0abbc70/objets-methodes/sort.md)
 
 ```js
 const quizId = req.params.id;
