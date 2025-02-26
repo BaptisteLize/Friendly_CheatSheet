@@ -42,13 +42,6 @@ await toDeleteLevel.destroy();
 // ===== Récupérer un enregistrement par son ID ====
 const level3 = await Level.findByPk(3);
 
-console.log(level3); // Level{...}
-console.log(level3.toJSON()); // Astuce : pour vos console.log, pratique pour observer les données
-console.log(JSON.stringify(level3, null, 2)); // Astuce : également
-
-console.log(level3.id); // 3
-console.log(level3.name); // Expert
-
 // ===== Récupérer tous les enregistrements ====
 const levels = await Level.findAll();
 console.log(levels); // [Level{...}, Level{...}, Level{...}]
