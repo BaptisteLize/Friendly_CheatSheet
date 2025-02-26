@@ -14,6 +14,7 @@ const schema = new PasswordValidator()
     
 if (! schema.validate(password)) {
   return res.status(400).render("register", { errorMessage:
-"Le mot de passe n'est pas suffisamment complexe. Veuillez utiliser au moins 12 caractères, une majuscule, une minuscule, un chiffre et un symbole." });
+"Le mot de passe n'est pas suffisamment complexe.
+Veuillez utiliser au moins 12 caractères, une majuscule, une minuscule, un chiffre et un symbole." });
 }
 ```
