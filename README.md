@@ -14,7 +14,7 @@
 
 - [Gestion Git](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/b92923fe610944c08141491709bd44500659f299/gestion-git)
 
-- [Mise en production](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/mise-en-production)
+- [Mise en production](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/473687cbc66df061095c3e0a7c419ddfeef4e7db/mise-en-production)
 
 - [Objets Méthodes JS](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/eedf24e96db8b224c1f9f0cb6399994a731c9586/objets-methodes)
 
