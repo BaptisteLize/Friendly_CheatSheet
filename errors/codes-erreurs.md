@@ -15,5 +15,5 @@ https://developer.mozilla.org/fr/docs/Web/HTTP/Status
 - 5XX = Erreurs serveur
 
   `500` - Unexpected Server Error :
-  - le client (l'utilisateur final) n'y est pour rien.
+  - Problème lié au serveur, connexion base de donnée ou host du site/app
 
