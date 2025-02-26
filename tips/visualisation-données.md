@@ -15,5 +15,5 @@ console.log(level3.toJSON());
 ```
 Pour un objet :
 ```js
-console.log(JSON.stringify(level3, null, 2)); // Astuce : également
+console.log(JSON.stringify(level3, null, 2));
 ```
