@@ -10,7 +10,7 @@ Voilà la logique régulièrement utilisée :
 - Push la branche :
   - `git push --set-upstream origin NOM_BRANCHE`
 
-- Code et commit et push régulièrement
+- Commit et push régulièrement
 
 - Créer une `Pull Request` (**PR**), ie. `Merge Request` 
   - demande d'intégration du code de la branche vers la branche principale
