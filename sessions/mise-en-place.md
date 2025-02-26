@@ -2,7 +2,7 @@ Penser à installer :
 
 npm i express-session connect-pg-simple
 
-*connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions*
+*connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
 
 Définir la SESSION_SECRET dans le .env pour l'utiliser | *pré-requis : dépendance dotenv*
 
