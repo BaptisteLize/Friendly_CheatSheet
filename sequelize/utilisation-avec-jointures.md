@@ -3,12 +3,12 @@
 ```js
 import { Question, Quiz, User } from "./associations.js";
 
-// Je veux récupérer le quiz n°4, avec son auteur, mais également ses tags
+// Récupérer le quiz n°4, avec son auteur et ses tags
 const quiz4 = await Quiz.findByPk(4, {
   include: ["author", "tags"],
 });
 
-// Je veux récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quizz
+// Récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quizz
 const chuck = await User.findOne({
   where: { firstname: "Chuck" },
   include: { association: "quizzes", include: "questions" }
@@ -23,12 +23,12 @@ const question = await Question.findByPk(11, {
   ]
 });
 
-// Je veux récupérer l'utilisateur n°1 mais seulement son nom et prénom
+// Récupérer l'utilisateur n°1 (seulement son nom et prénom)
 const user1 = await User.findByPk(1, {
   attributes: ["firstname", "lastname"]
 });
 
-// Je veux récupérer le quiz n°7 (juste son title et description), son auteur (mais seulement le nom et prénom de l'auteur)
+// Récupérer le quiz n°7 (seulement son titre et description), son auteur (seulement le nom et prénom de l'auteur)
 const quiz7 = await Quiz.findByPk(7, {
   attributes: ["title", "description"],
   include: { association: "author", attributes: ["firstname", "lastname"] }
