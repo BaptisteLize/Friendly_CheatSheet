@@ -1,3 +1,3 @@
-Site concernant les différentes méthodes de protection :
+Site concernant le chiffrement :
 
 [Chiffrer.info](https://chiffrer.info/)
