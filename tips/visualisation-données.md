@@ -1,5 +1,7 @@
 # Visualisation de données brutes suivant les environnements
 
+[Documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+
 ## View EJS
 
 À noter tout en haut du fichier pour visualier un élément récuperer dans le render :
