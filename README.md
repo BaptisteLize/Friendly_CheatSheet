@@ -42,7 +42,7 @@ Profitez bien !
 
 ---
 
-## 🏗️ Boilers
+## 🏗️ Boilerplates
 
 Templates préparés pour clone puis utilisation :
 
