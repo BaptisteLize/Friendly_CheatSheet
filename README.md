@@ -36,8 +36,6 @@
 
 - [ControllerWrapper](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/d77d818bdb668eb9204eaad0f89124e8bddee0b5/controller-wrapper)
 
-- [Vocabulaire](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/blob/f9b01689adc43884bc460d7988008485f440c1d4/vocabulaire.md)
-
 - [Tips](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/76acd8dd78ece5481722ccac2224ccb2450b7275/tips)
 
 ### Boilers
