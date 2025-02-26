@@ -24,7 +24,7 @@
 
 - [Sequelize](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/babc858caae45e9ed975a4a8cbf2d5c8c128a5ae/sequelize)
 
-- [Sessions](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/sessions)
+- [Sessions](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2cfa42723aaeca6f448d80963202238e38d3ad41/sessions)
 
 - [SQL](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/sql)
 
