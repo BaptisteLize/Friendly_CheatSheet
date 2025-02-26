@@ -66,5 +66,5 @@ Ce projet est sous licence MIT – vous êtes libre de le lire et de l'utiliser,
 
 ---
 
-🎉 **Merci de votre intérêt et bonne révision !** 🚀
+🎉 **Merci de votre intérêt et bonnes révisions !** 🚀
 
