@@ -8,7 +8,7 @@ const quiz4 = await Quiz.findByPk(4, {
   include: ["author", "tags"],
 });
 
-// Récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quizz
+// Récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quiz
 const chuck = await User.findOne({
   where: { firstname: "Chuck" },
   include: { association: "quizzes", include: "questions" }
