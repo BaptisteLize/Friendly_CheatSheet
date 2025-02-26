@@ -64,18 +64,6 @@ Tag.belongsToMany(Quiz, {
   otherKey: "quiz_id"
 });
 
-/*
-A.belongsToMany(B, {
-  foreignKey: 'A_id',
-  otherKey: 'B_id'
-})
-
-B.belongsToMany(A, {
-  foreignKey: 'B_id',
-  otherKey: 'A_id'
-})
-*/
-
 export { User, Quiz, Tag, Level, Answer, Question };
 
 ```
