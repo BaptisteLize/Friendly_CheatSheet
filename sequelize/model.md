@@ -11,7 +11,7 @@ Level.init({
   // pas besoin de le faire, c'est déjà intégré dans le core model (Model)
   // le fait que ça soit un entier généré par défaut et clé primaire est déjà pris en charge
 
-  // created_at et updated_at
+  // createdAt et updatedAt
   // également géré par sequelize !
 
   name: {
