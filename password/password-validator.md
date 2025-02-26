@@ -1,5 +1,7 @@
 # Module password-validator
 
+[Documentation](https://www.npmjs.com/package/password-validator)
+
 ```js
 import PasswordValidator from "password-validator";
 
