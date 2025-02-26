@@ -8,7 +8,7 @@
 
 ## Links
 
-- [Config](/config)
+- [Config](config/)
 
 - [PostgreSQL](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/a585b746d8493ba4e7c8953378eebd6fc7394373/postgresql)
 
