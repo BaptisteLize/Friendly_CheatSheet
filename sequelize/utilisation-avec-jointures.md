@@ -154,7 +154,7 @@ quiz.questions.forEach(question => {
 ```
 
 Explications sur la méthode .sort cumulée au Math.random() :
-``
+```
 Comment fonctionne .sort() en JavaScript ?
 La méthode .sort() de JavaScript prend une fonction de comparaison qui détermine l'ordre des éléments. La fonction de comparaison reçoit deux arguments, généralement appelés a et b, et doit retourner :
 
@@ -176,4 +176,4 @@ En utilisant Math.random() - 0.5, tu obtiens un nombre aléatoire qui peut être
 Résumé :
 La méthode .sort() attend une fonction de comparaison qui retourne un nombre positif, négatif ou zéro pour déterminer l'ordre des éléments.
 En utilisant Math.random() - 0.5, tu assures que l'ordre des éléments est aléatoire, car le résultat de la comparaison est aléatoire, entraînant ainsi un mélange aléatoire des éléments du tableau.
-``
+```
