@@ -1,4 +1,4 @@
-# IMPORTANT
+# Paramètrages préalables
 
 - architecture du projet
 - repository public
