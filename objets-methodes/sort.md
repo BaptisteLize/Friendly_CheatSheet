@@ -23,7 +23,8 @@ Exemple :
 
 Pourquoi cette méthode est-elle efficace pour randomiser ?
 
-En utilisant Math.random() - 0.5, tu obtiens un nombre aléatoire qui peut être négatif ou positif, ce qui permet de mélanger aléatoirement les éléments du tableau. 
+En utilisant Math.random() - 0.5, tu obtiens un nombre aléatoire qui peut être négatif ou positif, ce qui permet de mélanger aléatoirement les éléments du tableau.
+
 C'est une manière rapide et pratique de mélanger un tableau sans avoir besoin de logiques supplémentaires complexes.
 
 Résumé :
