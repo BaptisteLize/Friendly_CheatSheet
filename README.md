@@ -1,6 +1,6 @@
 # Cheat Sheet faite avec amour ❤️
 
-Tous les tips, bouts de code ou infos que j'ai trouvé important de conserver en mémoire.
+Tous les tips, snippets de code ou infos que j'ai trouvé important de conserver en mémoire.
 
 Profitez bien !
 
