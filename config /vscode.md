@@ -1,4 +1,6 @@
-# Config VSCode - Extension `.js` sur l'auto-import
+# Config VSCode 
+
+## Extension `.js` sur l'auto-import
 
 Ouvrir la palette de commande : 
 - `CTRL + SHIFT + P`
