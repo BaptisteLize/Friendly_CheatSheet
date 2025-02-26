@@ -1,4 +1,4 @@
-# Vocabulaires importants
+# Vocabulaire important
 
 ## Méthodes de sécurité :
 
