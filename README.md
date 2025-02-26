@@ -32,6 +32,10 @@
 
 - [Password](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/4e8b178f6a9f48f75b2a98597ab5cf94e9b826bb/password)
 
+- [Errors](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/8673fbcd2c9259119fe6f9a4be593d3af054f985/errors)
+
+- [ControllerWrapper]()
+
 ### Boilers
 
 Templates préparés pour clone puis utilisation
