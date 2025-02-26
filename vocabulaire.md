@@ -1,3 +1,5 @@
-Site à lire concernant les méthodes de sécurité :
+# Vocabulaires importants
+
+## Méthodes de sécurité :
 
 [Chiffrer.info](https://chiffrer.info/)
