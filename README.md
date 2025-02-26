@@ -10,7 +10,7 @@ Profitez bien !
 
 - [🔗 Links](#-links)
 - [📄 Fichiers utiles](#-fichiers-utiles)
-- [🏗️ Boilers](#-boilers)
+- [🏗️ Boilerplates](#-boilers)
 - [🤝 Comment contribuer](#-comment-contribuer)
 - [📜 Licence](#-licence)
 
