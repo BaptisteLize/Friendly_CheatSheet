@@ -70,9 +70,8 @@ const greenHatElves = await Elf.findAll({
 [Documentation pour Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
 
 ```js
-// , ici retourne uniquement les cadeaux
+// Retourne uniquement les cadeaux
 // dont le temps de fabriquation est supérieur à cinq jours
-// CF : [Doc. Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
 
 const fiveDaysPresent = await Present.findAll({
     where: {
@@ -107,7 +106,7 @@ Il faudra donc récupérer tout ce qui ne sera pas random dans un premier temps 
 
 **! ATTENTION !** - Cela lancera un deuxième appel BDD dans le même controller, niveau perf, pas dingue, est-ce que ca marche ? Yep !
 ```js
-const quizId = req.params.id;
+const quizId = parseInt(req.params.id);
       const quiz = await Quiz.findByPk(quizId, {
         attributes: ["title", "description", "created_at"],
         include: [
@@ -133,7 +132,7 @@ for (const question of quiz.questions) {
 Autre option, via JS directement - cf : [Méthode sort](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/blob/df223f9744205c23a472affe53eba17de0abbc70/objets-methodes/sort.md)
 
 ```js
-const quizId = req.params.id;
+const quizId = parseInt(req.params.id);
       const quiz = await Quiz.findByPk(quizId, {
         attributes: ["title", "description", "created_at"],
         include: [
