@@ -1,16 +1,12 @@
 # Exemples d'utilisation sans jointure
 
 ```js
-// ===== DEMONSTRATION (de cours) des méthodes Sequelize ====
-// Note : ESM = top level await = on peut utiliser "await" sans être dans une fonction
-
 import { Op } from "sequelize";
 import { Level } from "./Level.js";
 
-
 // ===== Créer un enregistrement (méthode 1) ====
 const level1 = new Level({ name: "Facile" }); // pas encore dans la BDD
-await level1.save();
+await level1.save(); // enregistré en BDD
 
 // ===== Créer un enregistrement (méthode 2) ====
 const level2 = await Level.create({ name: "Moyen" });
@@ -27,7 +23,7 @@ const easylevel = await Level.create({ name: "easy" });
 await easylevel.update({ name: "Very easy !"});
 
 
-// ==== Supprimer un enregistrement // ==== Modifier un enregistrement (méthode 1) ====
+// ==== Modifier un enregistrement (méthode 1) ====
 const hardLevel = await Level.create({ name: "hard" });
 hardLevel.name = "Hard Core";
 await hardLevel.save();
