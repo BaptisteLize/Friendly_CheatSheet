@@ -4,7 +4,7 @@
 import { Op } from "sequelize";
 import { Level } from "./Level.js";
 
-===== Créer un enregistrement (méthode 1) ====
+// ===== Créer un enregistrement (méthode 1) ====
 const level1 = new Level({ name: "Facile" });
 await level1.save();
 
