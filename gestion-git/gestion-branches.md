@@ -21,7 +21,7 @@
   - Retourner sur la branche cible/receveuse 
     - `git checkout main`
   - Merger la branche choisie dans la branche courante :
-    - `git merge NOM_BRANCHE`
+    - `git merge NOM_BRANCHE_QUI_SERA_MERGE`
 
 - Supprimer une branche
   - en local : `git branch -D NOM_BRANCHE`
