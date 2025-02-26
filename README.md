@@ -34,4 +34,6 @@
 
 ### Boilers
 
+Templates préparés pour clone puis utilisation
+
 [Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/tailwind-boiler)
