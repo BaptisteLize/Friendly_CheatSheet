@@ -4,11 +4,7 @@
 import { DataTypes, Model } from "sequelize";
 import { sequelize } from "./sequelize-client.js";
 
-// On étend le "core model" de Sequelize
 export class Level extends Model {}
-
-// On paramètre notre modèle
-// Level.init(ATTRIBUTS, CONFIGURATION)
 
 Level.init({
   // id :
@@ -18,7 +14,6 @@ Level.init({
   // created_at et updated_at
   // également géré par sequelize !
 
-  // name :
   name: {
     type: DataTypes.TEXT,
     allowNull: false // Pour interdire le champ d'être NULL
@@ -26,13 +21,6 @@ Level.init({
 }, {
   sequelize, // on fourni l'instance de connexion Sequelize
   tableName: "level", // dans le cadre de ce projet, puisque l'on connecte nos modèles à une BDD déjà existante, on précise vers quelle table ce modèle pointe
-
-  // createdAt: "created_at", permettrait de faire correspondre le champs createdAt (Sequelize) au champ created_at (notre BDD) dans le cas où ce ne serait pas géré dans le client
-  // updatedAt: "updated_at" permettrait de faire correspondre le champs updatedAt (Sequelize) au champ updated_at (notre BDD) dans le cas où ce ne serait pas géré dans le client
 });
-
-// TESTER NOTRE MODÈLE
-// const levels = await Level.findAll();
-// console.log(levels);
 
 ```
