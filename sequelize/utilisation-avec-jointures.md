@@ -99,3 +99,19 @@ const fiveDaysPresent = await Present.findAll({
   return fiveDaysPresent;
 }
 ```
+
+## Tri des sorties de données
+
+```js
+const tags = await Tag.findAll({
+        attributes: ["name"],
+        include: {association: "quizzes", attributes: ["id", "title", "description"]},
+        order: [["name", "ASC"], ["quizzes", "title", "ASC"]] // dans l'ordre, le tri pour les tag, ensuite l'appel de la table associée via son alias directement et le système de tri souhaité
+      });
+```
+
+Si cette syntaxe ne fonctionne pas pour le tri il faut forcer la reconnaissance du modèle :
+```js
+order: [["name", "ASC"], [{ model: Quiz, as: "quizzes" }, "title", "ASC"] 
+  ],
+``
