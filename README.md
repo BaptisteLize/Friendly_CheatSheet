@@ -22,6 +22,7 @@ Profitez bien !
 - [Controller Wrapper](controller-wrapper/) – Helpers pour gérer les contrôleurs
 - [Errors](errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
 - [Gestion Git](gestion-git/) – Commandes Git essentielles et gestion des branches
+- [Js Front](js-front/)
 - [Mise en production](mise-en-production/) – Déploiement de projets
 - [Objets & Méthodes JS](objets-methodes/) – Manipulation des objets en JavaScript
 - [Password](password/) – Sécurité des mots de passe
