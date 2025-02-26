@@ -12,7 +12,7 @@
 
 - [PostgreSQL](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/a585b746d8493ba4e7c8953378eebd6fc7394373/postgresql)
 
-- [Gestion Git](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/gestion-git)
+- [Gestion Git](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/b92923fe610944c08141491709bd44500659f299/gestion-git)
 
 - [Mise en production](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/mise-en-production)
 
