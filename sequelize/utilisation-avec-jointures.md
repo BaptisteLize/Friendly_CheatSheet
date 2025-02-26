@@ -98,7 +98,7 @@ order: [["name", "ASC"], [{ model: Quiz, as: "quizzes" }, "title", "ASC"]
   ],
 ```
 
-## Randomiser des sorties de données associées
+## Random sort - Rendre aléatoires les sorties de données associées
 
 Sequelize ne tolère pas la randomisation des résultats sortant d'associations *(au 26/02/2025)*.
 
