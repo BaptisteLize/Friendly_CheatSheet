@@ -1,22 +1,37 @@
 # Exemple controller avec sequelize
 
 ```js
-import { Level } from "../models/Level.js"; 
+import { Quiz } from "../models/index.js";
 
-const levelController = {
-    const levels = await Level.findAll();
+const mainController = {
 
-    res.render("levels", { levels });
-  },
+  async renderHomePage(req, res) {
+    try {
+      
+      const quizzes = await Quiz.findAll({
+        order: [["title", "ASC"]],
+        attributes: ["id", "title", "description"],
+        include: [
+          {association: "author", attributes: ["firstname", "lastname"]},
+          {association: "tags", attributes: ["name"]}
+        ]
+      });      
 
-  async createLevel(req, res) {
-    const level = new Level({ name: req.body.name });
-    await level.save();
+      if(!quizzes) {
+        res.status(404).render("404");
+        return;
+      };
 
-    res.redirect("/levels");
+      res.render("home", { quizzes });
+    } catch (error) {
+      console.error(error);
+      res.status(500).render("500");
+    }
+    
   }
+
 };
 
-export default levelController;
+export default mainController;
 
 ```
