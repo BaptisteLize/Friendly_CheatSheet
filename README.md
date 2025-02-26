@@ -6,7 +6,7 @@
 
  Bisous bisous
 
-## Links
+## 🔗 Links
 
 - [Config](config/)
 - [PostgreSQL](postgresql/)
@@ -27,7 +27,7 @@
 ### 📄 **Fichiers utiles**
 - [Base projet Node](base-projet-node.md)
 
-### Boilers
+### 🏗️ Boilers
 
 Templates préparés pour clone puis utilisation
 
