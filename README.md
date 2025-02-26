@@ -28,7 +28,7 @@
 
 - [SQL](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/f48a0b63fc33ce0726e108ed9a4b2d0f2179381f/sql)
 
-- [TailwindCss](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/tailwind)
+- [TailwindCss](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/1bb5b031287cd1cb958182a18046a645d5307e81/tailwind)
 
 - [Password](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/1bac39d2fd34eff2b3226e955ab7be01d0317a25/password)
 
