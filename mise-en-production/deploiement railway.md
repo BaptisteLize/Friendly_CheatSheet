@@ -12,7 +12,7 @@
     NODE_ENV=production
     ```
 
-- fichier de démarrage de l'application (server.js | index.js | app.js) paramétré comme suit :
+- fichier de démarrage de l'application (server.js | index.js | app.js) paramétré comme suit à adapter aux dépendances projet :
   
   - ```js
     import "dotenv/config";
