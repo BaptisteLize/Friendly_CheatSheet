@@ -1,7 +1,10 @@
 # Paramètrages préalables
 
-- architecture du projet
-- repository public
+- architecture du projet :
+
+  ![image](https://github.com/user-attachments/assets/285e5637-9d0f-4f55-91f5-11bde0afec91)
+
+- repository github en public
 - fichier `.env.example` paramétré comme suit :
 
   - ```env
