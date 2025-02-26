@@ -30,7 +30,7 @@
 
 - [TailwindCss](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/1bb5b031287cd1cb958182a18046a645d5307e81/tailwind)
 
-- [Password](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/1bac39d2fd34eff2b3226e955ab7be01d0317a25/password)
+- [Password](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/4e8b178f6a9f48f75b2a98597ab5cf94e9b826bb/password)
 
 ### Boilers
 
