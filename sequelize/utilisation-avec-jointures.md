@@ -100,7 +100,7 @@ order: [["name", "ASC"], [{ model: Quiz, as: "quizzes" }, "title", "ASC"]
 
 ## Random sort - Rendre aléatoires les sorties de données associées
 
-Sequelize ne tolère pas la randomisation des résultats sortant d'associations *(au 26/02/2025)*.
+Sequelize ne tolère pas le tri aléatoire des résultats sortant d'associations *(au 26/02/2025)*.
 
 Il faudra donc récupérer tout ce qui ne sera pas random dans un premier temps puis agir sur l'association en dehors de la première query grâce à une boucle traitant les fonctions asynchrones / await.
 
