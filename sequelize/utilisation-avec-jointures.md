@@ -102,7 +102,10 @@ order: [["name", "ASC"], [{ model: Quiz, as: "quizzes" }, "title", "ASC"]
 ## Randomiser des sorties de données associées
 
 Sequelize ne tolère pas la randomisation des résultats sortant d'associations *(au 26/02/2025)*.
+
 Il faudra donc récupérer tout ce qui ne sera pas random dans un premier temps puis agir sur l'association en dehors de la première query grâce à une boucle traitant les fonctions asynchrones / await.
+
+**! ATTENTION !** - Cela lancera un deuxième appel BDD dans le même controller, niveau perf, pas dingue, est-ce que ca marche ? Yep 
 ```js
 for (const question of quiz.questions) {
         question.answers = await Answer.findAll({
