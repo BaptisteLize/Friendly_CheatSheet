@@ -9,5 +9,11 @@
 
 ## Console.log
 
-console.log(level3.toJSON()); // Astuce : pour vos console.log, pratique pour observer les données
+Pour un tableau :
+```js
+console.log(level3.toJSON());
+```
+Pour un objet :
+```js
 console.log(JSON.stringify(level3, null, 2)); // Astuce : également
+```
