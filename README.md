@@ -18,7 +18,7 @@
 
 - [Objets Méthodes JS](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/bfa0b7ffba53d916d0d40baa70f77f721230d8f2/objets-methodes)
 
-- [Regex](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/regex)
+- [Regex](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/3371ef8501dc927b3713cf6416bf695daf6ac32d/regex)
 
 - [Scripts](https://github.com/BaptisteLize/CheatSheet_BaptisteLize/tree/2a88092d04b2c4a6b66eddfa38c57ad91aafc4eb/scripts)
 
