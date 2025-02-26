@@ -4,7 +4,7 @@
 - repository public
 - fichier `.env.example` paramétré comme suit :
 
-  - ```bash
+  - ```env
 
     PORT=3000
     PG_URL=postgres://user:password@localhost:5432/databasename
