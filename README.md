@@ -40,4 +40,4 @@
 
 Templates préparés pour clone puis utilisation
 
-[Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/tailwind-boiler)
+[Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/node-express-ejs-tailwind-project)
