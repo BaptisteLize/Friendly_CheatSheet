@@ -26,7 +26,6 @@
 
 ### 📄 **Fichiers utiles**
 - [Base projet Node](base-projet-node.md)
-- [README](README.md) (ce fichier)
 
 ### Boilers
 
