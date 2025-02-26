@@ -54,8 +54,7 @@ Templates préparés pour clone puis utilisation :
 
 Si vous souhaitez suggérer des ajouts ou corrections :
 
-1. **Ouvrir une issue** sur le repo GitHub en expliquant votre suggestion
-2. **Discuter** des améliorations pour rendre la cheat sheet encore plus utile !
+**Ouvrez une issue** sur le repo GitHub en expliquant votre suggestion
 
 Toutes les contributions sont les bienvenues. 😊
 
