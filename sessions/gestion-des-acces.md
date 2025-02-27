@@ -2,10 +2,9 @@
 
 PRÉ-REQUIS POUR FONCTIONNEMENT : CF [Mise en place des sessions](./mise-en-place.md)
 
-middleware - ACCESS :
+## Middleware - ACCESS :
 
 ```js
-
 const access = {
   isAdmin(req, res, next) {
     if (!req.session.user || req.session.user.role !== "admin") {
@@ -23,10 +22,9 @@ const access = {
 };
 
 export default access;
-
 ```
 
-middleware controller - Charger la page avec le ou les formulaires :
+## Controller - Charger la page avec le ou les formulaires :
 
 ```js
 async renderLoginPage(req,res) {
@@ -48,7 +46,7 @@ async renderLoginPage(req,res) {
   },
 ```
 
-middleware controller - Gestion du formulaire de connexion/enregistrement : 
+## Controller - Gestion du formulaire de connexion/enregistrement : 
 
 ```js
 async handleLoginForm(req,res) {
@@ -91,7 +89,6 @@ async handleLoginForm(req,res) {
 Exemples d'utilisation dans le router :
 
 ```js
-
 // ADMIN
 router.get("/admin/manage", access.isAdmin, adminController.renderAdminManagePage);
 router.post("/admin/manage", access.isAdmin, adminController.handleCoffeeForm);
