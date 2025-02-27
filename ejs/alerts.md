@@ -1,4 +1,4 @@
-# Snippets alert error / success
+# Snippets Alert Error / Success
 
 Utilisation classes Bootstrap cf [Alerts - Bootstrap](https://getbootstrap.com/docs/4.1/components/alerts/)
 
