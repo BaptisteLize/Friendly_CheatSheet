@@ -1,4 +1,4 @@
-# Snippet Navlinks
+# Snippets Navlinks
 
 Ajusté si un utilisateur connecté est trouvé ou non
 
