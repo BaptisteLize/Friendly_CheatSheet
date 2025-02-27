@@ -39,7 +39,7 @@ const authController = {
       return res.status(400).render("register", { errorMessage: "Le mot de passe n'est pas suffisamment complexe. Veuillez utiliser au moins 12 caractères, une majuscule, une minuscule, un chiffre et un symbole." });
     }
 
-    const alreadyExistingUser = await User.findOne({ where: { email: email }}); // {...} || null
+    const alreadyExistingUser = await User.findOne({ where: { email: email }});
 
     if (alreadyExistingUser) {
       return res.status(409).render("register", { errorMessage: "L'email renseigné est déjà utilisé." });
