@@ -1,4 +1,4 @@
-# Exemple de fichier auth.controller.js
+# Exemple de fichier `auth.controller.js`
 
 ```js
 import PasswordValidator from "password-validator";
