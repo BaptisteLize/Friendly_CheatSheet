@@ -6,7 +6,7 @@ npm i [express-session](https://www.npmjs.com/package/express-session) [connect-
 
 *connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
 
-## Mise en place des middlewares
+## Middlewares
 
 pré-requis : 
   - dépendance dotenv
