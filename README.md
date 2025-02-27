@@ -20,6 +20,7 @@ Profitez bien !
 
 - [Config](config/) – Paramétrage et configuration de divers outils
 - [Controller Wrapper](controller-wrapper/) – Helpers pour gérer les contrôleurs
+- [EJS](ejs/) – Snippets EJS
 - [Errors](errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
 - [Gestion Git](gestion-git/) – Commandes Git essentielles et gestion des branches
 - [Js Front](js-front/) – Snippets JavaScript Front-end
