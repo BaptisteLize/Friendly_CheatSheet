@@ -1,4 +1,4 @@
-# Exemple de migration (migrate)
+# Exemple de migration
 
 ```sql
 -- Script de migration
