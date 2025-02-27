@@ -65,7 +65,7 @@ const authController = {
       return res.status(400).render("login", { errorMessage: "Tous les champs sont obligatoires." });
     }
 
-    const user = await User.findOne({ where: { email : email } }); // { id, password, email }
+    const user = await User.findOne({ where: { email : email } });
 
     if (!user) {
       return res.status(400).render("login", { errorMessage: "L'email et le mot de passe fournis ne correspondent pas." });
