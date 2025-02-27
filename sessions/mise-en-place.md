@@ -1,14 +1,16 @@
 # Mise en place des sessions
 
-Penser à installer :
+## Installation
 
 npm i [express-session](https://www.npmjs.com/package/express-session) [connect-pg-simple](https://www.npmjs.com/package/connect-pg-simple)
 
 *connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
 
-## Définir la SESSION_SECRET dans le .env pour l'utiliser 
+## Mise en place des middlewares
 
-*pré-requis : dépendance dotenv*
+pré-requis : 
+  - dépendance dotenv
+  - Définir la SESSION_SECRET dans le .env
 
 **OPTIONNEL => Stockage des infos sessions dans une BDD**
 ```js
