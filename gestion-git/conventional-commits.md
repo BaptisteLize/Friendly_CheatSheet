@@ -34,11 +34,11 @@
 - ux: → Amélioration de l'expérience utilisateur
 -ui: → Modification de l'interface utilisateur
 
-:lien: **Dépendances et Configuration**
+:link: **Dépendances et Configuration**
 - deps: → Ajout ou mise à jour des dépendances
 - config: → Modification des fichiers de configuration
 
-:recyclage: **CI/CD et Déploiement**
+:recycle: **CI/CD et Déploiement**
 - ci: → Modification des workflows d'intégration continue
 - build: → Modification du système de build ou des dépendances
 - deploy: → Déploiement d'une version
