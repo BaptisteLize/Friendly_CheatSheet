@@ -10,7 +10,7 @@ Profitez bien !
 
 - [🔗 Links](#-links)
 - [📄 Fichiers utiles](#-fichiers-utiles)
-- [🏗️ Boilerplates]([#-boilerplates](https://github.com/BaptisteLize/Friendly_CheatSheet/blob/main/README.md#%EF%B8%8F-boilerplates))
+- [🏗️ Boilerplates](https://github.com/BaptisteLize/Friendly_CheatSheet/blob/main/README.md#%EF%B8%8F-boilerplates)
 - [🤝 Comment contribuer](#-comment-contribuer)
 - [🔒 Règles de protection](#-règles-de-protection)
 - [📜 Licence](#-licence)
