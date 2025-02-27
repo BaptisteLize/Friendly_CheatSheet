@@ -17,7 +17,6 @@ const authController = {
     const { firstname, lastname, email, password, confirm } = req.body;
 
     if (!firstname || !lastname || !email || !password || !confirm) {
-      // --> sinon : 400 (Bad Request)
       res.status(400).render("register", { errorMessage: "Tous les champs sont obligatoires." });
       return;
     }
