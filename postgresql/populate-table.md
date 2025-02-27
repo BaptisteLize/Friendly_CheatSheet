@@ -4,6 +4,9 @@ BEGIN;
 
 SET client_encoding TO 'UTF8';
 
+
+-- TRUNCATE supprime TOUS les enregistrements de la table, sans pour autant supprimer les tables elles-même.
+
 TRUNCATE TABLE "level",
 "answer",
 "user",
@@ -11,28 +14,26 @@ TRUNCATE TABLE "level",
 "question",
 "tag",
 "quiz_has_tag" RESTART IDENTITY;
--- TRUNCATE supprime TOUS les enregistrements de la table, sans pour autant supprimer les tables elles-même. 
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "users"
--- ----------------------------------------
+
 INSERT INTO "user" ("id", "firstname", "lastname", "email", "password") VALUES
 (1, 'Philippe', 'Candille', 'philippe@oclock.io', '$argon2id$v=19$m=65536,t=3,p=4$blvQNIlniTOF5rvdgTqxRw$XJiLCOeETtj0M7CiPDUIQhX7f0PRu3utbYsFvehoIn4'),
 (2, 'Jeff', 'Oclock', 'jeff@oclock.io', '$argon2id$v=19$m=65536,t=3,p=4$blvQNIlniTOF5rvdgTqxRw$XJiLCOeETtj0M7CiPDUIQhX7f0PRu3utbYsFvehoIn4'),
 (3, 'Chuck', 'Norris', 'chuck@oclock.io', '$argon2id$v=19$m=65536,t=3,p=4$blvQNIlniTOF5rvdgTqxRw$XJiLCOeETtj0M7CiPDUIQhX7f0PRu3utbYsFvehoIn4');
 -- Note : le mot de passe haché (avec argon2id) est 'password' ici ;-)
 
--- ----------------------------------------
 -- Déchargement des données de la table "levels"
--- ----------------------------------------
+
 INSERT INTO "level" ("id", "name") VALUES
 (1, 'Débutant'),
 (2, 'Confirmé'),
 (3, 'Expert');
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "quiz"
--- ----------------------------------------
+
 INSERT INTO "quiz" ("id", "title", "description", "author_id") VALUES
 (1, 'Animaux célèbres - I', 'Tantôt effrayants, tantôt drôles.', 1),
 (2, 'Le chocolat - I', 'Bon pour le moral, un peu moins pour le foie.', 1),
@@ -53,9 +54,9 @@ INSERT INTO "quiz" ("id", "title", "description", "author_id") VALUES
 (17, 'Les fromages de France - II', 'Près de 1000 fromages différents', 3),
 (18, 'Les fromages de France - III', 'Près de 1000 fromages différents', 3);
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "question"
--- ----------------------------------------
+
 INSERT INTO "question" ("id", "quiz_id", "description", "level_id", "anecdote", "wiki") VALUES
 (1, 1, 'Dans le film d''animation L''Âge de glace, qu''est-ce qui échappe à l''écureuil Scrat ?', 1, 'À l''occasion de la sortie de L''Âge de glace 4, Scrat a eu son double de cire au Musée Grévin le 20 juin 2012.', 'Scrat'),
 (2, 7, 'Comment se nomme l''orque à sauver dans une saga cinématographique populaire ?', 1, 'Si les deuxième et troisième films sont des suites du premier, le 4e n''a aucun lien avec le reste et est en quelque sorte un reboot.', 'Sauvez_Willy_(série_de_films)'),
@@ -239,9 +240,9 @@ INSERT INTO "question" ("id", "quiz_id", "description", "level_id", "anecdote", 
 (180, 18, 'Quel fromage a une pâte qui révèle une saveur de lard fumé et un final épicé ?', 3, 'Sa recette aurait été transmise au XIXe siècle à Saint-Julien-de-Concelles dans le vignoble nantais par un curé de passage.', 'Le_Curé_Nantais');
 
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "answer"
--- ----------------------------------------
+
 INSERT INTO "answer" ("id", "description", "question_id", "is_valid") VALUES
 (1, 'Un gland', 1, true),
 (2, 'Willy', 2, true),
@@ -966,9 +967,9 @@ INSERT INTO "answer" ("id", "description", "question_id") VALUES
 (953, 'Le munster', 179),
 (954, 'La figuette', 180);
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "tag"
--- ----------------------------------------
+
 INSERT INTO "tag" ("id", "name") VALUES
 (1, 'Cinema'),
 (2, 'Technologie'),
@@ -980,9 +981,8 @@ INSERT INTO "tag" ("id", "name") VALUES
 (8, 'Astronomie'),
 (9, 'Géographie');
 
--- ----------------------------------------
+
 -- Déchargement des données de la table "quiz_has_tag"
--- ----------------------------------------
 
 INSERT INTO "quiz_has_tag" ("quiz_id", "tag_id") VALUES
 (1, 1),
@@ -1014,9 +1014,6 @@ INSERT INTO "quiz_has_tag" ("quiz_id", "tag_id") VALUES
 (17, 3),
 (17, 9),
 (18, 3);
-
--- On rajoute la clé étrangère
--- ALTER TABLE "answer" ADD FOREIGN KEY ("question_id") REFERENCES "question"("id");
 
 COMMIT;
 
