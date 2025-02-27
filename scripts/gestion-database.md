@@ -14,7 +14,7 @@ Les exemples de scripts ci-dessus sont fonctionnels si votre dossier data est à
 ou
 `.\app\`   pour Windows
 
-Création des tables (avec drop inclus) :
+### Création des tables (avec drop inclus) :
 
 Linux
 ```bash
@@ -25,7 +25,7 @@ Windows
 "db:create": "npx dotenv -e .env -- powershell -Command "psql -U $env:PGUSER -d $env:PGDATABASE -f data\create_tables.sql"",
 ```
 
-Populate des tables - remplissage avec échantillonage fictif (avec truncate inclus) :
+### Populate des tables - remplissage avec échantillonage fictif (avec truncate inclus) :
 
 Linux
 ```bash
@@ -36,7 +36,7 @@ Windows
 "db:populate": "npx dotenv -e .env -- powershell -Command "psql -U $env:PGUSER -d $env:PGDATABASE -f data\add_to_tables.sql"",
 ```
 
-Reset global (drop, create, populate) :
+### Reset global (drop, create, populate) :
 
 Linux
 ```bash
