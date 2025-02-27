@@ -13,7 +13,7 @@
 - refactor: → Réécriture du code sans changer son comportement
 - improve: → Amélioration de la performance ou de la lisibilité du code
 
-:corbeille: **Suppressions**
+:no_entry: **Suppressions**
 - remove: → Suppression d'un fichier ou d'un élément
 - clean: → Nettoyage du code (suppression de code mort, fichiers inutiles, etc.)
 
