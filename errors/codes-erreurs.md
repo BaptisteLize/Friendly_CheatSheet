@@ -14,6 +14,9 @@ https://developer.mozilla.org/fr/docs/Web/HTTP/Status
  
   `400` - Bad Request
   - Indique que le serveur ne peut pas comprendre ou traiter la requête en raison d'une erreur côté client (par exemple une requête dont la syntaxe ou le contenu est invalide).
+ 
+  - `409` - Conflict
+  - Indique que la requête entre en conflit avec l'état actuel du serveur. Ce code est utilisé dans les situations où l'utilisateur peut être en mesure de résoudre le conflit et de soumettre à nouveau la requête.
 
 - 5XX = Erreurs serveur
 
