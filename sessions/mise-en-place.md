@@ -28,7 +28,7 @@ app.use(session({
   cookie: {
     secure: false,  // Passer à `true` en production avec HTTPS
     httpOnly: true, // Protection contre les attaques XSS
-    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 jours
+    maxAge: 30 * 24 * 60 * 60 * 1000 // 30 jours (en millisecondes)
   }
 }));
 ```
