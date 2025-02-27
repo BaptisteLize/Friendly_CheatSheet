@@ -64,7 +64,7 @@ Toutes les contributions sont les bienvenues. 😊
 
 ## 📜 Licence
 
-Ce projet est sous licence MIT – vous êtes libre de le lire et de l'utiliser, mais les modifications restent sous mon contrôle.
+Ce projet est sous licence MIT – vous êtes libres de le lire et de l'utiliser, mais les modifications restent sous mon contrôle.
 
 ---
 
