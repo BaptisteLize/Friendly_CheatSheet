@@ -1,9 +1,9 @@
-:épingle: **Ajouts et Créations**
+:pushpin: **Ajouts et Créations**
 feat: (feature) → Ajout d'une nouvelle fonctionnalité
 add: → Ajout d'un fichier, d'une dépendance ou d'un élément
 init: → Initialisation d'un projet ou d'une nouvelle partie du code
 
-:clé_anglaise: **Corrections et Modifications**
+:wrench: **Corrections et Modifications**
 fix: → Correction d'un bug
 update: → Mise à jour d'un fichier, d'un élément ou d'une fonctionnalité
 refactor: → Réécriture du code sans changer son comportement
@@ -13,7 +13,7 @@ improve: → Amélioration de la performance ou de la lisibilité du code
 remove: → Suppression d'un fichier ou d'un élément
 clean: → Nettoyage du code (suppression de code mort, fichiers inutiles, etc.)
 
-:fusée: **Optimisation et Performances**
+:rocket: **Optimisation et Performances**
 perf: → Amélioration des performances
 optimize: → Optimisation du code ou des requêtes
 
