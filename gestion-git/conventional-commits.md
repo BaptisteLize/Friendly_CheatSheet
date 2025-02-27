@@ -21,12 +21,12 @@
 - perf: → Amélioration des performances
 - optimize: → Optimisation du code ou des requêtes
 
-:coche_blanche: **Tests et Débogage**
+:white_check_mark: **Tests et Débogage**
 - test: → Ajout ou modification de tests
 - debug: → Correction de bugs identifiés en phase de test
 - mock: → Ajout ou modification de données factices pour les tests
 
-:livres: **Documentation**
+:books: **Documentation**
 - docs: → Ajout ou mise à jour de la documentation
 
 :art: **UI/UX et Style**
