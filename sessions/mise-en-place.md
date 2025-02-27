@@ -1,6 +1,6 @@
 Penser à installer :
 
-npm i express-session connect-pg-simple
+npm i [express-session](https://www.npmjs.com/package/express-session) [connect-pg-simple](https://www.npmjs.com/package/connect-pg-simple)
 
 *connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
 
