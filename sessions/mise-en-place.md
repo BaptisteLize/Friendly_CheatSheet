@@ -9,17 +9,19 @@ npm i [express-session](https://www.npmjs.com/package/express-session) [connect-
 ## Définir la SESSION_SECRET dans le .env pour l'utiliser 
 
 *pré-requis : dépendance dotenv*
+
+**OPTIONNEL => Stockage des infos sessions dans une BDD**
 ```js
-/* OPTIONNEL => Stockage des infos sessions dans une BDD
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
   pool: db, // nom donné au dataClient lors de l'import dans le fichier js de l'app
   tableName: "NOM_QUE_VOUS_SOUHAITEZ_POUR_LA_TABLE",
   createTableIfMissing: true
 });
-*/
+```
 
-// OBLIGATOIRE => Middleware déclencheur de la session
+**OBLIGATOIRE => Middleware déclencheur de la session**
+```js
 app.use(session({
   /* store, */ // À utiliser uniquement si vous avez mis en place connect-pg-simple
   secret: process.env.SESSION_SECRET,
