@@ -1,4 +1,4 @@
-# Gestion des utilisateurs par des middlewares
+# Gestion des infos utilisateurs par middleware
 **pré requis :**
   - avoir récupéré l'id du user
 ```js
