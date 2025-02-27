@@ -23,7 +23,7 @@ const store = new pgSession({
 **OBLIGATOIRE => Middleware déclencheur de la session**
 ```js
 app.use(session({
-  /* store, */ // À utiliser uniquement si vous avez mis en place connect-pg-simple
+  /* store, À utiliser uniquement si vous avez mis en place connect-pg-simple */
   secret: process.env.SESSION_SECRET,
   resave: false,  // Sauvegarde uniquement si modifié
   saveUninitialized: false, // Crée une session seulement si nécessaire
