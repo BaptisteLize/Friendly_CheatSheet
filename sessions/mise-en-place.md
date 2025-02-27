@@ -1,13 +1,15 @@
+# Mise en place des sessions
+
 Penser à installer :
 
 npm i [express-session](https://www.npmjs.com/package/express-session) [connect-pg-simple](https://www.npmjs.com/package/connect-pg-simple)
 
 *connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
 
-Définir la SESSION_SECRET dans le .env pour l'utiliser | *pré-requis : dépendance dotenv*
+## Définir la SESSION_SECRET dans le .env pour l'utiliser 
 
+*pré-requis : dépendance dotenv*
 ```js
-
 // OPTIONNEL => Stockage des infos sessions dans une BDD
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
@@ -28,12 +30,10 @@ app.use(session({
     maxAge: 30 * 24 * 60 * 60 * 1000 // 30 jours
   }
 }));
-
 ```
-Test pour vérifier que la session est bien fonctionnelle et conservée en mémoire :
 
+### Test pour vérifier que la session est bien fonctionnelle et conservée en mémoire :
 ```js
-
 app.get('/test-session', (req, res) => {
   if (!req.session.views) {
     req.session.views = 1;
@@ -42,25 +42,19 @@ app.get('/test-session', (req, res) => {
   }
   res.send(`Vous avez visité cette page ${req.session.views} fois`);
 });
-
 ```
-Voir l'objet session : 
+### Voir l'objet session : 
 ```js
-
 app.use((req,res,next) => {
   console.log(req.session);
   next();  
 });
-
 ```
 
-Permettre l'utilisation de req.session dans toutes les vues :
-
+### Permettre l'utilisation de req.session dans toutes les vues :
 ```js
-
 app.use((req, res, next) => {
   res.locals.session = req.session;
   next();
 });
-
 ```
