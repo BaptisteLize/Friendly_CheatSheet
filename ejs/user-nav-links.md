@@ -1,4 +1,6 @@
-# Modification des navlinks en fonction des informations
+# Snippet Navlinks
+
+Ajusté si un utilisateur connecté est trouvé ou non
 
 ```ejs
 <% if (locals.user) { %>
