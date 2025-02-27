@@ -1,6 +1,6 @@
 PRÉ-REQUIS POUR FONCTIONNEMENT : CF [Mise en place des sessions](./mise-en-place.md)
 
-middleware controller - ACCESS :
+middleware - ACCESS :
 
 ```js
 
