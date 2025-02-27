@@ -6,6 +6,7 @@ import argon2 from "argon2";
 import { User } from "../models/index.js";
 
 const authController = {
+
   renderRegisterPage(req, res) {
     res.render("register");
   },
@@ -16,7 +17,6 @@ const authController = {
 
   async registerUser(req, res) {
     const { firstname, lastname, email, password, confirm } = req.body;
-
     if (!firstname || !lastname || !email || !password || !confirm) {
       res.status(400).render("register", { errorMessage: "Tous les champs sont obligatoires." });
       return;
@@ -58,7 +58,6 @@ const authController = {
   },
 
   async loginUser(req, res) {
-    
     const { email, password } = req.body;
 
     if (! email || ! password) {
@@ -72,9 +71,7 @@ const authController = {
     }
 
     const rawPassword = password;
-
     const hashedPassword = user.password;
-
     const isMatching = await argon2.verify(hashedPassword, rawPassword);
     
     if (! isMatching) {
