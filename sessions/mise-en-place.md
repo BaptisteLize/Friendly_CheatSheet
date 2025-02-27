@@ -32,7 +32,7 @@ app.use(session({
 }));
 ```
 
-### Test pour vérifier que la session est bien fonctionnelle et conservée en mémoire :
+### Test pour vérifier que la session est bien fonctionnelle :
 ```js
 app.get('/test-session', (req, res) => {
   if (!req.session.views) {
