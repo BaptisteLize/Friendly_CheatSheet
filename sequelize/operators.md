@@ -1,4 +1,4 @@
-## Opérateurs de comparaison
+# Opérateurs de comparaison
 
 [Documentation pour Opérateurs](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/#operators)
 
