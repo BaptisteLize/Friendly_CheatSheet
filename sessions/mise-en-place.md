@@ -10,13 +10,14 @@ npm i [express-session](https://www.npmjs.com/package/express-session) [connect-
 
 *pré-requis : dépendance dotenv*
 ```js
-// OPTIONNEL => Stockage des infos sessions dans une BDD
+/* OPTIONNEL => Stockage des infos sessions dans une BDD
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
   pool: db, // nom donné au dataClient lors de l'import dans le fichier js de l'app
   tableName: "user_sessions",
   createTableIfMissing: true
 });
+*/
 
 // OBLIGATOIRE => Middleware déclencheur de la session
 app.use(session({
