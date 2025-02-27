@@ -10,8 +10,9 @@ Profitez bien !
 
 - [🔗 Links](#-links)
 - [📄 Fichiers utiles](#-fichiers-utiles)
-- [🏗️ Boilerplates](#-boilerplates)
+- [🏧️ Boilerplates](#-boilerplates)
 - [🤝 Comment contribuer](#-comment-contribuer)
+- [🔒 Règles de protection](#-règles-de-protection)
 - [📜 Licence](#-licence)
 
 ---
@@ -44,7 +45,7 @@ Profitez bien !
 
 ---
 
-## 🏗️ Boilerplates
+## 🏧️ Boilerplates
 
 Templates préparés pour clone puis utilisation :
 
@@ -54,11 +55,35 @@ Templates préparés pour clone puis utilisation :
 
 ## 🤝 Comment contribuer
 
-Si vous souhaitez suggérer des ajouts ou corrections :
+Ce projet est ouvert aux suggestions et contributions !
 
-**Ouvrez une issue** sur le repo GitHub en expliquant votre suggestion
+### 💪 Proposer une Amélioration
 
-Toutes les contributions sont les bienvenues. 😊
+1. **Ouvrir une issue** : Si vous avez une suggestion, une correction ou une idée d'ajout, ouvrez une issue en expliquant votre proposition.
+2. **Discuter et affiner** : Une discussion pourra avoir lieu sur l'issue pour affiner la proposition.
+
+### 🔀 Contribuer avec du Code
+
+1. **Forker le repo** : Créez une copie du projet sur votre compte GitHub.
+2. **Créer une branche** : Nommez votre branche en rapport avec votre modification.
+3. **Faire vos changements** : Ajoutez ou modifiez le contenu en respectant la structure du projet.
+4. **Soumettre une Pull Request (PR)** : Envoyez une PR vers la branche `main`.
+
+> ⚠️ **Seul l'administrateur du repo peut valider et fusionner les PRs.**
+
+Merci pour votre aide et votre engagement ! 😊
+
+---
+
+## 🔒 Règles de protection
+
+Pour garantir l'intégrité du projet, voici les règles mises en place :
+
+- La branche `main` est **protégée** : aucune modification directe n'est possible.
+- Toutes les modifications doivent passer par une **Pull Request (PR)**.
+- Les PRs doivent être **validées par l'administrateur** avant d'être fusionnées.
+- **Les issues sont ouvertes à tous** pour proposer des améliorations ou signaler des problèmes.
+- Les modifications forcées (`force push`) sont bloquées sur `main`.
 
 ---
 
