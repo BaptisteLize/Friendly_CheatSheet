@@ -1,8 +1,8 @@
 # Scripts Base de données
 
 Pré-requis :
-- dotenv (dependance)
-- dotenv-cli (dev dependance)
+  **dotenv** (dependance)
+  **dotenv-cli** (dev dependance)
 
 ![image](https://github.com/user-attachments/assets/75f3bf6d-9c9b-4e7c-801c-ec092ac7843b)
 ![image (1)](https://github.com/user-attachments/assets/9b80e75e-e6e2-4b7e-ba5a-b0f28ffb9f7b)
