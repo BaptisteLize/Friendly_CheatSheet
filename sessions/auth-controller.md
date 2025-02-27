@@ -18,6 +18,7 @@ const authController = {
     const { firstname, lastname, email, password, confirm } = req.body;
 
     if (!firstname || !lastname || !email || !password || !confirm) {
+      // --> sinon : 400 (Bad Request)
       res.status(400).render("register", { errorMessage: "Tous les champs sont obligatoires." });
       return;
     }
@@ -54,7 +55,41 @@ const authController = {
       password: hash
     });
 
-    res.render("login", { successMessage: "Veuillez à présent vous authentifier." });
+    res.render("login", { successMessage: "Veuillez à présent vous authentifier." });;
+  },
+
+  async loginUser(req, res) {
+    
+    const { email, password } = req.body;
+
+    if (! email || ! password) {
+      return res.status(400).render("login", { errorMessage: "Tous les champs sont obligatoires." });
+    }
+
+    const user = await User.findOne({ where: { email : email } }); // { id, password, email }
+
+    if (!user) {
+      return res.status(400).render("login", { errorMessage: "L'email et le mot de passe fournis ne correspondent pas." });
+    }
+
+    const rawPassword = password;
+
+    const hashedPassword = user.password;
+
+    const isMatching = await argon2.verify(hashedPassword, rawPassword);
+    
+    if (! isMatching) {
+      return res.status(400).render("login", { errorMessage: "L'email et le mot de passe fournis ne correspondent pas." });
+    }
+
+    req.session.userId = user.id;
+
+    res.redirect("/");
+  },
+
+  async logoutUser(req, res) {
+    req.session.destroy();
+    res.redirect("/");
   }
 };
 
