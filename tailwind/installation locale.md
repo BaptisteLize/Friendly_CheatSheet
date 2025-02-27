@@ -1,6 +1,6 @@
 # Intégrer Tailwind CSS en local (usage PostCSS)
 
-**! Version v3.4.17 !**
+## **! Version v3.4.17 !**
 
 - Initialiser son projet avec npm init -y
 
