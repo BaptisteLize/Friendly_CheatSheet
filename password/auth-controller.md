@@ -2,6 +2,7 @@
 
 ```js
 import PasswordValidator from "password-validator";
+import argon2 from "argon2";
 import { User } from "../models/index.js";
 
 const authController = {
@@ -38,20 +39,22 @@ const authController = {
       return res.status(400).render("register", { errorMessage: "Le mot de passe n'est pas suffisamment complexe. Veuillez utiliser au moins 12 caractères, une majuscule, une minuscule, un chiffre et un symbole." });
     }
 
-    const alreadyExistingUser = await User.findOne({ where: { email: email }});
+    const alreadyExistingUser = await User.findOne({ where: { email: email }}); // {...} || null
 
     if (alreadyExistingUser) {
       return res.status(409).render("register", { errorMessage: "L'email renseigné est déjà utilisé." });
     }
 
+    const hash = await argon2.hash(password);
+
     await User.create({
       firstname: firstname,
       lastname: lastname,
       email: email,
-      password: password
+      password: hash
     });
 
-    res.redirect("/login");
+    res.render("login", { successMessage: "Veuillez à présent vous authentifier." });
   }
 };
 
