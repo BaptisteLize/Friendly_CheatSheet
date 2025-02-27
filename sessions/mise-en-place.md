@@ -14,14 +14,14 @@ npm i [express-session](https://www.npmjs.com/package/express-session) [connect-
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
   pool: db, // nom donné au dataClient lors de l'import dans le fichier js de l'app
-  tableName: "user_sessions",
+  tableName: "NOM_QUE_VOUS_SOUHAITEZ_POUR_LA_TABLE",
   createTableIfMissing: true
 });
 */
 
 // OBLIGATOIRE => Middleware déclencheur de la session
 app.use(session({
-  store,
+  /* store, */ // À utiliser uniquement si vous avez mis en place connect-pg-simple
   secret: process.env.SESSION_SECRET,
   resave: false,  // Sauvegarde uniquement si modifié
   saveUninitialized: false, // Crée une session seulement si nécessaire
