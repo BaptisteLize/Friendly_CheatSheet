@@ -52,7 +52,6 @@ const authController = {
       password: password
     });
 
-    // Rediriger vers /login
     res.redirect("/login");
   }
 };
