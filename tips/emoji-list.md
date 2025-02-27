@@ -45,12 +45,11 @@ People
 | :two_men_holding_hands: `:two_men_holding_hands:` | :two_women_holding_hands: `:two_women_holding_hands:` | :dancer: `:dancer:` |
 | :dancers: `:dancers:` | :ok_woman: `:ok_woman:` | :no_good: `:no_good:` |
 | :information_desk_person: `:information_desk_person:` | :raising_hand: `:raising_hand:` | :bride_with_veil: `:bride_with_veil:` |
-| :person_with_pouting_face: `:person_with_pouting_face:` | :person_frowning: `:person_frowning:` | :bow: `:bow:` |
+| :bow: `:bow:` | :man_with_gua_pi_mao: `:man_with_gua_pi_mao:` | :man_with_turban: `:man_with_turban:` |
 | :couplekiss: `:couplekiss:` | :couple_with_heart: `:couple_with_heart:` | :massage: `:massage:` |
 | :haircut: `:haircut:` | :nail_care: `:nail_care:` | :boy: `:boy:` |
 | :girl: `:girl:` | :woman: `:woman:` | :man: `:man:` |
 | :baby: `:baby:` | :older_woman: `:older_woman:` | :older_man: `:older_man:` |
-| :person_with_blond_hair: `:person_with_blond_hair:` | :man_with_gua_pi_mao: `:man_with_gua_pi_mao:` | :man_with_turban: `:man_with_turban:` |
 | :construction_worker: `:construction_worker:` | :cop: `:cop:` | :angel: `:angel:` |
 | :princess: `:princess:` | :smiley_cat: `:smiley_cat:` | :smile_cat: `:smile_cat:` |
 | :heart_eyes_cat: `:heart_eyes_cat:` | :kissing_cat: `:kissing_cat:` | :smirk_cat: `:smirk_cat:` |
