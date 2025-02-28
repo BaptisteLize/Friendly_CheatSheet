@@ -19,29 +19,29 @@ Profitez bien !
 
 ## 🔗 Links
 
-- [Config](config/) – Paramétrage et configuration de divers outils
-- [Controller Wrapper](controller-wrapper/) – Helpers pour gérer les contrôleurs
-- [EJS](ejs/) – Snippets EJS
-- [Errors](errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
-- [Gestion Git](gestion-git/) – Commandes Git essentielles et gestion des branches
-- [Js Front](js-front/) – Snippets JavaScript Front-end
-- [Mise en production](mise-en-production/) – Déploiement de projets
-- [Objets & Méthodes JS](objets-methodes/) – Manipulation des objets en JavaScript
-- [Password](password/) – Sécurité des mots de passe
-- [PostgreSQL](postgresql/) – Commandes et astuces pour PostgreSQL
-- [Regex](regex/) – Expressions régulières courantes et exemples
-- [Scripts](scripts/) – Scripts utiles pour automatiser des tâches
-- [Sequelize](sequelize/) – ORM Sequelize, associations et modèles
-- [Sessions](sessions/) – Gestion des sessions et des accès utilisateurs
-- [SQL](sql/) – Requêtes SQL avancées et manipulations de bases de données
-- [Tailwind CSS](tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
-- [Tips](tips/) – Astuces et vocabulaire utile pour les développeurs
+- [Config](friendly_cheatsheet/config/) – Paramétrage et configuration de divers outils
+- [Controller Wrapper](friendly_cheatsheet/controller-wrapper/) – Helpers pour gérer les contrôleurs
+- [EJS](friendly_cheatsheet/ejs/) – Snippets EJS
+- [Errors](friendly_cheatsheet/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
+- [Gestion Git](friendly_cheatsheet/gestion-git/) – Commandes Git essentielles et gestion des branches
+- [Js Front](friendly_cheatsheet/js-front/) – Snippets JavaScript Front-end
+- [Mise en production](friendly_cheatsheet/mise-en-production/) – Déploiement de projets
+- [Objets & Méthodes JS](friendly_cheatsheet/objets-methodes/) – Manipulation des objets en JavaScript
+- [Password](friendly_cheatsheet/password/) – Sécurité des mots de passe
+- [PostgreSQL](friendly_cheatsheet/postgresql/) – Commandes et astuces pour PostgreSQL
+- [Regex](friendly_cheatsheet/regex/) – Expressions régulières courantes et exemples
+- [Scripts](friendly_cheatsheet/scripts/) – Scripts utiles pour automatiser des tâches
+- [Sequelize](friendly_cheatsheet/sequelize/) – ORM Sequelize, associations et modèles
+- [Sessions](friendly_cheatsheet/sessions/) – Gestion des sessions et des accès utilisateurs
+- [SQL](friendly_cheatsheet/sql/) – Requêtes SQL avancées et manipulations de bases de données
+- [Tailwind CSS](friendly_cheatsheet/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
+- [Tips](friendly_cheatsheet/tips/) – Astuces et vocabulaire utile pour les développeurs
 
 ---
 
 ## 📄 Fichiers utiles
 
-- [Base projet Node](base-projet-node.md) – Structure de base pour un projet Node.js
+- [Base projet Node](friendly_cheatsheet/base-projet-node.md) – Structure de base pour un projet Node.js
 
 ---
 
