@@ -19,23 +19,23 @@ Profitez bien !
 
 ## 🔗 Links
 
-- [Config](friendly_cheatsheet/config/) – Paramétrage et configuration de divers outils
-- [Controller Wrapper](friendly_cheatsheet/controller-wrapper/) – Helpers pour gérer les contrôleurs
-- [EJS](friendly_cheatsheet/ejs/) – Snippets EJS
-- [Errors](friendly_cheatsheet/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
-- [Gestion Git](friendly_cheatsheet/gestion-git/) – Commandes Git essentielles et gestion des branches
-- [Js Front](friendly_cheatsheet/js-front/) – Snippets JavaScript Front-end
-- [Mise en production](friendly_cheatsheet/mise-en-production/) – Déploiement de projets
-- [Objets & Méthodes JS](friendly_cheatsheet/objets-methodes/) – Manipulation des objets en JavaScript
-- [Password](friendly_cheatsheet/password/) – Sécurité des mots de passe
-- [PostgreSQL](friendly_cheatsheet/postgresql/) – Commandes et astuces pour PostgreSQL
-- [Regex](friendly_cheatsheet/regex/) – Expressions régulières courantes et exemples
-- [Scripts](friendly_cheatsheet/scripts/) – Scripts utiles pour automatiser des tâches
-- [Sequelize](friendly_cheatsheet/sequelize/) – ORM Sequelize, associations et modèles
-- [Sessions](friendly_cheatsheet/sessions/) – Gestion des sessions et des accès utilisateurs
-- [SQL](friendly_cheatsheet/sql/) – Requêtes SQL avancées et manipulations de bases de données
-- [Tailwind CSS](friendly_cheatsheet/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
-- [Tips](friendly_cheatsheet/tips/) – Astuces et vocabulaire utile pour les développeurs
+- [Config](docs/config/) – Paramétrage et configuration de divers outils
+- [Controller Wrapper](docs/controller-wrapper/) – Helpers pour gérer les contrôleurs
+- [EJS](docs/ejs/) – Snippets EJS
+- [Errors](docs/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
+- [Gestion Git](docs/gestion-git/) – Commandes Git essentielles et gestion des branches
+- [Js Front](docs/js-front/) – Snippets JavaScript Front-end
+- [Mise en production](docs/mise-en-production/) – Déploiement de projets
+- [Objets & Méthodes JS](docs/objets-methodes/) – Manipulation des objets en JavaScript
+- [Password](docs/password/) – Sécurité des mots de passe
+- [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
+- [Regex](docs/regex/) – Expressions régulières courantes et exemples
+- [Scripts](docs/scripts/) – Scripts utiles pour automatiser des tâches
+- [Sequelize](docs/sequelize/) – ORM Sequelize, associations et modèles
+- [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
+- [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
+- [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
+- [Tips](docs/tips/) – Astuces et vocabulaire utile pour les développeurs
 
 ---
 
