@@ -4,6 +4,6 @@ Mise à jour permanente
 
 ## Vocabulaire
 
-### Méthodes de sécurité :
+#### Méthodes de sécurité :
 
 [Chiffrer.info](https://chiffrer.info/)
