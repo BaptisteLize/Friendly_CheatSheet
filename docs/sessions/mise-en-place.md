@@ -39,11 +39,13 @@ app.use(session({
 
 **🔹 resave: false :**
   Cette option définit si une session doit être sauvegardée dans le store à chaque requête, même si elle n'a pas été modifiée.
+  
     - false (recommandé) : La session ne sera pas resauvegardée si elle n'a pas été modifiée.
     - true : La session sera sauvegardée à chaque requête, même si elle n'a pas changé (peut causer des écritures inutiles dans le store).
 
 **🔹 saveUninitialized: false**
 Contrôle si une nouvelle session, créée mais non modifiée, doit être sauvegardée dans le store.
+
   - false (recommandé) : Si la session est nouvelle mais qu'aucune donnée n'y a été ajoutée, elle ne sera pas sauvegardée.
   - true : Une session vierge sera sauvegardée même si elle ne contient encore aucune donnée.
 
