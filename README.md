@@ -41,7 +41,7 @@ Profitez bien !
 
 ## 📄 Fichiers utiles
 
-- [Base projet Node](friendly_cheatsheet/base-projet-node.md) – Structure de base pour un projet Node.js
+- [Projet Node | Express | Tailwind](friendly_cheatsheet/base-projet-node.md) – Structure de base pour un projet Node.js
 
 ---
 
@@ -50,6 +50,7 @@ Profitez bien !
 Templates préparés pour clone puis utilisation :
 
 - [Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/node-express-ejs-tailwind-project)
+- [Projet Node.js + Express + EJS + Sessions](https://github.com/BaptisteLize/Template-node-express-ejs-sessions)
 
 ---
 
