@@ -1,5 +1,5 @@
 # Exemple d'arborescence de projet (tree)
-
+```bash
 project_root/
 ├── app/
 │ ├── controller/
@@ -49,3 +49,4 @@ project_root/
 ├── index.js
 ├── package-lock.json
 └── package.json
+```
