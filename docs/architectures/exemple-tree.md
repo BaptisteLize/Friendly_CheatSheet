@@ -1,4 +1,4 @@
-# Tree 
+# Tree
 
 project_root/
 ├── app/
