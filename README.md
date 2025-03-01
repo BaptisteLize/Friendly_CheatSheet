@@ -49,8 +49,8 @@ Profitez bien !
 
 Templates préparés pour clone puis utilisation :
 
-- [Projet Node.js + Express + EJS + TailwindCss](https://github.com/BaptisteLize/node-express-ejs-tailwind-project)
-- [Projet Node.js + Express + EJS + Sessions](https://github.com/BaptisteLize/Template-node-express-ejs-sessions)
+- [Projet Node.js | Express | EJS | TailwindCss](https://github.com/BaptisteLize/node-express-ejs-tailwind-project)
+- [Projet Node.js | Express | Sessions | EJS](https://github.com/BaptisteLize/Template-node-express-ejs-sessions)
 
 ---
 
