@@ -35,7 +35,7 @@ Profitez bien !
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
 - [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
 - [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
-- [Links & Tips](docs/tips/) – Liens utiles et astuces pour les développeurs
+- [Links & Tips](docs/links-tips/) – Liens utiles et astuces pour les développeurs
 
 ---
 
