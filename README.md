@@ -19,6 +19,7 @@ Profitez bien !
 
 ## 🔗 Links
 
+- [Architectures](docs/architectures/)
 - [Config](docs/config/) – Paramétrage et configuration de divers outils
 - [Controller Wrapper](docs/controller-wrapper/) – Helpers pour gérer les contrôleurs
 - [EJS](docs/ejs/) – Snippets EJS
