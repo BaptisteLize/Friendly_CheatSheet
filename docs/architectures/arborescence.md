@@ -1,4 +1,4 @@
-# Tree
+# Exemple d'arborescence de projet (tree)
 
 project_root/
 ├── app/
