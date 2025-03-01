@@ -9,7 +9,6 @@ Profitez bien !
 ## 📚 Sommaire
 
 - [🔗 Links](#-links)
-- [📄 Fichiers utiles](#-fichiers-utiles)
 - [📦 Boilerplates](#-boilerplates)
 - [🤝 Comment contribuer](#-comment-contribuer)
 - [🔒 Règles de protection](#-règles-de-protection)
@@ -36,13 +35,7 @@ Profitez bien !
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
 - [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
 - [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
-- [Tips](docs/tips/) – Astuces et vocabulaire utile pour les développeurs
-
----
-
-## 📄 Fichiers utiles
-
-- [Projet Node | Express | Tailwind](friendly_cheatsheet/base-projet-node.md) – Structure de base pour un projet Node.js
+- [Links & Tips](docs/tips/) – Liens utiles et astuces pour les développeurs
 
 ---
 
