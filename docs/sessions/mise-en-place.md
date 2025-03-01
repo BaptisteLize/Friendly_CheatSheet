@@ -49,7 +49,6 @@ Contrôle si une nouvelle session, créée mais non modifiée, doit être sauveg
 - false (recommandé): Si la session est nouvelle mais qu'aucune donnée n'y a été ajoutée, elle ne sera pas sauvegardée.
 - true: Une session vierge sera sauvegardée même si elle ne contient encore aucune donnée.
 
-
 ### Test pour vérifier que la session est bien fonctionnelle :
 ```js
 app.get('/test-session', (req, res) => {
