@@ -1,7 +1,7 @@
 # Projet Node.js (Express, EJS, PostgreSQL)
 
 1. Initilisation du projet : `npm init -y`
-2. Installation des dépendances souhaitées : `npm i express ejs pg dotenv`
+2. Installation des dépendances souhaitées : `npm i express ejs dotenv`
 3. Installation des dev dependencies (-D) : `npm i eslint -D` - Détection des problèmes : `npx eslint .` - Fix des problèmes : `npm eslint . --fix`
 4. Vérification du fichier package.json : `"type": "module"` doit être présent
 5. Vérification des scripts de base dans le package.json :
