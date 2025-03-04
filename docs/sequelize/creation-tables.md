@@ -23,7 +23,7 @@ Test2.init(
   { sequelize, modelName: "Test2", tableName: "test_2" }
 );
 
-// 📌 EXEMPLES ASSOCIATIONS
+// 📌 EXEMPLE ASSOCIATION
 Test1.hasMany(Test2, { foreignKey: "test1Id", onDelete: "CASCADE" });
 Test2.belongsTo(Test1, { foreignKey: "test1Id" });
 
