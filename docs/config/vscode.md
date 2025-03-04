@@ -41,4 +41,4 @@ Rajouter l'ensemble :
   "editor.formatOnSave": true
 },
 ```
-
+Vous aurez grâce à tout ceci de l'autocomplétion et des options de génération de tableaux automatiques, citation automatique, etc.
