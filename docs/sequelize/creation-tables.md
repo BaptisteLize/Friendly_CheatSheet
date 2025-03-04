@@ -32,7 +32,8 @@ Test2.belongsTo(Test1, { foreignKey: "test1Id" });
   try {
     await sequelize.authenticate();
     console.log("✅ Connexion OK");
-    await sequelize.sync({ force: true }); // Recrée les tables - Mettre alter: true si modification de la structure souhaitée sans modification des données
+    await sequelize.sync({ force: true }); // Recrée les tables
+// Mettre alter: true si modification de la structure souhaitée sans modification des données
     console.log("✅ Base de données synchronisée");
   } catch (error) {
     console.error("❌ Erreur :", error);
@@ -42,7 +43,8 @@ Test2.belongsTo(Test1, { foreignKey: "test1Id" });
 })();
 ```
 **🔹 Explication rapide :**
-Modèles : Définit Test1 et Test2.
-Associations : Un Test1 peut avoir plusieurs Test2.
-Synchronisation : `force: true` recrée les tables, `alter: true` adapte sans perte de données.
+
+- Modèles : Définit Test1 et Test2.
+- Associations : Un Test1 peut avoir plusieurs Test2.
+- Synchronisation : `force: true` recrée les tables, `alter: true` adapte sans perte de données.
 
