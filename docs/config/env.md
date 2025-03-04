@@ -9,4 +9,5 @@ PGPASSWORD=okanban
 PGDATABASE=okanban
 PGHOST=localhost
 PGPORT=5432
+PG_URL=postgres://username:password@localhost/databasename
 ```
