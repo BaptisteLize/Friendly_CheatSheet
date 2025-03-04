@@ -40,11 +40,9 @@ Test2.belongsTo(Test1, { foreignKey: "test1Id" });
     await sequelize.close();
   }
 })();
-
-
-🔹 Explication rapide :
-Modèles : Définit User et Post.
-Associations : Un User peut avoir plusieurs Post.
-Synchronisation : force: true recrée les tables, alter: true adapte sans perte de données.
-Cette fiche tient sur une seule page et couvre l’essentiel ! 🚀
 ```
+**🔹 Explication rapide :**
+Modèles : Définit Test1 et Test2.
+Associations : Un Test1 peut avoir plusieurs Test2.
+Synchronisation : `force: true` recrée les tables, `alter: true` adapte sans perte de données.
+
