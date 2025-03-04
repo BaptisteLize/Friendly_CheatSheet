@@ -4,8 +4,10 @@
 
 Ouvrir la palette de commande : 
 - `CTRL + SHIFT + P`
+
 Chercher les preférences VSCode :
 - `Preferences: Open User Settings (JSON)`
+
 Rajouter la ligne :
 - `"javascript.preferences.importModuleSpecifierEnding": "js",`
 
@@ -21,8 +23,10 @@ Installer les extensions suivantes :
 
 Ouvrir la palette de commande : 
 - `CTRL + SHIFT + P`
+
 Chercher les preférences VSCode :
 - `Preferences: Open User Settings (JSON)`
+
 Rajouter l'ensemble :
 ```json
 "[markdown]": {
