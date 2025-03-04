@@ -1,4 +1,4 @@
-# Configuration sequelize-client
+# Configuration du client PostgreSQL via module sequelize
 ```js
 import "dotenv/config";
 import { Sequelize } from "sequelize";
