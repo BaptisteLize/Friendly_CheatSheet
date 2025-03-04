@@ -1,6 +1,6 @@
 # Process complet de création de tables en BDD uniquement avec sequelize
 
-Exemple d'un fichier type, tout est dans la même page, ne respecte pas le SoC mais montre bien toutes les étapes
+Exemple d'un fichier type, tout est dans la même page, montre bien toutes les étapes
 
 ```js
 // 📌 EXEMPLES MODÈLES
