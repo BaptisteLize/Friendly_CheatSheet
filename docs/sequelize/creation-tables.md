@@ -24,8 +24,8 @@ Test2.init(
 );
 
 // 📌 EXEMPLES ASSOCIATIONS
-Test1.hasMany(Post, { foreignKey: "test1Id", onDelete: "CASCADE" });
-Test2.belongsTo(User, { foreignKey: "test1Id" });
+Test1.hasMany(Test2, { foreignKey: "test1Id", onDelete: "CASCADE" });
+Test2.belongsTo(Test1, { foreignKey: "test1Id" });
 
 // 📌 EXEMPLE SYNCHRONISATION
 (async () => {
