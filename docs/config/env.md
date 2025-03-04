@@ -4,9 +4,9 @@
 
 ```env
 PORT=3000
-PGUSER=okanban
-PGPASSWORD=okanban
-PGDATABASE=okanban
+PGUSER=username
+PGPASSWORD=password
+PGDATABASE=databasename
 PGHOST=localhost
 PGPORT=5432
 PG_URL=postgres://username:password@localhost/databasename
