@@ -22,5 +22,4 @@ Level.init({
   sequelize, // on fourni l'instance de connexion Sequelize
   tableName: "level", // dans le cadre de ce projet, puisque l'on connecte nos modèles à une BDD déjà existante, on précise vers quelle table ce modèle pointe
 });
-
 ```
