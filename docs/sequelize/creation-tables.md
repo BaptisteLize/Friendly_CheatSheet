@@ -1,4 +1,4 @@
-# Process complet de création/recréation de tables via sequelize
+# Process complet de création/reset de tables via sequelize
 
 Exemple d'un fichier type avec toutes les étapes, à adapter au besoin bien entendu
 
