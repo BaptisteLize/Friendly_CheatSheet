@@ -43,7 +43,6 @@ Test2.belongsTo(User, { foreignKey: "test1Id" });
 
 
 🔹 Explication rapide :
-Connexion : Instancie Sequelize avec PostgreSQL.
 Modèles : Définit User et Post.
 Associations : Un User peut avoir plusieurs Post.
 Synchronisation : force: true recrée les tables, alter: true adapte sans perte de données.
