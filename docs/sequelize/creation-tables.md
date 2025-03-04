@@ -3,13 +3,6 @@
 Exemple d'un fichier type, tout est dans la même page, ne respecte pas le SoC mais montre bien toutes les étapes
 
 ```js
-// 📌 CONFIGURATION SEQUELIZE
-import { Sequelize, DataTypes, Model } from "sequelize";
-const sequelize = new Sequelize("postgres://user:pass@localhost:5432/dbname", {
-  dialect: "postgres",
-  logging: false,
-});
-
 // 📌 EXEMPLES MODÈLES
 class Test1 extends Model {}
 Test1.init(
