@@ -18,7 +18,7 @@ ou
 
 Linux
 ```bash
-"db:create": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/create-tables.sql'",
+"db:create": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/create_tables.sql'",
 ```
 Windows
 ```bash
@@ -29,7 +29,7 @@ Windows
 
 Linux
 ```bash
-"db:populate": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/populate-tables.sql'",
+"db:populate": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/populate_tables.sql'",
 ```
 Windows
 ```bash
@@ -45,7 +45,7 @@ Windows
 
 Linux
 ```bash
-"db:reset": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/create-tables.sql'; npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/populate-tables.sql'"
+"db:reset": "npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/create_tables.sql'; npx dotenv -e .env -- bash -c 'psql -U ${PGUSER} -d ${PGDATABASE} -f data/populate_tables.sql'"
 ```
 Windows
 Windows
