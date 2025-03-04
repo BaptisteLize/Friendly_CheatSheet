@@ -1,4 +1,4 @@
-# Process complet de création de tables en BDD uniquement avec sequelize
+# Process complet de création/recréation de tables via sequelize
 
 Exemple d'un fichier type avec toutes les étapes, à adapter au besoin bien entendu
 
