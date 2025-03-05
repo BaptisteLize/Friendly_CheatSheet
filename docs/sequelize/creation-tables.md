@@ -33,7 +33,7 @@ Test2.belongsTo(Test1, { foreignKey: "test1Id" });
     await sequelize.authenticate();
     console.log("✅ Connexion OK");
     await sequelize.sync({ force: true }); // Recrée les tables
-// Mettre alter: true si modification de la structure souhaitée sans modification des données
+  // Mettre alter: true si modification de la structure souhaitée sans modification des données
     console.log("✅ Base de données synchronisée");
   } catch (error) {
     console.error("❌ Erreur :", error);
