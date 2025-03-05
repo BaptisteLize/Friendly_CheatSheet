@@ -1,4 +1,4 @@
-# Parsers
+# Parsers (traducteurs)
 
 ## API REST, requêtes AJAX
 Format accepté : JSON
