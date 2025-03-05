@@ -23,6 +23,7 @@ Profitez bien !
 - [Controller Wrapper](docs/controller-wrapper/) – Helpers pour gérer les contrôleurs
 - [EJS](docs/ejs/) – Snippets EJS
 - [Errors](docs/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
+- [Extensions](docs/extensions) – Extensions utiles, paramètres et utilisations
 - [Gestion Git](docs/gestion-git/) – Commandes Git essentielles et gestion des branches
 - [Js Front](docs/js-front/) – Snippets JavaScript Front-end
 - [Mise en production](docs/mise-en-production/) – Déploiement de projets
