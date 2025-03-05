@@ -27,6 +27,7 @@ Profitez bien !
 - [Js Front](docs/js-front/) – Snippets JavaScript Front-end
 - [Mise en production](docs/mise-en-production/) – Déploiement de projets
 - [Objets & Méthodes JS](docs/objets-methodes/) – Manipulation des objets en JavaScript
+- [Parsers](docs/parsers/) – Snippets et explication pour les parsers
 - [Password](docs/password/) – Sécurité des mots de passe
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
 - [Regex](docs/regex/) – Expressions régulières courantes et exemples
