@@ -31,7 +31,7 @@ Profitez bien !
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
 - [Regex](docs/regex/) – Expressions régulières courantes et exemples
 - [Scripts](docs/scripts/) – Scripts utiles pour automatiser des tâches
-- [Sequelize](docs/sequelize/) – ORM Sequelize, associations et modèles
+- [Sequelize](docs/sequelize/) – ORM Sequelize, associations, modèles et snippets
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
 - [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
 - [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
