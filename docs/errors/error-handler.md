@@ -17,7 +17,7 @@ const errorHandler = (error, req, res, next) => {
 
   res.status(status).json({
     status,
-    message: errorMessages[status] || error.message || "Something went wrong", // En dev, on affiche plus d'infos
+    message: message || "Something went wrong",
     details: error.details || null, // Si on veut envoyer des détails d'erreur spécifiques
   });
 };
