@@ -1,6 +1,10 @@
-# Différents codes erreurs
+# Codes HTTP 
 
-https://developer.mozilla.org/fr/docs/Web/HTTP/Status
+- Les réponses informatives (100 - 199)
+- Les réponses de succès (200 - 299)
+- Les messages de redirection (300 - 399)
+- Les erreurs du client (400 - 499)
+- Les erreurs du serveur (500 - 599)
 
 ## Erreurs les plus rencontrées
 
