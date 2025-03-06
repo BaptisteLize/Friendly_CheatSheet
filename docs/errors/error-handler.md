@@ -29,8 +29,8 @@ export { errorHandler };
 
 ```js
 if (!list) {
-    const error = new Error(); // On crée l'instance d'erreur (ajouter simplement "votre message" si besoin d'un message personnalisé)
-    error.statusCode = 404; // On lui attribue un code HTTP qui fera appel à errorMessages
-    return next(error); // On la passe au middleware d'erreur
+  const error = new Error(); // On crée l'instance d'erreur (ajouter simplement "votre message" si besoin d'un message personnalisé)
+  error.statusCode = 404; // On lui attribue un code HTTP qui fera appel à errorMessages
+  return next(error); // On la passe au middleware d'erreur
 }
 ```
