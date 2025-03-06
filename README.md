@@ -20,7 +20,6 @@ Profitez bien !
 
 - [Architectures](docs/architectures/) - Exemples d'architectures partielles ou complètes de projets
 - [Config](docs/config/) – Paramétrage et configuration de divers outils
-- [Controller Wrapper](docs/controller-wrapper/) – Helpers pour gérer les contrôleurs
 - [EJS](docs/ejs/) – Snippets EJS
 - [Errors](docs/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
 - [Extensions](docs/extensions) – Extensions utiles, paramètres et utilisations
