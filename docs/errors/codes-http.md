@@ -1,4 +1,4 @@
-# Codes HTTP 
+# Codes HTTP
 
 - Les réponses informatives (100 - 199)
 - Les réponses de succès (200 - 299)
@@ -6,31 +6,45 @@
 - Les erreurs du client (400 - 499)
 - Les erreurs du serveur (500 - 599)
 
-1xx Informational
-Code	Name	Description
-100	Continue	The server has received the request headers and the client should proceed with the request.
-101	Switching Protocols	The server is switching protocols according to the client's request.
-2xx Success
-Code	Name	Description
-200	OK	The request has succeeded.
-201	Created	The request has been fulfilled, resulting in the creation of a new resource.
-202	Accepted	The request has been accepted for processing, but the processing has not been completed.
-204	No Content	The server has successfully fulfilled the request, but there is no content to send back.
-3xx Redirection
-Code	Name	Description
-300	Multiple Choices	The requested resource has multiple choices, each with different locations.
-301	Moved Permanently	The requested resource has been permanently moved to a new location.
-302	Found	The requested resource has been temporarily moved to a different location.
-304	Not Modified	The client's cached version of the requested resource is up to date.
-4xx Client Errors
-Code	Name	Description
-400	Bad Request	The server cannot process the request due to a client error.
-401	Unauthorized	The client must authenticate itself to get the requested response.
-403	Forbidden	The server understood the request, but refuses to authorize it.
-404	Not Found	The requested resource could not be found on the server.
-405	Method Not Allowed	The method specified in the request is not allowed for the resource.
-5xx Server Errors
-Code	Name	Description
-500	Internal Server Error	The server encountered an unexpected condition that prevented it from fulfilling the request.
-501	Not Implemented	The server does not support the functionality required to fulfill the request.
-503	Service Unavailable	The server is currently unable to handle the request due to a temporary overload or maintenance.
+## 1xx Informational
+
+| Code |           Nom           |                                    Description                                     |
+| :--: | :---------------------: | :--------------------------------------------------------------------------------: |
+| 100  |        Continuer        | Le serveur a reçu les en-têtes de requête et le client doit poursuivre la requête. |
+| 101  | Changement de protocole |        Le serveur change de protocole en fonction de la demande du client.         |
+
+## 2xx Success
+
+| Code |      Nom      |                                      Description                                       |
+| :--: | :-----------: | :------------------------------------------------------------------------------------: |
+| 200  |      OK       |                                  La requête a réussi.                                  |
+| 201  |     Créé      |  La requête a été satisfaite, ce qui a entraîné la création d'une nouvelle ressource.  |
+| 202  |    Accepté    |    La requête a été acceptée pour traitement, mais le traitement n'est pas terminé.    |
+| 204  | Aucun contenu | Le serveur a satisfait avec succès la requête, mais il n'y a aucun contenu à renvoyer. |
+
+## 3xx Redirection
+
+| Code |           Nom           |                                    Description                                    |
+| :--: | :---------------------: | :-------------------------------------------------------------------------------: |
+| 300  |     Choix multiples     | La ressource demandée a plusieurs choix, chacun avec des emplacements différents. |
+| 301  | Déplacée définitivement |  La ressource demandée a été déplacée définitivement vers un nouvel emplacement.  |
+| 302  |         Trouvée         |  La ressource demandée a été temporairement déplacée vers un autre emplacement.   |
+| 304  |      Non modifiée       |        La version en cache du client de la ressource demandée est à jour.         |
+
+## 4xx Client Errors
+
+| Code |          Nom          |                                 Description                                 |
+| :--: | :-------------------: | :-------------------------------------------------------------------------: |
+| 400  |  Demande incorrecte   | Le serveur ne peut pas traiter la demande en raison d'une erreur du client. |
+| 401  |     Non autorisé      |       Le client doit s'authentifier pour obtenir la réponse demandée.       |
+| 403  |       Interdit        |        Le serveur a compris la demande, mais refuse de l'autoriser.         |
+| 404  |      Introuvable      |            La ressource demandée est introuvable sur le serveur.            |
+| 405  | Méthode non autorisée | La méthode spécifiée dans la demande n'est pas autorisée pour la ressource. |
+
+## 5xx Server Errors
+
+| Code |            Nom            |                                                         Description                                                          |
+| :--: | :-----------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+| 500  | Erreur interne du serveur |                  Le serveur a rencontré une condition inattendue qui l'a empêché de répondre à la demande.                   |
+| 501  |      Non implémenté       |                   Le serveur ne prend pas en charge la fonctionnalité requise pour répondre à la demande.                    |
+| 503  |   Service indisponible    | Le serveur n'est actuellement pas en mesure de traiter la demande en raison d'une surcharge temporaire ou d'une maintenance. |
