@@ -13,12 +13,11 @@ const errorMessages = {
 const errorHandler = (error, req, res, next) => {
   const status = error.statusCode || 500;
 
+  const message = (errorMessages[status] || null) + (error.message ? `: ${error.message}` : "");
+
   res.status(status).json({
     status,
-    message:
-      process.env.NODE_ENV === "production"
-        ? "An unexpected error occurred" // En prod, on masque le détail
-        : errorMessages[status] || error.message || "Something went wrong", // En dev, on affiche plus d'infos
+    message: errorMessages[status] || error.message || "Something went wrong", // En dev, on affiche plus d'infos
     details: error.details || null, // Si on veut envoyer des détails d'erreur spécifiques
   });
 };
