@@ -1,4 +1,4 @@
-# Vérifier si nombre entier ou non
+# Vérification nombre entier
 
 ```js
 (\\d+)
