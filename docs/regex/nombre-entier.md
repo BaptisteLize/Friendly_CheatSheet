@@ -1,3 +1,9 @@
 # Vérifier si nombre entier ou non
 
-`(\\d+)`
+```js
+(\\d+)
+```
+Exemple d'utilisation : 
+```js
+router.get("/lists/:id(\\d+)"
+```
