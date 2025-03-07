@@ -24,8 +24,8 @@ Exemple d'utilisation :
 import { Router } from 'express';
 import listController from './controllers/listController.js';
 import CW from './middlewares/controller-wrapper.js';
-import { createListSchema, updateListSchema } from './middlewares/schema-validate.js';
 import { validate } from './middlewares/validate-wrapper.js';
+import { createListSchema, updateListSchema } from './middlewares/schema-validate.js';
 
 const router = Router();
 
