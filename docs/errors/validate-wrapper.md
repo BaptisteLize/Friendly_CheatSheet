@@ -38,7 +38,7 @@ router.delete("/lists/:id(\\d+)", CW(listController.deleteListById));
 export { router };
 ```
 
-Exemple de fichier schema-validate.js :
+Exemple de fichier schema-validate.js (ici avec Joi) :
 ```js
 import Joi from 'joi';
 
