@@ -21,7 +21,7 @@ function controllerWrapper(middlewareFunction) {
       // Passer l'erreur au middleware d'erreur centralisé pour gestion appropriée
       next(error); 
     }
-  }
+  };
 }
 ```
 ## Exemple d'utilisation
