@@ -1,6 +1,7 @@
 # Middleware de gestion des erreurs
 
 ```js
+// eslint-disable-next-line no-unused-vars
 const errorHandler = (error, req, res, next) => {
   const errorMessages = {
     400: "Bad Request",
@@ -16,13 +17,12 @@ const errorHandler = (error, req, res, next) => {
   const details = error.details;
 
   if(!details){
-    res.status(status).json({ status, message});
+    return res.status(status).json({ status, message});
   }
-  res.status(status).json({ status, message, details});
+  return res.status(status).json({ status, message, details });
 };
 
 export { errorHandler };
-
 ```
 ## Exemples d'utilisation dans un controller 
 
