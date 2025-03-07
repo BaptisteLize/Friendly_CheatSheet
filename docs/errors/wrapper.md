@@ -8,7 +8,7 @@ function controllerWrapper(middlewareFunction) {
     } catch (error) {
       res.status(500).render("500")
     }
-  }
+  };
 }
 ```
 Wrapper avec middleware de gestion des erreurs
