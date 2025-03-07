@@ -1,5 +1,5 @@
 # Factorisation du try / catch pour les controllers
-Wrapper sans middleware de gestion des erreurs
+**Wrapper sans middleware de gestion des erreurs**
 ```js
 function controllerWrapper(middlewareFunction) {
   return async (req, res, next) => {
@@ -11,7 +11,7 @@ function controllerWrapper(middlewareFunction) {
   };
 }
 ```
-Wrapper avec middleware de gestion des erreurs
+**Wrapper avec middleware de gestion des erreurs**
 ```js
 function controllerWrapper(middlewareFunction) {
   return async (req, res, next) => {
