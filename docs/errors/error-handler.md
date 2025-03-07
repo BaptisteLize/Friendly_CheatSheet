@@ -18,7 +18,7 @@ const errorHandler = (error, req, res, next) => {
   if(!details){
     res.status(status).json({ status, message});
   }
-  res.status(status).json({ status, message, details: error.details });
+  res.status(status).json({ status, message, details});
 };
 
 export { errorHandler };
