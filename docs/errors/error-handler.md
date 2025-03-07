@@ -16,11 +16,9 @@ const errorHandler = (error, req, res, next) => {
   const message = (errorMessages[status] || null) + (error.message ? `: ${error.message}` : "");
 
   res.status(status).json({
-    process.env.NODE_ENV === "production"
-    ? "An error occured"
-    : status,
-     message: message || "Something went wrong",
-     details: error.details || null, // Si on veut envoyer des détails d'erreur spécifiques
+    status,
+    message: message || "Something went wrong",
+    details: error.details || null, // Si on veut envoyer des détails d'erreur spécifiques
   });
 };
 
