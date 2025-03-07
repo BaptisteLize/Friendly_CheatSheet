@@ -1,28 +1,28 @@
 # Middleware de gestion des erreurs
 
 ```js
-const errorMessages = {
-  400: "Bad Request",
-  401: "Unauthorized",
-  403: "Forbidden",
-  404: "Not Found",
-  409: "Conflict",
-  500: "Internal Server Error",
-};
+const errorHandler = (error, req, res, next) => {
+  const errorMessages = {
+    400: "Bad Request",
+    401: "Unauthorized",
+    403: "Forbidden",
+    404: "Not Found",
+    409: "Conflict",
+    500: "Internal Server Error",
+  };
 
-const errorHandler = (error, req, res) => {
   const status = error.statusCode || 500;
+  const message = (errorMessages[status] || "Something went wrong") + (error.message ? `: ${error.message}` : "");
+  const details = error.details;
 
-  const message = (errorMessages[status] || null) + (error.message ? `: ${error.message}` : "");
-
-  res.status(status).json({
-    status,
-    message: message || "Something went wrong",
-    details: error.details || null, // Si on veut envoyer des détails d'erreur spécifiques
-  });
+  if(!details){
+    res.status(status).json({ status, message});
+  }
+  res.status(status).json({ status, message, details: error.details });
 };
 
 export { errorHandler };
+
 ```
 ## Exemples d'utilisation dans un controller 
 
