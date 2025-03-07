@@ -24,7 +24,7 @@ Exemple d'utilisation :
 import { Router } from 'express';
 import listController from './controllers/listController.js';
 import CW from './middlewares/controller-wrapper.js';
-import { createListSchema } from './middlewares/schema-validate.js';
+import { createListSchema, updateListSchema } from './middlewares/schema-validate.js';
 import { validate } from './middlewares/validate-wrapper.js';
 
 const router = Router();
@@ -32,7 +32,7 @@ const router = Router();
 router.get("/lists", CW(listController.getAllLists));
 router.get("/lists/:id(\\d+)", CW(listController.getListById));
 router.post("/lists", validate(createListSchema), CW(listController.createList));
-router.patch("/lists/:id(\\d+)", CW(listController.updateListById));
+router.patch("/lists/:id(\\d+)", validate(updateListSchema), CW(listController.updateListById));
 router.delete("/lists/:id(\\d+)", CW(listController.deleteListById));
 
 export { router };
