@@ -10,7 +10,7 @@ const errorMessages = {
   500: "Internal Server Error",
 };
 
-const errorHandler = (error, req, res, next) => {
+const errorHandler = (error, req, res) => {
   const status = error.statusCode || 500;
 
   const message = (errorMessages[status] || null) + (error.message ? `: ${error.message}` : "");
