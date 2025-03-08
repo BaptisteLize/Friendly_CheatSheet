@@ -1,4 +1,4 @@
-# Exemple pour gérer le delete avec sequelize
+# Exemple DELETE avec sequelize
 ```js
 async deleteCardById(req,res,next){
     const cardId = req.params.id;
