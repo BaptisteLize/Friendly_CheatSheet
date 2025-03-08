@@ -1,4 +1,4 @@
-# Exemple pour gérer l'update avec sequelize
+# Exemple UPDATE avec sequelize
 ```js
 async updateListById(req,res,next){
     const listId = req.params.id;
