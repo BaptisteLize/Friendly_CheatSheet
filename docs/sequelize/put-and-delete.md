@@ -1,4 +1,4 @@
-# Exemple de put avec sequelize
+# Exemples PUT / DELETE avec sequelize
 
 **Cas d'une relation Many to Many**
 
