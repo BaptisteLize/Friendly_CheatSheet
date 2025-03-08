@@ -1,6 +1,6 @@
 # Exemple de put avec sequelize
-Cas d'une relation many to many 
-Ajout d'un tag a une carte
+- Cas d'une relation many to many 
+- Ajout d'un tag a une carte
 ```
 async linkTagToCard(req,res,next){
     const { card_id: cardId, tag_id: tagId } = req.params;
