@@ -1,7 +1,8 @@
 # Exemple de put avec sequelize
 - Cas d'une relation Many to Many 
 - Ajout d'un Tag a une Carte
-```
+- 
+```js
 async linkTagToCard(req,res,next){
     const { card_id: cardId, tag_id: tagId } = req.params;
     const [card, tag] = await Promise.all([ Card.findByPk(cardId, {include: "tags"}), Tag.findByPk(tagId) ]);
