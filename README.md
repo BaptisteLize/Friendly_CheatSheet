@@ -30,6 +30,7 @@ Profitez bien !
 - [Parsers](docs/parsers/) – Snippets et explication pour les parsers
 - [Password](docs/password/) – Sécurité des mots de passe
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
+- [Promesses](docs/promesses/) – Promesses JavaScript
 - [Regex](docs/regex/) – Expressions régulières courantes et exemples
 - [Scripts](docs/scripts/) – Scripts utiles pour automatiser des tâches
 - [Sequelize](docs/sequelize/) – ORM Sequelize, associations, modèles et snippets
