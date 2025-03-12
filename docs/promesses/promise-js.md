@@ -10,7 +10,7 @@ Voici une liste (presque) exhaustive des origines possibles des promesses
 
 Ce sont les promesses les plus courantes et elles proviennent des fonctionnalités intégrées dans JavaScript et le navigateur.
 
-### Requêtes réseau (AJAX, API)**
+### Requêtes réseau (AJAX, API)
 
 - `fetch()`
 
@@ -22,7 +22,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
 
 - `Response.blob()`, `Response.json()`, `Response.text()`, etc.
 
-### Stockage local et base de données**
+### Stockage local et base de données
 
 - IndexedDB via `indexedDB.open()`
 - Cache API (`caches.open()`, `cache.match()`)
