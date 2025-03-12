@@ -28,7 +28,7 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
 - Cache API (`caches.open()`, `cache.match()`)
 - File System API (accès aux fichiers locaux)
 
-### Temps et animations**
+### Temps et animations
 
 - `setTimeout()` / `setInterval()` via `Promise`
 
