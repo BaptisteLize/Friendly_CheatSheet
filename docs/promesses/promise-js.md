@@ -2,7 +2,7 @@
 
 En JavaScript, les promesses (Promise) peuvent venir de plusieurs sources, principalement liées à des opérations asynchrones.
 
-Voici une liste (presque) exhaustive des origines possibles des promesses :
+Voici une liste (presque) exhaustive des origines possibles des promesses
 
 ---
 
