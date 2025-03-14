@@ -44,6 +44,7 @@ import Joi from 'joi';
 
 export const createListSchema = Joi.object({
   title: Joi.string()
+    .trim()
     .min(3)
     .max(100)
     .required()
@@ -63,6 +64,7 @@ export const createListSchema = Joi.object({
 
 export const updateListSchema = Joi.object({
   title: Joi.string()
+    .trim()
     .min(3)
     .max(100)
     .messages({
