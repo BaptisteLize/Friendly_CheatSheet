@@ -1,32 +1,5 @@
-# Process complet de création/reset de tables via sequelize
-
-Exemple d'un fichier type avec toutes les étapes, à adapter au besoin bien entendu
-
+# Migration avec Sequelize
 ```js
-// 📌 EXEMPLES MODÈLES
-class Test1 extends Model {}
-Test1.init(
-  {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    username: { type: DataTypes.STRING, allowNull: false },
-  },
-  { sequelize, modelName: "Test1", tableName: "test_1" }
-);
-
-class Test2 extends Model {}
-Test2.init(
-  {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    title: { type: DataTypes.STRING, allowNull: false },
-    userId: { type: DataTypes.INTEGER, allowNull: false },
-  },
-  { sequelize, modelName: "Test2", tableName: "test_2" }
-);
-
-// 📌 EXEMPLE ASSOCIATION
-Test1.hasMany(Test2, { foreignKey: "test1Id", onDelete: "CASCADE" });
-Test2.belongsTo(Test1, { foreignKey: "test1Id" });
-
 // 📌 EXEMPLE SYNCHRONISATION
 (async () => {
   try {
@@ -44,7 +17,5 @@ Test2.belongsTo(Test1, { foreignKey: "test1Id" });
 ```
 **🔹 Explication rapide :**
 
-- Modèles : Définit Test1 et Test2.
-- Associations : Un Test1 peut avoir plusieurs Test2.
-- Synchronisation : `force: true` recrée les tables, `alter: true` adapte sans perte de données.
+`force: true` recrée les tables, `alter: true` adapte sans perte de données.
 
