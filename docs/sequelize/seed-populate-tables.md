@@ -9,19 +9,14 @@ async function seedDatabase() {
   try {
     await sequelize.sync();
 
-    console.log("Seeding Types...");
     await Type.bulkCreate(typeData);
 
-    console.log("Seeding Pokémon...");
     await Pokemon.bulkCreate(pokemonData);
 
-    console.log("Seeding Teams...");
     await Team.bulkCreate(teamData);
 
-    console.log("Seeding Pokémon-Types Associations...");
     await sequelize.models.pokemon_type.bulkCreate(pokemonTypeData);
 
-    console.log("Seeding Team-Pokémon Associations...");
     await sequelize.models.team_pokemon.bulkCreate(teamPokemonData);
 
     console.log("Seeding completed!");
