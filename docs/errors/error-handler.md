@@ -2,7 +2,7 @@
 
 ```js
 // eslint-disable-next-line no-unused-vars
-const errorHandler = (error, req, res, next) => {
+export const errorHandler = (error, req, res, next) => {
   const errorMessages = {
     400: "Bad Request",
     401: "Unauthorized",
@@ -21,8 +21,6 @@ const errorHandler = (error, req, res, next) => {
   }
   return res.status(status).json({ status, message, details });
 };
-
-export { errorHandler };
 ```
 ## Exemples d'utilisation dans un controller 
 
