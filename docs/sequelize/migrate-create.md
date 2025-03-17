@@ -1,4 +1,4 @@
-# Migration avec Sequelize
+# Migration ou Création avec Sequelize
 
 Exemple de fichier createTables.js (ou migrateTables.js)
 ```js
