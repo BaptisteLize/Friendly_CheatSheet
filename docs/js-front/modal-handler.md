@@ -8,30 +8,46 @@ const modal = {
 
   escapeListener(e) {
     if (e.key === "Escape") {
-      modal.close();
+      modal.close(e);
       document.removeEventListener("keydown", this.escapeListener);
     }
   },
 
-  open(modalId) {
-    document.getElementById(modalId).showModal();
-    document.addEventListener("keydown", modal.escapeListener);
-  },
+  open(modal) {
+    const modalElement = document.getElementById(modal);
 
-  close() {
-    const dialog = document.querySelector("dialog[open]");
-    const notif = dialog.querySelector(".notification");
-    const form = dialog.querySelector("form");
-
-    if (notif) notif.className = "notification is-hidden";
-    if (form) form.reset();
-    
-    dialog.close();
-
-    if (!document.querySelector("dialog[open]")) {
-      document.removeEventListener("keydown", modal.escapeListener);
+    if (modalElement) {
+      modalElement.classList.add("is-active");
+      document.addEventListener("keydown", this.escapeListener);
     }
   },
+
+  close(e) {
+    let dialog;
+
+    if (e?.target) {
+      dialog = e.target.closest(".modal");
+    }
+
+    if (e?.key === "Escape") {
+      dialog = Array.from(document.querySelectorAll(".modal.is-active")).pop();
+    }
+
+    if (dialog) {
+      const notif = dialog.querySelector(".notification");
+      const form = dialog.querySelector("form");
+
+      if (notif) notif.className = "notification is-hidden";
+      if (form) form.reset();
+
+      dialog.classList.remove("is-active");
+    }
+
+    if (!document.querySelector(".modal.is-active")) {
+      document.removeEventListener("keydown", modal.escapeListener);
+    }
+
+  }
 
 };
 
