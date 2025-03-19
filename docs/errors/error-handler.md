@@ -14,6 +14,8 @@ export const errorHandler = (error, req, res, next) => {
   return res.status(status).json({ status, message });
 };
 ```
+Pour mettre les détails à la ligne, `.join("<br>")`
+
 ## Exemples d'utilisation dans un controller 
 
 ```js
