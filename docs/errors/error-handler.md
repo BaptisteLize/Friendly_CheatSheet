@@ -3,23 +3,15 @@
 ```js
 // eslint-disable-next-line no-unused-vars
 export const errorHandler = (error, req, res, next) => {
-  const errorMessages = {
-    400: "Bad Request",
-    401: "Unauthorized",
-    403: "Forbidden",
-    404: "Not Found",
-    409: "Conflict",
-    500: "Internal Server Error",
-  };
 
   const status = error.statusCode || 500;
-  const message = (errorMessages[status] || "Something went wrong") + (error.message ? `: ${error.message}` : "");
-  const details = error.details;
+  let message = error.message;
 
-  if(!details){
-    return res.status(status).json({ status, message});
+  if (error.details) {
+    message = `${message} ${error.details.join(" ")}`;
   }
-  return res.status(status).json({ status, message, details });
+
+  return res.status(status).json({ status, message });
 };
 ```
 ## Exemples d'utilisation dans un controller 
