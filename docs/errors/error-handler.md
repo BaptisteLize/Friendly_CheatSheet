@@ -24,6 +24,12 @@ if (!list) {
   error.statusCode = 404; // On lui attribue un code HTTP qui fera appel à errorMessages
   return next(error); // On la passe au middleware d'erreur
 }
+
+// Autre syntaxe possible :
+
+if (!list) {
+  return next(new Error("List not found"), { error.statusCode: 404 });
+}
 ```
 ```js
 if (!email) {
