@@ -8,6 +8,4 @@ function showNavLinks() {
     navLinks.classList.toggle("hidden");
   });
 }
-
-showNavLinks();
 ```
