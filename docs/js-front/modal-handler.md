@@ -25,6 +25,10 @@ const modal = {
   close(e) {
     let dialog;
 
+    if (e?.type === "submit") {
+      dialog = e.target.closest(".modal");
+    }
+
     if (e?.target) {
       dialog = e.target.closest(".modal");
     }
