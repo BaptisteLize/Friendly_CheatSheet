@@ -1,4 +1,4 @@
-# Définir les détails d'annotation d'une fonction custom dans javascript
+# Définir les détails/infos d'une fonction custom
 
 ```js
 /**
