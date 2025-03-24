@@ -1,4 +1,4 @@
-# Exemple d'arborescence de projet (tree)
+# Exemple d'arborescence de projet MVC (tree)
 ```bash
 project_root/
 ├── app/
