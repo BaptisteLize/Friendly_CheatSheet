@@ -112,9 +112,9 @@ if (personne instanceof Personne) {
 
 ## 🧠 Astuces et bonnes pratiques
 
-1.Évitez any autant que possible - Utilisez unknown si nécessaire
+1. Évitez any autant que possible - Utilisez unknown si nécessaire
 
-2.Utilisez l'inférence de type - TypeScript peut souvent deviner le type
+2. Utilisez l'inférence de type - TypeScript peut souvent deviner le type
 
 ## 🛠️ Configuration tsconfig.json
 ```json
