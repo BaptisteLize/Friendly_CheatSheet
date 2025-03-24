@@ -2,16 +2,17 @@
 
 
 1. Qu'est-ce que TypeScript ?
+   
 TypeScript = JavaScript avec un typage statique en plus.
 👉 Il transpile en JavaScript classique pour être exécuté dans le navigateur.
 👉 Il aide à éviter des bugs en détectant les erreurs avant l'exécution.
 
-2. Pourquoi l'utiliser ?
+3. Pourquoi l'utiliser ?
 ✅ Détection des erreurs à l'écriture.
 ✅ Auto-complétion améliorée dans l’IDE.
 ✅ Meilleure lisibilité et maintenabilité du code.
 
-3. Les bases du typage
+4. Les bases du typage
 TypeScript ajoute des types explicites :
 
 ```ts
