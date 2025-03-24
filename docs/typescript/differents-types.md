@@ -1,5 +1,7 @@
 # 🚀 Fiche récapitulative TypeScript
 
+Toute cette fiche a été réalisée par [YannickOclock](https://github.com/YannickOclock)
+
 ## 📌 Les bases de TypeScript
 
 ### Types primitifs
