@@ -18,3 +18,10 @@ js.configs.recommended,
 }
 ];
 ```
+## Scan à l'installation
+
+- Installation en dev dependencies (-D) : npm i eslint -D 
+
+- Détection des problèmes : npx eslint .
+
+- Fix des problèmes : npm eslint . --fix
