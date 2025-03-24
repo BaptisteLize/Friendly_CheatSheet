@@ -97,6 +97,6 @@ tsc fichier.ts
 
 3️⃣ Utiliser tsconfig.json pour configurer TypeScript dans un projet.
 
-Conclusion
+*Conclusion*
 
 TypeScript n’ajoute rien au runtime (une fois transpilé, c'est du JS classique). Il est juste là pour aider le dev avec un meilleur typage et des outils plus puissants. 🎯
