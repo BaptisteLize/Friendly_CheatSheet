@@ -1,6 +1,6 @@
 # Les différents types
 
-**Les types primitif (valeurs immutables) :**
+**1. Les types primitif (valeurs immutables) :**
 
 *Number* : Nombres (entiers et flottants)
 
@@ -16,7 +16,7 @@
 
 *BigInt* : Entiers très grands
 
-**Les types complexes (référencés) :**
+**2. Les types complexes (référencés) :**
 
 *Object* : Ensemble de paires clé-valeur
 
