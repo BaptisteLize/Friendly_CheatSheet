@@ -1,6 +1,6 @@
 # Middleware de gestion des erreurs
 
-La première ligne est à conserver si vous utilisez eslint et souhaitez ne pas avoir d'erreur notifée sur le next
+La première ligne est à conserver si vous utilisez eslint et souhaitez ne pas avoir d'erreur notifiée sur le next
 ```js
 // eslint-disable-next-line no-unused-vars
 export const errorHandler = (error, req, res, next) => {
