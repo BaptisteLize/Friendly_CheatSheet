@@ -2,16 +2,16 @@
 
 **Les types primitif (valeurs immutables) :**
 
-- Number Représente des nombres (entiers et flottants).
-- String Représente une chaîne de caractères.
-- Boolean Représente une valeur logique, soit true ou false.
-- Undefined Une variable déclarée sans valeur.
-- Null Représente une valeur vide ou inexistante.
-- Symbol Représente un identifiant unique et immuable.
-- BigInt Représente des entiers très grands
+- Number : Nombres (entiers et flottants).
+- String : Chaîne de caractères.
+- Boolean : Valeur logique, soit true ou false.
+- Undefined : Variable déclarée sans valeur.
+- Null : Valeur vide ou inexistante.
+- Symbol : Identifiant unique et immuable.
+- BigInt : Entiers très grands
 
 **Les types complexes (référencés) :**
 
-- Object Un ensemble de paires clé-valeur.
-- Array Une liste ordonnée d'éléments (tableau).
-- Function Représente des blocs de code exécutables.
+- Object : Ensemble de paires clé-valeur.
+- Array : Liste ordonnée d'éléments (tableau).
+- Function : Blocs de code exécutables.
