@@ -6,14 +6,19 @@
 TypeScript = JavaScript avec un typage statique en plus.
 
 👉 Il transpile en JavaScript classique pour être exécuté dans le navigateur.
+
 👉 Il aide à éviter des bugs en détectant les erreurs avant l'exécution.
 
 3. Pourquoi l'utiliser ?
+
 ✅ Détection des erreurs à l'écriture.
+
 ✅ Auto-complétion améliorée dans l’IDE.
+
 ✅ Meilleure lisibilité et maintenabilité du code.
 
-4. Les bases du typage
+6. Les bases du typage
+
 TypeScript ajoute des types explicites :
 
 ```ts
@@ -29,6 +34,7 @@ let name = "John"; // TypeScript sait que c'est une string
 ```
 
 4. Typage des fonctions
+
 On précise les types des paramètres et du retour :
 
 ```ts
@@ -38,6 +44,7 @@ function add(a: number, b: number): number {
 ```
 
 5. Les objets et interfaces
+
 Définition propre d’un objet :
 
 ```ts
@@ -50,6 +57,7 @@ let user: User = { name: "Alice", age: 30 };
 ```
 
 6. Les types avancés (optionnels, union, génériques)
+
 🔹 Optionnel (?) :
 
 ```ts
@@ -74,6 +82,7 @@ function identity<T>(arg: T): T {
 ```
 
 7. Comment l'utiliser ?
+
 1️⃣ Installer TypeScript :
 
 ```ts
@@ -89,4 +98,5 @@ tsc fichier.ts
 3️⃣ Utiliser tsconfig.json pour configurer TypeScript dans un projet.
 
 Conclusion
+
 TypeScript n’ajoute rien au runtime (une fois transpilé, c'est du JS classique). Il est juste là pour aider le dev avec un meilleur typage et des outils plus puissants. 🎯
