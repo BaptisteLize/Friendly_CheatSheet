@@ -14,6 +14,6 @@ setSearchBar() {
   },
 
 // Si vous avez plusieurs attributs à récupérer, plutôt que d'identifier chaque attribut sur sa ligne utilisez cette méthode :
-//   const searchAttributes = ["data-name", "data-type"];
+// const searchAttributes = ["data-name", "data-type"];
 // if (searchAttributes.some(attr => card.getAttribute(attr).toLowerCase().includes(searchTerm))
 ```
