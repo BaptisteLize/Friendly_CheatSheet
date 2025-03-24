@@ -4,6 +4,7 @@
 1. Qu'est-ce que TypeScript ?
    
 TypeScript = JavaScript avec un typage statique en plus.
+
 👉 Il transpile en JavaScript classique pour être exécuté dans le navigateur.
 👉 Il aide à éviter des bugs en détectant les erreurs avant l'exécution.
 
