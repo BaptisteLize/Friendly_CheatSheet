@@ -58,7 +58,7 @@ let user: User = { name: "Alice", age: 30 };
 
 **6. Les types avancés (optionnels, union, génériques)**
 
-🔹 Optionnel (?) :
+🔹 Optionnel ( ? ) :
 
 ```ts
 interface User {
@@ -67,13 +67,13 @@ interface User {
 }
 ```
 
-🔹 Union (|) :
+🔹 Union ( | ) :
 
 ```ts
 let id: number | string = 42; // Peut être un nombre ou une string
 ```
 
-🔹 Génériques (<T>) :
+🔹 Génériques ( <T> ) :
 
 ```ts
 function identity<T>(arg: T): T {
