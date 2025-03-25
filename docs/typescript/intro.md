@@ -73,7 +73,7 @@ interface User {
 let id: number | string = 42; // Peut être un nombre ou une string
 ```
 
-🔹 Génériques ( <T> ) :
+🔹 Génériques ( < T > ) :
 
 ```ts
 function identity<T>(arg: T): T {
