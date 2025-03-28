@@ -1,5 +1,5 @@
 # Gestion complète d'un formulaire
-```tsx
+```js
 import { useState } from "react";
 
 export default function AddBookMark({bookmarks, categories, addNewBookmark}) {
