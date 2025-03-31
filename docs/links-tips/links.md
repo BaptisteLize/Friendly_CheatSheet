@@ -15,3 +15,6 @@ Mise à jour permanente
 
 - [Regex101](https://regex101.com/)
 
+## TypeScript
+
+- [JSON to TypeScript](https://transform.tools/json-to-typescript/)
