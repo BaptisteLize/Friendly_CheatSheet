@@ -31,6 +31,7 @@ Profitez bien !
 - [Password](docs/password/) – Sécurité des mots de passe
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
 - [Promesses](docs/promesses/) – Promesses JavaScript
+- [React](docs/react/) – Components fonctionnels avec contexte
 - [Regex](docs/regex/) – Expressions régulières courantes et exemples
 - [Scripts](docs/scripts/) – Scripts utiles pour automatiser des tâches
 - [Sequelize](docs/sequelize/) – ORM Sequelize, associations, modèles et snippets
