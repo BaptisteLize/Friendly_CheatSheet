@@ -14,8 +14,7 @@ export default function AddBookMark({bookmarks, categories, addNewBookmark}) {
   const [formData, setFormData] = useState(initialFormState)
   
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    const updatedData = { ...formData, [name]: value }
+    const updatedData = { ...formData, [e.target.name]: e.target.value }
     setFormData(updatedData);
   }
   
