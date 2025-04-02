@@ -13,12 +13,12 @@ export default function AddBookMark({bookmarks, categories, addNewBookmark}) {
 
   const [formData, setFormData] = useState(initialFormState)
   
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const updatedData = { ...formData, [e.target.name]: e.target.value }
     setFormData(updatedData);
   }
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const newBookMark = {
