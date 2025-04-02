@@ -1,6 +1,6 @@
 # Gestion complète d'un formulaire
 ```jsx
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function AddBookMark({bookmarks, categories, addNewBookmark}) {
 
@@ -13,12 +13,12 @@ export default function AddBookMark({bookmarks, categories, addNewBookmark}) {
 
   const [formData, setFormData] = useState(initialFormState)
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const updatedData = { ...formData, [e.target.name]: e.target.value }
     setFormData(updatedData);
   }
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const newBookMark = {
