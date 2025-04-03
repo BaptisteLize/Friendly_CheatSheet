@@ -2,6 +2,8 @@
 
 Contenu écrit par [LaFibreDuDev](https://github.com/LaFibreDuDev)
 
+-----
+
 Javascript est un langage très permissif car une même variable peut contenir, au cours de sa vie, des valeurs de types différents ! C'est ce qu'on appelle un langage non typé, non strict ou à typage dynamique.
 
 ```js
