@@ -1,4 +1,4 @@
-# Code du "No Break Space"
+# Code du "Non Breaking Space"
 
 ```html
 &nbsp;
