@@ -38,6 +38,7 @@ Profitez bien !
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
 - [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
 - [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
+- [Testing](docs/testing/) – Snippets JavaScript pour différents tests
 - [TypeScript](docs/typescript) – Informations et bonnes pratiques pour TypeScript
 - [Links & Tips](docs/links-tips/) – Liens utiles et astuces pour les développeurs
 
