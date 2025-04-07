@@ -27,4 +27,4 @@ describe("toTitleCaseFr", () => {
 });
 ```
 
-Environnement de test ici node, fichier `nomFonction.js` + fichier `nomFonction.unit.test.js`, dans le terminal appliquer node --test 'chemin/vers/le/fichier.unit.test.js'
+Environnement de test ici node, fichier `nomFonction.js` + fichier `nomFonction.unit.test.js`, dans le terminal appliquer `node --test 'chemin/vers/le/fichier.unit.test.js'`
