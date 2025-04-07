@@ -15,6 +15,5 @@
 // /[a-z]/.test(string)
 
 // La dernière pour les chiffres de 0 à 9 ?
-// Allez c'est cadeau, tout au même endroit :
 // /\d/.test(string)
 ```
