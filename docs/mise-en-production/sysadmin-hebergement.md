@@ -744,6 +744,8 @@ server {
 ## Enregistrer et quitter Nano comme d'habitude
 CTRL + O (puis ENTER)   puis CTRL + X
 ```
+Bien penser à redémarrer nginx : `sudo systemctl restart nginx`
+Vérifier le status qui doit être active (running) à ce stade : `sudo systemctl status nginx`
 
 Pour finir, on remodifie les variables d'environnement du build front pour prendre la nouvelle adresse de l'API
 
