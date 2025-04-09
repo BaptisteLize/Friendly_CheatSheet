@@ -2,23 +2,6 @@
 
 Tout ce qui suit a été entièrement écrit et réalisé par [Enzo](https://github.com/enzoclock), merci pour tout 
 
-## Menu du jour
-
-```
-9h-10h : échauffement
-  - Slides d'introduction
-  - Démarrer les machines
-
-10h-12h : déploiement
-  - Clone, installations, lancement
-  - Postgres, Node
-
-13h-15h : plus loin ?
-  - Deamon PM2
-  - Reverse Proxy Nginx
-```
-
-
 ## Introduction au métier de Sysadmin
 
 ### Notion de Serveurs
