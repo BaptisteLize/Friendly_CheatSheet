@@ -1,4 +1,4 @@
-# Installer le package en front + back
+# Installer le package en back + front
 
 ```json
 "scripts": {
