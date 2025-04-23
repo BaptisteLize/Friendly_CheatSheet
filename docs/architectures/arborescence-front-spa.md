@@ -22,7 +22,7 @@
 ├── package.json
 └── README.md
 ```
-❗️**features/ – là c’est plus flou, mais elle a un vrai intérêt (et pas juste théorique)**
+❗️**features/**
 C’est normal que ça te paraisse redondant au début, mais c’est une logique différente :
 
 On découpe par "fonctionnalité métier", pas par "type de fichier".
