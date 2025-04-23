@@ -22,10 +22,3 @@
 ├── package.json
 └── README.md
 ```
-
-Dossier | Rôle | Exemple | Résumé
-components/ | Composants UI atomiques et réutilisables | Button, Input | Blocs de base
-layouts/ | Structure de page partagée | DashboardLayout | Cadres globaux
-pages/ | Pages entières liées au routing | LoginPage, DashboardPage | Routables
-features/ | Grouper tout le code métier par fonctionnalité | features/auth/, features/budget/ | Organisé par logique métier
-store/ | État global partagé | useAuthStore | Gestion centralisée du state
