@@ -3,26 +3,8 @@ Utilisation sous format de wrapper autour de schémas de validation (fonctions)
 ```js
 export function validate(schema) {
   return (req, res, next) => {
-    const { error } = schema.validate(req.body, { abortEarly: false });
-
-    if (error) {
-      const errorMessages = error.details.map(detail => detail.message);
-      const validationError = new Error();
-      validationError.statusCode = 400;
-      validationError.details = errorMessages;
-
-      return next(validationError);
-    }
-
-    next();
-  };
-};
-```
-```js
-export function validate(schema) {
-  return (req, res, next) => {
     const validation = schema.validate(req.body, {
-      abortEarly: false, // impose de tester toutes les étapes de validation
+      abortEarly: false, //  ne s'arrête pas à la première erreur, renvoie toutes les erreurs de validation
       allowUnknown: false, // rejette les champs inattendus
       stripUnknown: true, // supprime les champs inattendus
     });
