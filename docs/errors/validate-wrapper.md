@@ -18,6 +18,28 @@ export function validate(schema) {
   };
 };
 ```
+```js
+export function validate(schema) {
+  return (req, res, next) => {
+    const validation = schema.validate(req.body, {
+      abortEarly: false, // impose de tester toutes les étapes de validation
+      allowUnknown: false, // rejette les champs inattendus
+      stripUnknown: true, // supprime les champs inattendus
+    });
+
+    if (validation.error) {
+      const messages = validation.error.details.map(detail => detail.message);
+      const error = new Error();
+      error.statusCode = 400;
+      error.details = messages;
+      return next(error);
+    }
+
+    req.body = validation.value;
+    next();
+  };
+}
+```
 
 Exemple d'utilisation :
 ```js
