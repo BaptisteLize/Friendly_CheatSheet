@@ -5,19 +5,25 @@ Exemple de fichier createTables.js (ou migrateTables.js)
 import { sequelize } from "./sequelize-client.js";
 import "./associations.js";
 
-(async () => {
+async function resetDatabase() {
+
   try {
     await sequelize.authenticate();
     console.log("✅ Connexion OK");
 
     await sequelize.sync({ force: true });
     console.log("✅ Base de données synchronisée");
+
   } catch (error) {
     console.error(error);
+
   } finally {
     await sequelize.close();
   }
-})();
+
+}
+
+resetDatabase();
 ```
 **🔹 Explication rapide :**
 
