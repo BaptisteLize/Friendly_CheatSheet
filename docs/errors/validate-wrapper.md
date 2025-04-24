@@ -17,6 +17,7 @@ export function validate(schema) {
       return next(error);
     }
 
+    // On remplace req.body par les données validées et nettoyées
     req.body = validation.value;
     next();
   };
