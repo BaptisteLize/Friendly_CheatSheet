@@ -3,7 +3,10 @@
 ## Usage avec `dotenv` et `dotenv-cli`
 
 ```env
+# HTTP
 PORT=3000
+
+# DATABASE
 PGUSER=username
 PGPASSWORD=password
 PGDATABASE=databasename
