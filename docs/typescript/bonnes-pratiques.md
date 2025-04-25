@@ -152,7 +152,11 @@ console.log(user.getAge());
 ## Bonnes pratiques générales
 
 ✅ Toujours activer strict dans tsconfig.json
+
 ✅ Utiliser interface pour structurer les objets
+
 ✅ Éviter any, préférer unknown si nécessaire
+
 ✅ Utiliser les génériques <T> pour les fonctions et classes réutilisables
+
 ✅ Prendre l’habitude d’utiliser les types optionnels (?), les valeurs par défaut et les unions (|)
