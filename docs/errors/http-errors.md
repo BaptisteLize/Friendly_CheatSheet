@@ -1,4 +1,4 @@
-# Codes HTTP
+# HTTP Errors
 
 - Les réponses informatives (100 - 199)
 - Les réponses de succès (200 - 299)
