@@ -1,4 +1,4 @@
-# validateIdParam
+# Validate Id Param
 ```js
 export function validateIdParam(req, res, next) {
 
