@@ -25,6 +25,7 @@ Profitez bien !
 - [Extensions](docs/extensions) – Extensions utiles, paramètres et utilisations
 - [Gestion Git](docs/gestion-git/) – Commandes Git essentielles et gestion des branches
 - [Js Front](docs/js-front/) – Snippets JavaScript Front-end
+- [Middlewares](docs/middlewares/) – Middlewares complets prêts à l'emploi
 - [Mise en production](docs/mise-en-production/) – Déploiement de projets
 - [Objets & Méthodes JS](docs/objets-methodes/) – Manipulation des objets en JavaScript
 - [Parsers](docs/parsers/) – Snippets et explication pour les parsers
