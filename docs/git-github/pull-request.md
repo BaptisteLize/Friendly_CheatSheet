@@ -2,7 +2,7 @@
 
 Généralement, si on travaille à plusieurs, on ne merge pas directement sur `main` sans consulter les collègues.
 
-Voilà la logique régulièrement utilisée : 
+Voilà la logique régulièrement utilisée :
 
 - Créer une branche et se placer dessus :
   - `git checkout -b NOM_BRANCHE`
@@ -12,7 +12,7 @@ Voilà la logique régulièrement utilisée :
 
 - Commit et push régulièrement
 
-- Créer une `Pull Request` (**PR**), ie. `Merge Request` 
+- Créer une `Pull Request` (**PR**), ie. `Merge Request`
   - demande d'intégration du code de la branche vers la branche principale
   - via l'interface de GitHub
 
@@ -21,8 +21,8 @@ Voilà la logique régulièrement utilisée :
 
 - On MERGE la PR avec un bouton sur l'interface GitHub
 
-- Puis on met à jour la branche principale en local, 
+- Puis on met à jour la branche principale en local,
   - on retourne sur la branche principale :
     - `git checkout main`
-  - on récupère les commits mergés : 
+  - on récupère les commits mergés :
     - `git pull`

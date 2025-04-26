@@ -1,4 +1,5 @@
 # Controller Wrapper
+
 ```js
 export default function controllerWrapper(middlewareFunction) {
   return async (req, res, next) => {

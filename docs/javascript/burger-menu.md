@@ -1,4 +1,5 @@
 # Burger Menu
+
 ```js
 function showNavLinks() {
   const navLinks = document.getElementById("nav-links");

@@ -1,6 +1,7 @@
-# Snippets Navlinks
+# Navlinks
 
 Utilisateur connecté ou non
+
 ```ejs
 <% if (locals.user) { %>
 <!-- Si l'utilisateur est connecté -->

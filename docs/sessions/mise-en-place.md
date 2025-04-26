@@ -4,15 +4,17 @@
 
 npm i [express-session](https://www.npmjs.com/package/express-session) [connect-pg-simple](https://www.npmjs.com/package/connect-pg-simple)
 
-*connect-pg-simple est optionnel et à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance*
+**OPTIONNEL** => connect-pg-simple est à utiliser dans le cas où vous souhaiter stocker les données des sessions en BDD dans une table gérée par la dépendance
 
 ## Middlewares
 
-pré-requis : 
-  - dépendance dotenv
-  - Définir la SESSION_SECRET dans le .env
+pré-requis :
 
-**OPTIONNEL => Stockage des infos sessions dans une BDD**
+- dépendance dotenv
+- Définir la SESSION_SECRET dans le .env
+
+**OPTIONNEL** => Stockage des infos sessions dans une BDD
+
 ```js
 const pgSession = connectPgSimple(session); // permet de stocker la session dans la pool référencée, ici db
 const store = new pgSession({
@@ -22,7 +24,8 @@ const store = new pgSession({
 });
 ```
 
-**OBLIGATOIRE => Middleware déclencheur de la session**
+**OBLIGATOIRE** => Middleware déclencheur de la session
+
 ```js
 app.use(session({
   /* store, À utiliser uniquement si vous avez mis en place connect-pg-simple */
@@ -47,7 +50,8 @@ app.use(session({
 - false (recommandé): Si la session est nouvelle mais qu'aucune donnée n'y a été ajoutée, elle ne sera pas sauvegardée.
 - true: Une session vierge sera sauvegardée même si elle ne contient encore aucune donnée.
 
-### Test pour vérifier que la session est bien fonctionnelle :
+### Test pour vérifier que la session est bien fonctionnelle
+
 ```js
 app.get('/test-session', (req, res) => {
   if (!req.session.views) {
@@ -58,7 +62,9 @@ app.get('/test-session', (req, res) => {
   res.send(`Vous avez visité cette page ${req.session.views} fois`);
 });
 ```
-### Voir l'objet session : 
+
+### Voir l'objet session
+
 ```js
 app.use((req,res,next) => {
   console.log(req.session);
@@ -66,7 +72,8 @@ app.use((req,res,next) => {
 });
 ```
 
-### Permettre l'utilisation de req.session dans toutes les vues :
+### Permettre l'utilisation de req.session dans toutes les vues
+
 ```js
 app.use((req, res, next) => {
   res.locals.session = req.session;

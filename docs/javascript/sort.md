@@ -32,4 +32,3 @@ C'est une manière rapide et pratique de mélanger un tableau sans avoir besoin 
 La méthode .sort() attend une fonction de comparaison qui retourne un nombre positif, négatif ou zéro pour déterminer l'ordre des éléments.
 
 En utilisant Math.random() - 0.5, tu assures que l'ordre des éléments est aléatoire, car le résultat de la comparaison est aléatoire, entraînant ainsi un mélange aléatoire des éléments du tableau.
-

@@ -13,12 +13,12 @@
   - note : `git push` suffit les fois suivantes
   - note : si on fait juste `git push` la première fois, on nous suggère la commande complète
 
-- Savoir sur quelle branche on est : 
+- Savoir sur quelle branche on est :
   - `git branch` puis `Q` pour quitter
   - `git branch --show-current`
- 
-- Merger une branche dans une autre : 
-  - Retourner sur la branche cible/receveuse 
+
+- Merger une branche dans une autre :
+  - Retourner sur la branche cible/receveuse
     - `git checkout main`
   - Merger la branche choisie dans la branche courante :
     - `git merge NOM_BRANCHE_QUI_SERA_MERGE`
@@ -28,3 +28,7 @@
     - attention, s'assurer que cette branche ne serve plus
   - sur GitHub : voir dans l'interface pour supprimer la branche
     - en général, on fait le nettoyage automatiquement au moment du merge
+
+- Mettre à jour l'état des branches distantes
+  - `git fetch --prune`
+    - supprimera les connexions à des branches distantes fantômes

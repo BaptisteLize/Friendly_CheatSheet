@@ -1,4 +1,5 @@
 # Validate Schema
+
 ```js
 export function validate(schema) {
   return (req, res, next) => {

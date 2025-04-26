@@ -1,4 +1,5 @@
 # Écouteur de scroll
+
 ```js
 window.addEventListener("scroll", async () => {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -9,6 +10,7 @@ window.addEventListener("scroll", async () => {
     }
 });
 ```
+
 📝 Explications :
 
 - scrollTop → combien l'utilisateur a scrollé depuis le haut

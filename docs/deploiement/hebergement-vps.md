@@ -1,16 +1,17 @@
 # S17E02 - Sysadmin
 
-Tout ce qui suit a été entièrement écrit et réalisé par [Enzo](https://github.com/enzoclock), merci pour tout 
+Tout ce qui suit a été entièrement écrit et réalisé par [Enzo](https://github.com/enzoclock), merci pour tout
 
 ## Introduction au métier de Sysadmin
 
 ### Notion de Serveurs
 
-On distingue : 
+On distingue :
+
 - **serveurs physique**
   - une unité d'un rack (rack = une baie) dans un data-center
   - la machine que vous avez devant les yeux
-  - Raspberry PI 
+  - Raspberry PI
 - **serveurs applicatif**
   - Live serveur
   - Apache (PHP)
@@ -28,26 +29,28 @@ On distingue :
 - J'achête un serveur à la maison, que je branche sur mon réseau internet, et dont je gère l'infrastructure et la sécurité
   - _"mon serveur dans le placard sous l'escalier"_
 
-- Avantages : 
+- Avantages :
   - **coût** : pas d'abonnement (investissement initial) mais on paie l'electricité
   - **contrôle** : accès à la machine à 100%
 
-- Inconvénients : 
+- Inconvénients :
   - **infrastructure** : on gère les backups, on évite le downtime (pas de coupures réseaux, ...)
   - **scalabilité** : si notre traffic augmente, alors il faut investir plus
 
-- Exemple typique : 
+- Exemple typique :
   - une entreprise qui veut un controle total sur ces données
   - pour des tests à la maison
   - projets "hobby"
-  - pré-prod 
+  - pré-prod
 
 #### Solutions `Cloud`
 
 Location d'une machine (ou partie d'une machine) dans un datacenter
+
 - _"Le Cloud, c'est la machine de quelqu'un d'autre"_
 
-**Fournisseur Cloud** les plus populaires : 
+**Fournisseur Cloud** les plus populaires :
+
 - `AWS` (Amazon Web Service)
 - `GCP` (Google Cloud Platform)
 - `MA` (Microsoft Azure)
@@ -58,11 +61,11 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
 - `Digital Ocean`
 - `Hostinger`
 
-- Avantages : 
+- Avantages :
   - **infrastructure** : rien à géré, le fournisseur s'occupe de nous avoir un uptime de 99.9%
   - **scalabilité** : pour augmenter la charge, l'hébergeur s'occupe de nous fournir plus de serveurs
 
-- Inconvénients : 
+- Inconvénients :
   - **dépendance** : dépendant du service
   - **coût** : abonnement, plus ou moins cher selon le service
   - **loi/confiance** : qui s'occupe de sécuriser les données
@@ -75,14 +78,14 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
 
 - **Serveur dédié virtuel (VPS)**
   - VPS = Virtual Private Serveur
-  - _on loue une VM (indépendante) à l'intérieur d'une unité_. 
+  - _on loue une VM (indépendante) à l'intérieur d'une unité_.
   - ressentie "machine complète".
   - **avantages** :
     - moins cher que le serveur ocmplet
-    - mais on a un contôle à 100% sur la machine 
+    - mais on a un contôle à 100% sur la machine
     - en général, on a les accès `root` à la machine en SSH
-  - **inconvénients** : 
-    - on ne gère pas l'infrastructure MAIS on gère tout le reste : 
+  - **inconvénients** :
+    - on ne gère pas l'infrastructure MAIS on gère tout le reste :
       - installation des logiciels (Node, Postgres)
       - backup de BDD
       - mise à jour de l'OS
@@ -92,7 +95,7 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
     - ex : Déjà Wordpress + MySQL d'installé, et la seul chose qu'on puisse faire est d'y placer notre code
     - **avantages**
       - encore moins cher que le serveur VPS
-    - **inconvénients** 
+    - **inconvénients**
       - bcp moins de contrôle
 
 ### `...as a Service`
@@ -116,9 +119,9 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
   - serveur brut -> bcp de configuration mais contrôle plus fin
 
 `DBaaS` : Database as a service
-  - sous catégorie de PaaS qui fourni le serveur applicatif d'une base de donénes
-  - ex : MongoAtlas, Firebase
 
+- sous catégorie de PaaS qui fourni le serveur applicatif d'une base de donénes
+- ex : MongoAtlas, Firebase
 
 ### Les 7 travaux de l'administrateur système
 
@@ -130,8 +133,7 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
 
 - `Devops` = une mouvance qui tend à réconcilier ces deux approches complémentaires
   - des scripts de déploiement automatissés
-  - des tests 
-
+  - des tests
 
 - Choisir le bon type d'hébergement
   - selon le nombre d'utilisateur
@@ -169,40 +171,42 @@ Location d'une machine (ou partie d'une machine) dans un datacenter
 - On met en place notre BDD
 - On lance l'application
 
+## A vous
 
-## A vous ! 
+**Kourou** : <https://kourou.oclock.io/ressources/vm-cloud/>
 
-**Kourou** : https://kourou.oclock.io/ressources/vm-cloud/
 - `Créer la VM` (si elle n'existe pas)
 - `Démarrer la VM` (si elle existe)
 - (tant qu'à faire, aller sur Kourou DEPUIS Chrome de votre Téléporteur)
 - vous la garderez **UN AN** 🎉 !
 
 Lancer vos **Téléporteurs**
+
 - si ce n'est pas déjà fait ce matin
 - car vous aurez besoin du VPN
 
-Accepter le **ochallenge** d'hier 
+Accepter le **ochallenge** d'hier
+
 - pour ceux qui ne l'ont pas fait
 - `S17-okanban-PSEUDOGITHUB`
 - pas besoin de le cloner
-- https://kourou.oclock.io/ressources/recap-quotidien/sushi-s17e01-tests-automatises/
+- <https://kourou.oclock.io/ressources/recap-quotidien/sushi-s17e01-tests-automatises/>
 
 Rejoindre le LiveSahre
+
 - ça copier/coller souvent !
-- https://prod.liveshare.vsengsaas.visualstudio.com/join?F1C88AAEEE90C6FDD417BAE6495A8FAA0848
+- <https://prod.liveshare.vsengsaas.visualstudio.com/join?F1C88AAEEE90C6FDD417BAE6495A8FAA0848>
 
-
-## Vocabulaire 
+## Vocabulaire
 
 - **Hôte** = votre poste de travail (Windows, Mac, Linux)
 - **Téléporteur** = VM Téléporteur (habituelle) = celle qui est sur votre hôte
-- **VM Kourou** = **VPS* = ***VM Cloud** = celle qu'on vient de commander sur AWS via Kourou
-
+- **VM Kourou** = *_VPS_ =***VM Cloud** = celle qu'on vient de commander sur AWS via Kourou
 
 ## Rappels : comment lancer le projet en local ?
 
-Rappels : 
+Rappels :
+
 - On clone le projet
 - Installer les dépendances : `npm i`
 - Vérifier la version de node : `node -v`
@@ -212,16 +216,16 @@ Rappels :
 - Créer le `dist` client : `npm run build`
 - Lancer l'application : `npm start`
 
-Notes : 
-- sur Linux (et Windows), problème avec le `npm install` ? 
+Notes :
+
+- sur Linux (et Windows), problème avec le `npm install` ?
   - `cd client`
   - `rm package-lock.json`
   - `rm -rf node_modules`
   - `npm install`
   - `cd ..`
 
-
-## Plan d'action pour le déploiement sur le VPS ? 
+## Plan d'action pour le déploiement sur le VPS ?
 
 - [x] Commander un VPS Linux Ubuntu sur AWS (via Kourou)
 - [x] Se connecter à ce VPS (via SSH)
@@ -244,17 +248,17 @@ Notes :
   - [ ] Lancer Okanban au démarrage du système (via PM2)
   - [ ] Faire en sorte d'accéder à Okanban depuis le port 80 (par défaut) plutôt que 3000 (via un reverse proxy NGINX)
 
-
 ## Se connecter à notre VPS
 
-Depuis un terminal de votre Téléporteur (vous pouvez tester avec votre hôte), peu importe la localisation du terminal : 
+Depuis un terminal de votre Téléporteur (vous pouvez tester avec votre hôte), peu importe la localisation du terminal :
+
 - SSH = Secure SHell = protocole pour se connecter à distance à machine
   - COMMANDE : `ssh utilisateur@hôte`
 
 - ✅ `ssh student@PSEUDOGITHUB-server.eddi.cloud`
   - répondre `yes` pour se connecter
   - le prompt change : `student@PSEUDOGITHUB-server:~$`
-  - ⚠️ si la commande Timeout, essayer, sur la Même machine où vous utilisez le terminal, de vous connecter avec Chrome à Kourou sur cette page https://kourou.oclock.io/ressources/vm-cloud/ (pour whitelister votre IP)
+  - ⚠️ si la commande Timeout, essayer, sur la Même machine où vous utilisez le terminal, de vous connecter avec Chrome à Kourou sur cette page <https://kourou.oclock.io/ressources/vm-cloud/> (pour whitelister votre IP)
   - le mot de passe a été retiré de cette commande SSH pour vous faciliter la vie MAIS c'est un problème de sécurité
 
 - Pour retourner sur votre machine :
@@ -284,7 +288,6 @@ htop
 # Touche 'q' pour quitter
 ```
 
-
 ```bash
 # Mettre à jour la liste des package Linux (l'annuaire des packages)
 ✅ sudo apt update
@@ -308,12 +311,14 @@ sudo reboot
 ssh student@PSEUDOGITHUB-server.eddi.cloud
 ```
 
-⚠️ Mot de passe `sudo` (pour TOUTES LES FOIS où on en aura besoin) : 
+⚠️ Mot de passe `sudo` (pour TOUTES LES FOIS où on en aura besoin) :
+
 - `par dessus les nuages`
 - il faudra le taper à chaque fois qu'on se déconnecte/reconnecte en SSH
 - lorsqu'on le tape, rien ne s'affiche, c'est normal, c'est une sécurité pour qu'on ne voit pas le nombre de caractère derrière notre dos
 
-Vocabulaire : 
+Vocabulaire :
+
 - `SUDO` = **Super User Do** = prendre les droits de l'administrateur `root`
 - `APT` = **Advanced Packaging Tool** = le gestionnaire de packet le plus populaire sur Linux (_APT est à Linux ce que NPM est à Node.js_)
 - `Kernel` = Le code "coeur" du système d'exploitation
@@ -344,14 +349,15 @@ git clone git@github.com:O-clock-Sushi/S17-okanban-PSEUDOGITHUB.git
 
 C'est une sécurité de Github : on ne peut pas cloner un dépôt depuis n'importe quelle machine (et tant mieux !). Il faut "déclarer" cette machine auprès de Github.
 
-Il faut donc : 
+Il faut donc :
+
 - créer une clé SSH sur la machine
 - l'ajouter à l'agent SSH de la machine
 - la fournir à Github (soit au niveau du dépôt, soit au niveau du compte)
 
-Pour cela : 
-- [on suit la documentation](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
+Pour cela :
 
+- [on suit la documentation](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
 
 ```bash
 # Générer la clé SSH (⚠️ avec votre email Github !)
@@ -383,20 +389,22 @@ ssh-add ~/.ssh/id_ed25519
 ```
 
 Déclarons à présent notre clé SSH (publique) auprès de Github
-- ✅ soit au niveau du dépôt à cloner 
+
+- ✅ soit au niveau du dépôt à cloner
   - cette clé SSH permet alors de cloner UNIQUEMENT un dépôt particulier
   - plus sécurisé !
-- soit au niveau de son compte Github 
+- soit au niveau de son compte Github
   - cette clé SSH permettrait de cloner et push sur n'importe quel dépôt
 
-Sur Github : 
-- On se rend sur le dépôt à cloner : 
-  - https://github.com/O-clock-Sushi/S17-okanban-PSEUDOGITHUB
+Sur Github :
+
+- On se rend sur le dépôt à cloner :
+  - <https://github.com/O-clock-Sushi/S17-okanban-PSEUDOGITHUB>
   - ⚠️ ATTENTION, le VOTRE, pas le mien !
-- Dans les `Settings `
-  - https://github.com/O-clock-Sushi/S17-okanban-PSEUDOGITHUB/settings
+- Dans les `Settings`
+  - <https://github.com/O-clock-Sushi/S17-okanban-PSEUDOGITHUB/settings>
 - `Deploy Keys`
-  - https://github.com/O-clock-Sushi/S17-okanban-enzoclock/settings/keys
+  - <https://github.com/O-clock-Sushi/S17-okanban-enzoclock/settings/keys>
 - Bouton `Add deploy Key`
   - Title : `VPS VM Kourou` (c'est à titre indicatif)
   - Clé : celle qu'on a copié tout à l'heure (pour la retrouver `cat ~/.ssh/id_ed25519.pub`)
@@ -416,7 +424,6 @@ git clone git@github.com:O-clock-Sushi/S17-okanban-PSEUDOGITHUB.git
 # Vérifier
 ls # -> C'est ok le dossier est là 
 ```
-
 
 ## Serveur de Bases de données Postgres
 
@@ -470,6 +477,7 @@ exit
 ## Installation de Node.js
 
 Pour installer Node.js, on va installer **NVM = Node Version Manager** (gestionnaire de version pour Node).
+
 - Pourquoi utiliser NVM ? pour pouvoir mettre à jour facilement Node lorsque le besoin s'en fait ressentir.
 
 ```bash
@@ -525,7 +533,6 @@ cat .env
   - Sauvegarder dans nano : `CTRL + O` puis ENTER
   - Quitter nano : `CTRL + X`
 
-
 ```bash
 # Créer les tables dans la BDD
 npm run db:create
@@ -537,7 +544,6 @@ psql -U okanban -d okanban -h localhost # mdp: okanban
 exit # Quitter psql
 ```
 
-
 ```bash
 # build le front (dossier dist)
 npm run build
@@ -546,19 +552,20 @@ npm run build
 npm run start
 ```
 
-Tester : 
-- Trouver l'adresse HTTP de sa machine VPS sur la page 
-  - https://kourou.oclock.io/ressources/vm-cloud/
-  - quelque chose comme : http://enzoclock-server.eddi.cloud
-- Avec son navigateur (celui où on a ouvert la page de gestion de VM) : 
+Tester :
+
+- Trouver l'adresse HTTP de sa machine VPS sur la page
+  - <https://kourou.oclock.io/ressources/vm-cloud/>
+  - quelque chose comme : <http://enzoclock-server.eddi.cloud>
+- Avec son navigateur (celui où on a ouvert la page de gestion de VM) :
   - `http://enzoclock-server.eddi.cloud:3000` ❌
   - `http://enzoclock-server.eddi.cloud:3000/api/lists` ✅
 
 - Explication :
-  - depuis Chrome sur mon Téléporteur : 
-    - le front se charge (car on accède à http://enzoclock-server.eddi.cloud:3000)
+  - depuis Chrome sur mon Téléporteur :
+    - le front se charge (car on accède à <http://enzoclock-server.eddi.cloud:3000>)
     - mais le front ne trouve pas le backend :
-      - car apiBaseURL = http://localhost:3000
+      - car apiBaseURL = <http://localhost:3000>
       - et que actuellement, rien ne tourne sur mon Téléporteur
       - il faut changer la base URL pour pointer vers le VPS
 
@@ -587,31 +594,36 @@ npm run build
 npm run start
 ```
 
-Vérification : 
-- a priori, depuis le CHROME de votre Téléporteur (du moins, la machine sur laquelle vous aviez ouvert la page d'administration des VM Kourou), ALORS vous devriez pouvoir accéder à votre Okanban : 
+Vérification :
+
+- a priori, depuis le CHROME de votre Téléporteur (du moins, la machine sur laquelle vous aviez ouvert la page d'administration des VM Kourou), ALORS vous devriez pouvoir accéder à votre Okanban :
 - `http://PSEUDOGITHUB-server.eddi.cloud:3000`
 
 ## Bonus - Rendre l'application plus accessible
 
-Problème : 
+Problème :
+
 - ce n'est pas accessible au reste du monde (pare feu qui bloque tous les ports par défaut)
 - ce n'est pas pratique de devoir préciser le port 3000
 - je ne peux même pas fermer mon ordi, sans quoi le tunnel SSH se ferme, donc l'application s'arrête
 
 ### PM2 - Process Manager pour Node.js
 
-Problématique : 
-- lorsque je lance `npm run start`, je lance mon serveur Node HTTP, mais pas en tâche de fond : 
+Problématique :
+
+- lorsque je lance `npm run start`, je lance mon serveur Node HTTP, mais pas en tâche de fond :
   - donc si je quitte le terminal, l'application s'arrête 🤯.
 
-Idée : 
+Idée :
+
 - utiliser un process manager pour Node.js (PM2) afin de :
   - lancer l'application en tâche de fond
   - la relancer au re-démarrage
 
 PM2 :
+
 - "PM2 is a daemon process manager" (daemon = tâche de fond)
-- outil très utilisé dans l'industrie 
+- outil très utilisé dans l'industrie
   - rare de faire juste `npm run start` => en général on passe plutot par PM2.
 
 ```bash
@@ -655,36 +667,40 @@ pm2 startup
 sudo env PATH=$PATH:/home/student/.nvm/versions/node/v22.14.0/bin /home/student/.nvm/versions/node/v22.14.0/lib/node_modules/pm2/bin/pm2 startup systemd -u student --hp /home/student
 ```
 
+### Choisir le port pour l'application
 
-### Choisir le port pour l'application 
+Actuellement, l'application tourne sur :
 
-Actuellement, l'application tourne sur : 
 - `http://PSEUDOGITHUB-server.eddi.cloud:3000/`
 
-Ce qu'on veut : 
+Ce qu'on veut :
+
 - `http://PSEUDOGITHUB-server.eddi.cloud`
 - (strictement équivalent à) `http://PSEUDOGITHUB-server.eddi.cloud:80`
 
-On pourrait se dire : 
+On pourrait se dire :
+
 - je n'ai qu'à choisir dans le `.env` le `PORT=8O`
   - ❌ sécurité de node, ça ne marchera pas!
 
 Ce qu'on va faire :
+
 - installer un serveur "spécial", qu'on appelle un **REVERSE PROXY**
   - pour rediriger les flux entrant sur le port 80 --> 3000
 - on installe pour cela `NGINX`
   - se pronone "engine-x"
   - très utilisé dans l'industrie, en particulier avec Node
 
-Tant qu'à faire, on va faire encore mieux : 
+Tant qu'à faire, on va faire encore mieux :
+
 - ❌ `http://PSEUDOGITHUB-server.eddi.cloud:3000`
 - ❌ `http://PSEUDOGITHUB-server.eddi.cloud:80`
 - ✅ `http://okanban.PSEUDOGITHUB-server.eddi.cloud:80`
 
-Pourquoi ce prefix (sous-domaine) ? 
+Pourquoi ce prefix (sous-domaine) ?
+
 - comme ça, si vous souhaitez déployer également (oblog, onews, oquiz...), la voie est libre !
 - très facile à gérer avec `NGINX`
-
 
 ```bash
 # Installer NGINX
@@ -703,11 +719,11 @@ ls /etc/nginx
 ```
 
 Objectif :
+
 - déclarer la configuration pour Okanban dans `sites-available`
   - `okanban.PSEUDOGITHUB-server.eddi.cloud` -> `localhost:3000`
 - active cette configuration en créant un lien symbolique vers `sites-enabled`
 - relance le serveur nginx
-
 
 #### Création de la configuration NGINX pour Okanban
 
@@ -744,6 +760,7 @@ server {
 ## Enregistrer et quitter Nano comme d'habitude
 CTRL + O (puis ENTER)   puis CTRL + X
 ```
+
 Bien penser à redémarrer nginx : `sudo systemctl restart nginx`
 
 Vérifier le status qui doit être active (running) à ce stade : `sudo systemctl status nginx`
@@ -761,15 +778,12 @@ cd ~/S17-okanban-PSEUDOGITHUB
 npm run build
 ```
 
+### Rendre notre port 80 accessible au reste du monde
 
-### Rendre notre port 80 accessible au reste du monde 
-
-- https://kourou.oclock.io/ressources/vm-cloud/
+- <https://kourou.oclock.io/ressources/vm-cloud/>
   - **RENDRE LA VM PUBLIQUE**
   - (parfois il faut cliquer 3-4 fois)
   - (parfois, elle repasse en privé pour une raison que j'ignore)
-
-
 
 ## A retenir
 

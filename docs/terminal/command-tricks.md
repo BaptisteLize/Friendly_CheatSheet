@@ -1,4 +1,4 @@
-# Tips & Tricks
+# Command tricks
 
 **🔥 Pour supprimer toute la ligne en une fois :**
 
@@ -15,4 +15,3 @@
 `Alt + D` → Supprime le mot après le curseur.
 
 `Ctrl + W` → Supprime le mot avant le curseur.
-

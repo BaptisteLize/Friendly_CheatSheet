@@ -1,7 +1,6 @@
-Exemple de création :
+# TABLES Many To Many
 
 ```js
-
 CREATE TABLE Eleve (
     id_eleve SERIAL PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -21,5 +20,4 @@ CREATE TABLE Eleve_Cours (
     FOREIGN KEY (id_eleve) REFERENCES Eleve(id_eleve) ON DELETE CASCADE,
     FOREIGN KEY (id_cours) REFERENCES Cours(id_cours) ON DELETE CASCADE
 );
-
 ```

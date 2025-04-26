@@ -1,4 +1,4 @@
-# Exemples d'utilisation avec jointures
+# INCLUDE & ATTRIBUTES
 
 ```js
 import { Question, Quiz, User } from "./associations.js";
@@ -8,7 +8,7 @@ const quiz4 = await Quiz.findByPk(4, {
   include: ["author", "tags"],
 });
 
-// Récupérer l'utilisateur Chuck, et tous ses quizzes, et les questions de chaque quiz
+// Récupérer l'utilisateur Chuck, tous ses quizzes, et les questions de chaque quiz
 const chuck = await User.findOne({
   where: { firstname: "Chuck" },
   include: { association: "quizzes", include: "questions" }
@@ -23,7 +23,7 @@ const question = await Question.findByPk(11, {
   ]
 });
 
-// Récupérer l'utilisateur n°1 (seulement son nom et prénom)
+// Récupérer l'utilisateur n°1 mais seulement son nom et prénom
 const user1 = await User.findByPk(1, {
   attributes: ["firstname", "lastname"]
 });

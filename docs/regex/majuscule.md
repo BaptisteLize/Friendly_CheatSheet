@@ -8,6 +8,7 @@
 ```
 
 ## Vérification contient une majuscule
+
 ```js
 /[A-Z]/.test(string)
 

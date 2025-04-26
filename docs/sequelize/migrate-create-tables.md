@@ -1,11 +1,11 @@
 # Migration ou Création avec Sequelize
 
 Exemple de fichier createTables.js (ou migrateTables.js)
-```js
-import { sequelize } from "./sequelize-client.js";
-import "./associations.js";
 
-async function resetDatabase() {
+```js
+import { sequelize } from "../../models/index.js";
+
+async function createTables() {
 
   try {
     await sequelize.authenticate();
@@ -23,12 +23,12 @@ async function resetDatabase() {
 
 }
 
-resetDatabase();
+createTables();
 ```
+
 **🔹 Explication rapide :**
 
 - `force: true` recrée les tables,
 - `alter: true` adapte sans perte de données.
 
 Utiliser en fonction le bon format.
-

@@ -1,25 +1,29 @@
-# Seeding / Populate des données via sequelize
-Exemple de fichier seedTables.js à utiliser avec un fichier à part seedData.js
-```js
-import { sequelize } from "../sequelize-client.js";
-import { Pokemon, Type, Team } from "../models/index.js";
-import { pokemonData, typeData, teamData, pokemonTypeData, teamPokemonData } from "./seedData.js";
+# Seeding / Populate
 
-async function seedDatabase() {
+Exemple de fichier seedTables.js à utiliser avec un fichier à part seedData.js
+
+```js
+import { User, Expense, Category, Budget, sequelize } from "../../models/index.js";
+import { budgetData, categoryData, expenseData, userData } from "./seedData.js";
+
+async function seedTables() {
   try {
     await sequelize.sync();
+    
+    await User.bulkCreate(userData);
+    await Category.bulkCreate(categoryData);
+    await Expense.bulkCreate(expenseData);
+    await Budget.bulkCreate(budgetData);
 
-    await Type.bulkCreate(typeData);
+    await sequelize.query(`
+      SELECT setval('user_id_seq', (SELECT MAX(id) from "user"));
+      SELECT setval('category_id_seq', (SELECT MAX(id) from "category"));
+      SELECT setval('expense_id_seq', (SELECT MAX(id) from "expense"));
+      SELECT setval('budget_id_seq', (SELECT MAX(id) from "budget"));
+      `);
 
-    await Pokemon.bulkCreate(pokemonData);
+    console.log("✅ Seeding terminé !");
 
-    await Team.bulkCreate(teamData);
-
-    await sequelize.models.pokemon_type.bulkCreate(pokemonTypeData);
-
-    await sequelize.models.team_pokemon.bulkCreate(teamPokemonData);
-
-    console.log("Seeding completed!");
   } catch (error) {
     console.error(error);
   } finally {
@@ -27,5 +31,5 @@ async function seedDatabase() {
   }
 }
 
-seedDatabase();
+seedTables();
 ```

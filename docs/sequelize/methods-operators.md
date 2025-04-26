@@ -1,4 +1,4 @@
-# Exemples d'utilisation sans jointure
+# MÉTHODES & OPERATEURS
 
 ```js
 import { Op } from "sequelize";
@@ -10,34 +10,28 @@ await level1.save();
 
 // ===== Créer un enregistrement (méthode 2) ====
 const level2 = await Level.create({ name: "Moyen" });
-console.log(level2);
 
 // ==== Modifier un enregistrement (méthode 1) ====
 const hardLevel = await Level.create({ name: "hard" });
 hardLevel.name = "Hard Core";
 await hardLevel.save();
 
-
 // ==== Modifier un enregistrement (méthode 2) ====
 const easylevel = await Level.create({ name: "easy" });
 await easylevel.update({ name: "Very easy !"});
-
 
 // ==== Modifier un enregistrement (méthode 1) ====
 const hardLevel = await Level.create({ name: "hard" });
 hardLevel.name = "Hard Core";
 await hardLevel.save();
 
-
 // ==== Modifier un enregistrement (méthode 2) ====
 const easylevel = await Level.create({ name: "easy" });
 await easylevel.update({ name: "Very easy !"});
-
 
 // ==== Supprimer un enregistrement ====
 const toDeleteLevel = await Level.create({ name: "A supprimer" });
 await toDeleteLevel.destroy();
-
 
 // ===== Récupérer un enregistrement par son ID ====
 const level3 = await Level.findByPk(3);

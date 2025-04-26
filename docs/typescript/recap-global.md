@@ -5,6 +5,7 @@ Toute cette fiche de récap a été réalisée par [YannickOclock](https://githu
 ## 📌 Les bases de TypeScript
 
 ### Types primitifs
+
 ```ts
 let nombre: number = 42;
 let texte: string = "Hello TypeScript";
@@ -14,6 +15,7 @@ let rien: null = null;
 ```
 
 ### Types spéciaux
+
 ```ts
 let quelconque: any = "Je peux être n'importe quoi";
 let inconnu: unknown = 4;  // Plus sûr que 'any', nécessite vérification
@@ -24,6 +26,7 @@ let vide: void = undefined; // Pour les fonctions sans retour
 ## 🧩 Types composés
 
 ### Tableaux
+
 ```ts
 let nombres: number[] = [1, 2, 3];
 let chaines: Array<string> = ["a", "b", "c"];
@@ -31,12 +34,14 @@ let mixte: (number | string)[] = [1, "deux", 3];
 ```
 
 ### Tuples
+
 ```ts
 let coordonnees: [number, number] = [10, 20];
 let utilisateur: [number, string, boolean] = [1, "Alice", true];
 ```
 
 ### Objets
+
 ```ts
 let personne: { nom: string; age: number } = { nom: "Thomas", age: 30 };
 // Avec propriétés optionnelles
@@ -51,6 +56,7 @@ let contact: {
 ### Interfaces
 
 Une interface permet de typer un objet JS.
+
 ```ts
 interface Utilisateur {
   id: number;
@@ -119,6 +125,7 @@ if (personne instanceof Personne) {
 2. Utilisez l'inférence de type - TypeScript peut souvent deviner le type
 
 ## 🛠️ Configuration tsconfig.json
+
 ```json
 {
   "compilerOptions": {
@@ -137,6 +144,7 @@ if (personne instanceof Personne) {
 ```
 
 ## 🔗 Ressources utiles
+
 - Documentation officielle TypeScript
 - TypeScript Playground
 - Type Challenges

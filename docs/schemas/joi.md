@@ -1,4 +1,4 @@
-# **[Joi](https://joi.dev/)**
+# **[JOI](https://joi.dev/)**
 
 ```js
 import Joi from 'joi';

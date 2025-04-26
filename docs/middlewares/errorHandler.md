@@ -1,6 +1,7 @@
 # Error Handler
 
 La première ligne est à conserver si vous utilisez eslint et souhaitez ne pas avoir d'erreur notifiée sur le next
+
 ```js
 // eslint-disable-next-line no-unused-vars
 export const errorHandler = (error, req, res, next) => {
@@ -13,8 +14,7 @@ export const errorHandler = (error, req, res, next) => {
 };
 ```
 
-
-## Exemples d'utilisation dans un controller 
+## Exemples d'utilisation dans un controller
 
 ```js
 if (!list) {
@@ -29,6 +29,7 @@ if (!list) {
   return next(new Error("List not found"), { error.statusCode: 404 });
 }
 ```
+
 **Pour respecter les bonnes pratiques API et faciliter le travail du front, les error.details seront toujours un tableau de string.**
 
 ```js

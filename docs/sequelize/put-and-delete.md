@@ -1,8 +1,9 @@
-# Exemples PUT / DELETE avec sequelize
+# PUT / DELETE
 
-**Cas d'une relation Many to Many**
+## Cas d'une relation Many to Many
 
-- Liaison d'un Tag a une Carte
+Liaison d'un Tag avec une Carte
+
 ```js
 async linkTagToCard(req,res,next){
     const { card_id: cardId, tag_id: tagId } = req.params;
@@ -17,9 +18,11 @@ async linkTagToCard(req,res,next){
     await card.addTag(tag);
     await card.reload({ include: "tags"});
     res.status(200).json(card);
-  },
+  }
 ```
-- Suppression d'un Tag lié à une Carte
+
+Suppression d'un Tag lié à une Carte
+
 ```js
 async unlinkTagFromCard(req,res,next){
     const { card_id: cardId, tag_id: tagId } = req.params;
@@ -34,5 +37,5 @@ async unlinkTagFromCard(req,res,next){
     await card.removeTag(tag);
     await card.reload({ include: "tags"});
     res.status(200).json(card);
-  },
+  }
 ```

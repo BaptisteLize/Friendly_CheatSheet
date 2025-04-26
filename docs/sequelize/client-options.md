@@ -12,6 +12,6 @@ export const sequelize = new Sequelize(process.env.PG_URL, {
     createdAt: "created_at", // Mapping du champs createdAt (Sequelize) vers created_at (BDD Postgres)
     updatedAt: "updated_at" // Mapping du champs updatedAt (Sequelize) vers updated_at (BDD Postgres)
   }
-  logging: false,
+  logging: false, // Permet d'éviter les logs en console à chaque requête
 });
-``
+```

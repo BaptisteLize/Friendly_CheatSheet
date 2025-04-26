@@ -2,7 +2,7 @@
 
 PRÉ-REQUIS POUR FONCTIONNEMENT : CF [Mise en place des sessions](./mise-en-place.md)
 
-## Middleware - ACCESS :
+## Middleware - ACCESS
 
 ```js
 const access = {
@@ -46,7 +46,7 @@ async renderLoginPage(req,res) {
   },
 ```
 
-## Controller - Gestion du formulaire de connexion/enregistrement : 
+## Controller - Gestion du formulaire de connexion/enregistrement
 
 ```js
 async handleLoginForm(req,res) {

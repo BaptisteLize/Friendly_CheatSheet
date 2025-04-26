@@ -1,4 +1,5 @@
 # Gestion basique des boîtes de dialogue
+
 ```js
 const modal = {
 

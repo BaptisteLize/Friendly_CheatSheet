@@ -1,4 +1,5 @@
 # Barre de recherche dynamique
+
 ```js
 setSearchBar() {
     const searchInput = document.getElementById("search-input");

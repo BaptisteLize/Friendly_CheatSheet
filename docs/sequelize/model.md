@@ -1,25 +1,32 @@
-# Exemple d'un modèle sequelize
+# Modèle type
+
+UUID, createdAt et updatedAt sont gérés automatiquement par sequelize, à vos [**DOCS**](https://sequelize.org/docs/v6/) pour les config du client.
 
 ```js
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "./sequelize-client.js";
+import { sequelize } from "../database/database-client.js";
 
-export class Level extends Model {}
+export class Expense extends Model {}
 
-Level.init({
-  // id :
-  // pas besoin de le faire, c'est déjà intégré dans le core model (Model)
-  // le fait que ça soit un entier généré par défaut et clé primaire est déjà pris en charge
-
-  // createdAt et updatedAt
-  // également géré par sequelize !
-
-  name: {
-    type: DataTypes.TEXT,
-    allowNull: false // Pour interdire le champ d'être NULL
+Expense.init({
+  amount: {
+    type: DataTypes.DECIMAL,
+    allowNull: false
+  },
+  description: {
+    type: DataTypes.STRING(255)
+  },
+  date: {
+    type: DataTypes.DATEONLY
+  },
+  category_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false
   }
-}, {
+},
+
+{
   sequelize, // on fourni l'instance de connexion Sequelize
-  tableName: "level", // dans le cadre de ce projet, puisque l'on connecte nos modèles à une BDD déjà existante, on précise vers quelle table ce modèle pointe
+  tableName: "expense",
 });
 ```

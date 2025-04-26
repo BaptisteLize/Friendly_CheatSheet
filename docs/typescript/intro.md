@@ -1,15 +1,14 @@
 # Typescript, quesaco ?
 
+## 1. Qu'est-ce que TypeScript ?
 
-**1. Qu'est-ce que TypeScript ?**
-   
 TypeScript = JavaScript avec un typage statique en plus.
 
 👉 Il transpile en JavaScript classique pour être exécuté dans le navigateur.
 
 👉 Il aide à éviter des bugs en détectant les erreurs avant l'exécution.
 
-**2. Pourquoi l'utiliser ?**
+## 2. Pourquoi l'utiliser ?
 
 ✅ Détection des erreurs à l'écriture.
 
@@ -17,7 +16,7 @@ TypeScript = JavaScript avec un typage statique en plus.
 
 ✅ Meilleure lisibilité et maintenabilité du code.
 
-**3. Les bases du typage**
+## 3. Les bases du typage
 
 TypeScript ajoute des types explicites :
 
@@ -33,7 +32,7 @@ Inférence automatique : TypeScript devine le type si tu ne le précises pas.
 let name = "John"; // TypeScript sait que c'est une string
 ```
 
-**4. Typage des fonctions**
+## 4. Typage des fonctions
 
 On précise les types des paramètres et du retour :
 
@@ -43,7 +42,7 @@ function add(a: number, b: number): number {
 }
 ```
 
-**5. Les objets et interfaces**
+## 5. Les objets et interfaces
 
 Définition propre d’un objet :
 
@@ -56,7 +55,7 @@ interface User {
 let user: User = { name: "Alice", age: 30 };
 ```
 
-**6. Les types avancés (optionnels, union, génériques)**
+## 6. Les types avancés (optionnels, union, génériques)
 
 🔹 Optionnel ( ? ) :
 
@@ -80,23 +79,3 @@ function identity<T>(arg: T): T {
   return arg;
 }
 ```
-
-**7. Comment l'utiliser ?**
-
-1️⃣ Installer TypeScript :
-
-```ts
-npm install -g typescript
-```
-
-2️⃣ Compiler un fichier .ts en .js :
-
-```ts
-tsc fichier.ts
-```
-
-3️⃣ Utiliser tsconfig.json pour configurer TypeScript dans un projet.
-
-**Conclusion**
-
-TypeScript n’ajoute rien au runtime (une fois transpilé, c'est du JS classique). Il est juste là pour aider le dev avec un meilleur typage et des outils plus puissants. 🎯

@@ -7,6 +7,7 @@ TypeScript n’ajoute rien au runtime (une fois transpilé, c'est du JS classiqu
 ✅ Code plus maintenable avec un typage explicite.
 
 ## Installation et configuration
+
 ```sh
 npm install -g typescript # Installation globale
 tsc --init                 # Génère un fichier de config tsconfig.json
@@ -26,15 +27,18 @@ Dans tsconfig.json, active les options suivantes pour un bon usage :
 
 ## Les bases du typage
 
-###Typage simple
+### Typage simple
+
 ```ts
 let username: string = "Alice";
 let age: number = 25;
 let isAdmin: boolean = true;
 ```
+
 ✅ Bonne pratique : Toujours typiser tes variables et activer strict pour éviter les erreurs.
 
 ### Les tableaux et objets
+
 ```ts
 let numbers: number[] = [1, 2, 3]; // Tableau de nombres
 
@@ -43,6 +47,7 @@ let user: { name: string; age: number } = {
   age: 30,
 };
 ```
+
 ✅ Bonne pratique : Utilise des interfaces pour mieux structurer tes objets.
 
 ```ts
@@ -57,25 +62,31 @@ const user: User = { name: "Alice", age: 25 };
 ## Fonctions et bonnes pratiques
 
 ### Typage des paramètres et du retour
+
 ```ts
 function sum(a: number, b: number): number {
   return a + b;
 }
 ```
+
 ✅ Bonne pratique : Toujours préciser le type du retour pour éviter les erreurs.
 
 ### Paramètres optionnels et valeurs par défaut
+
 ```ts
 function greet(name: string, age?: number): string {
   return age ? `Hello ${name}, you are ${age} years old.` : `Hello ${name}!`;
 }
 ```
+
 ✅ Bonne pratique : Utiliser ? pour les valeurs optionnelles.
 
 ### Les fonctions fléchées
+
 ```ts
 const multiply = (a: number, b: number): number => a * b;
 ```
+
 Astuce : TypeScript infère automatiquement le type de retour si c'est évident.
 
 ## Interfaces et Types
@@ -114,6 +125,7 @@ type AdminEmployee = Admin & Employee;
 ✅ Bonne pratique : Utiliser & pour fusionner plusieurs types.
 
 ### Les génériques (pour rendre ton code réutilisable)
+
 ```ts
 function identity<T>(arg: T): T {
   return arg;
@@ -128,6 +140,7 @@ console.log(identity<number>(123));
 ## Classes et programmation orientée objet
 
 ### Définition d’une classe avec TypeScript
+
 ```ts
 class User {
   constructor(public name: string, private age: number) {}

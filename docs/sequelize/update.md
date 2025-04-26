@@ -1,5 +1,7 @@
-# Exemple UPDATE avec sequelize
+# UPDATE
+
 Syntaxe Object.entries
+
 ```js
 async updateOneExpense(req, res, next) {
     
@@ -27,6 +29,7 @@ async updateOneExpense(req, res, next) {
 ```
 
 Syntaxe updatedRows/Count
+
 ```js
 async updateListById(req,res,next){
     const listId = req.params.id;
