@@ -8,25 +8,29 @@ Profitez bien !
 
 ## 📚 Sommaire
 
-- [🔗 Links](#-links)
-- [📦 Boilerplates](#-boilerplates)
-- [🤝 Comment contribuer](#-comment-contribuer)
-- [🔒 Règles de protection](#-règles-de-protection)
-- [📜 Licence](#-licence)
+- [Cheat Sheet faite avec amour ❤️](#cheat-sheet-faite-avec-amour-️)
+  - [📚 Sommaire](#-sommaire)
+  - [🔗 Links](#-links)
+  - [📦 Boilerplates](#-boilerplates)
+  - [🤝 Comment contribuer](#-comment-contribuer)
+    - [💪 Proposer une Amélioration](#-proposer-une-amélioration)
+    - [🔀 Contribuer avec du Code](#-contribuer-avec-du-code)
+  - [🔒 Règles de protection](#-règles-de-protection)
+  - [📜 Licence](#-licence)
 
 ---
 
 ## 🔗 Links
 
+- [API Client](docs/api-client/) – Références et tips sur les clients API
 - [Architectures](docs/architectures/) – Exemples d'architectures partielles ou complètes de projets
-- [Client Api](docs/client-api/) – Références et tips sur les clients API
 - [Config](docs/config/) – Paramétrage et configuration de divers outils ou environnements
 - [Deploy](docs/deploy/) – Processus de déploiement / hébergement 
 - [EJS](docs/ejs/) – Snippets EJS
 - [Errors](docs/errors/) – Liste des codes d’erreurs HTTP
 - [Git & Github](docs/git-github/) – Commandes Git essentielles et gestion des branches
 - [Javascript](docs/javascript/) – Snippets JavaScript
-- [Links](docs/link) – Liens utiles
+- [Links](docs/links) – Liens utiles
 - [Middlewares](docs/middlewares/) – Middlewares complets prêts à l'emploi
 - [Password](docs/password/) – Sécurité des mots de passe
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
