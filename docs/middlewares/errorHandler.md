@@ -38,7 +38,7 @@ if (!list) {
 if (!email) {
   const error = new Error(); // On crée l'instance d'erreur sans message personnalisé
   error.statusCode = 400;
-  error.details = { missingField: "email" }; // On ajoute des détails à l'erreur
+  error.details = ["L'email doit contenir @ au minimum."]; // On ajoute des détails à l'erreur
   return next(error);
 }
 ```
