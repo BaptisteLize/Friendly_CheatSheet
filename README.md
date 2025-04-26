@@ -42,7 +42,7 @@ Profitez bien !
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
 - [SQL](docs/sql/) – Requêtes SQL avancées et manipulations de bases de données
 - [Tailwind CSS](docs/tailwind/) – Utilisation et bonnes pratiques de Tailwind CSS
-- [Terminal](docs/terminal/) – Tips & Tricks de raccourcis pour faciliter l'usage du terminal
+- [Terminal](docs/terminal/) – Tips & Raccourcis pour faciliter l'usage du terminal
 - [Testing](docs/testing/) – Snippets JavaScript pour différents tests
 - [TypeScript](docs/typescript) – Informations et bonnes pratiques pour TypeScript
 
