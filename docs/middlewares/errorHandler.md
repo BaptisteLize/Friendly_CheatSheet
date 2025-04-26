@@ -36,7 +36,7 @@ if (!list) {
 ```
 ```js
 if (!email) {
-  const error = new Error(); // On crée l'instance d'erreur sans message personnalisé
+  const error = new Error("Email non valide."); // On crée l'instance d'erreur sans message personnalisé
   error.statusCode = 400;
   error.details = ["L'email doit contenir @ au minimum."]; // On ajoute des détails à l'erreur
   return next(error);
