@@ -6,13 +6,8 @@ La première ligne est à conserver si vous utilisez eslint et souhaitez ne pas 
 export const errorHandler = (error, req, res, next) => {
 
   const status = error.statusCode || 500;
-  let message = error.message || "Une erreur est survenue";
-
-  let details = [];
-
-  if (error.details) {
-    details = error.details;
-  }
+  const message = error.message || "Une erreur est survenue";
+  const details = error.details || [];
 
   return res.status(status).json({ status, message, details });
 };
