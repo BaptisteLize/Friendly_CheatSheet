@@ -18,22 +18,21 @@ Profitez bien !
 
 ## 🔗 Links
 
-- [Architectures](docs/architectures/) - Exemples d'architectures partielles ou complètes de projets
-- [Config](docs/config/) – Paramétrage et configuration de divers outils
+- [Architectures](docs/architectures/) – Exemples d'architectures partielles ou complètes de projets
+- [Client Api](docs/client-api/) – Références et tips sur les clients API
+- [Config](docs/config/) – Paramétrage et configuration de divers outils ou environnements
+- [Deploy](docs/deploy/) – Processus de déploiement / hébergement 
 - [EJS](docs/ejs/) – Snippets EJS
-- [Errors](docs/errors/) – Liste des codes d’erreurs HTTP et gestion des erreurs
-- [Extensions](docs/extensions) – Extensions utiles, paramètres et utilisations
-- [Gestion Git](docs/gestion-git/) – Commandes Git essentielles et gestion des branches
-- [Js Front](docs/js-front/) – Snippets JavaScript Front-end
+- [Errors](docs/errors/) – Liste des codes d’erreurs HTTP
+- [Git & Github](docs/git-github/) – Commandes Git essentielles et gestion des branches
+- [Javascript](docs/javascript/) – Snippets JavaScript
+- [Links](docs/link) – Liens utiles
 - [Middlewares](docs/middlewares/) – Middlewares complets prêts à l'emploi
-- [Mise en production](docs/mise-en-production/) – Déploiement de projets
-- [Objets & Méthodes JS](docs/objets-methodes/) – Manipulation des objets en JavaScript
-- [Parsers](docs/parsers/) – Snippets et explication pour les parsers
 - [Password](docs/password/) – Sécurité des mots de passe
 - [PostgreSQL](docs/postgresql/) – Commandes et astuces pour PostgreSQL
-- [Promesses](docs/promesses/) – Promesses JavaScript
 - [React](docs/react/) – Components fonctionnels avec contexte
 - [Regex](docs/regex/) – Expressions régulières courantes et exemples
+- [Schemas](docs/schemas/) – Schemas de validation préparés
 - [Scripts](docs/scripts/) – Scripts utiles pour automatiser des tâches
 - [Sequelize](docs/sequelize/) – ORM Sequelize, associations, modèles et snippets
 - [Sessions](docs/sessions/) – Gestion des sessions et des accès utilisateurs
@@ -42,7 +41,6 @@ Profitez bien !
 - [Terminal](docs/terminal/) – Tips & Tricks de raccourcis pour faciliter l'usage du terminal
 - [Testing](docs/testing/) – Snippets JavaScript pour différents tests
 - [TypeScript](docs/typescript) – Informations et bonnes pratiques pour TypeScript
-- [Links & Tips](docs/links-tips/) – Liens utiles et astuces pour les développeurs
 
 ---
 
