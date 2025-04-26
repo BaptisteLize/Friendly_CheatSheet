@@ -8,11 +8,13 @@ export const errorHandler = (error, req, res, next) => {
   const status = error.statusCode || 500;
   let message = error.message || "Une erreur est survenue";
 
+  let details = [];
+
   if (error.details) {
-    message = `${message} ${error.details.join(" ")}`;
+    details = error.details;
   }
 
-  return res.status(status).json({ status, message });
+  return res.status(status).json({ status, message, details });
 };
 ```
 Pour mettre les détails à la ligne, `.join("<br>")`
