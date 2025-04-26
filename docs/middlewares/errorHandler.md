@@ -36,9 +36,9 @@ if (!list) {
 ```
 ```js
 if (!email) {
-  const error = new Error("Email non valide."); // On crée l'instance d'erreur sans message personnalisé
+  const error = new Error("Email non valide.");
   error.statusCode = 400;
-  error.details = ["L'email doit contenir @.", "On peut mettre plein de détails", "Tableau de string standard"]; // On ajoute des détails à l'erreur
+  error.details = ["L'email doit contenir @.", "On peut mettre plein de détails", "Tableau de string standard"];
   return next(error);
 }
 ```
