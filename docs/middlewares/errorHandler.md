@@ -29,6 +29,8 @@ if (!list) {
   return next(new Error("List not found"), { error.statusCode: 404 });
 }
 ```
+Pour respecter les bonnes pratiques API et faciliter le travail du front, les error.details seront toujours un tableau de string.
+
 ```js
 if (!email) {
   const error = new Error("Email non valide.");
