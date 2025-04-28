@@ -1,6 +1,6 @@
 # Validate Id Param
 
-Cf. [**Validators**](docs/javascript/validators.md)
+Cf. [**Validators**](https://github.com/BaptisteLize/Friendly_CheatSheet/blob/main/docs/javascript/validators.md)
 
 ```js
 import { isPositiveInteger } from "../utils/validators.js";
