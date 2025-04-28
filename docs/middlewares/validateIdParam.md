@@ -1,6 +1,6 @@
 # Validate Id Param
 
-Cf. [**Validators**](docs/javascript/validators/)
+Cf. [**Validators**](docs/javascript/validators.md)
 
 ```js
 import { isPositiveInteger } from "../utils/validators.js";
