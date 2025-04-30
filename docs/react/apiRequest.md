@@ -1,31 +1,4 @@
-# authApi.js
-
-```js
-import { apiRequest } from "./api";
-
-/**
- * Login user with email and password.
- */
-export async function login(email, password) {
-  return await apiRequest("/login", "POST", { email, password });
-}
-
-/**
- * Register a new user with email and password.
- */
-export async function register(email, password) {
-  return await apiRequest("/register", "POST", { email, password });
-}
-
-/**
- * Fetch the currently authenticated user's profile.
- */
-export async function getUserProfile() {
-  return await apiRequest("/users/profile");
-}
-```
-
-## api.js
+# api.js
 
 ```js
 import { getToken, getAuthHeaders } from "../services/jwtService";
@@ -64,5 +37,32 @@ export async function apiRequest(endpoint, method = "GET", data = null, token = 
       console.error("Erreur API:", error); // log optionnel
       throw error; // on relance l'erreur attrapée au dessus pour la propager
   }
+}
+```
+
+## Exemple pour un fichier authApi.js
+
+```js
+import { apiRequest } from "./api";
+
+/**
+ * Login user with email and password.
+ */
+export async function login(email, password) {
+  return await apiRequest("/login", "POST", { email, password });
+}
+
+/**
+ * Register a new user with email and password.
+ */
+export async function register(email, password) {
+  return await apiRequest("/register", "POST", { email, password });
+}
+
+/**
+ * Fetch the currently authenticated user's profile.
+ */
+export async function getUserProfile() {
+  return await apiRequest("/users/profile");
 }
 ```
