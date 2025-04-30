@@ -54,11 +54,4 @@ export async function login(email, password) {
 export async function register(email, password) {
   return await apiRequest("/register", "POST", { email, password });
 }
-
-/**
- * Fetch the currently authenticated user's profile.
- */
-export async function getUserProfile() {
-  return await apiRequest("/users/profile");
-}
 ```
