@@ -82,8 +82,6 @@ export async function apiRequest(endpoint, method = "GET", data = null, token = 
 
 ### Exemple pour le throw result qui récupèrerait une erreur 
 
-Je vous vois, je sais que ça vous met en pls, ça va bien se passer !
-
 ```js
 async function getUserProfile() {
   try {
