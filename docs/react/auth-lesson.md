@@ -94,6 +94,7 @@ fetch("/api/protected-route", {
   headers: {
     "Content-Type": "application/json",
     ...getAuthHeaders(), // Injecte Authorization si le token est présent
+// le spread operator ici permet de dire au headers "fait comme si le résultat de la fonction getAuthHeaders() faisait déjà partie de ton objet"
   }
 });
 ```
