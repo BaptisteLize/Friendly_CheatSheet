@@ -30,7 +30,7 @@ export async function registerRequest(email, password) {
 }
 
 export async function fetchProfile() {
-  const response = await fetch("/api/users/profile", {
+  const response = await fetch(`${BASE_URL}/users/profile`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
