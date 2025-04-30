@@ -2,9 +2,9 @@
 
 **Rappels :**
 
-La méthode JSON.stringify(valeur) convertit une valeur JavaScript en chaîne JSON
+- La méthode JSON.stringify(valeur) convertit une valeur JavaScript en chaîne JSON
 
-La méthode .json(valeur) produit un objet JavaScript à partir d'une valeur JSON
+- La méthode .json(valeur) produit un objet JavaScript à partir d'une valeur JSON
 
 ```js
 import { getAuthHeaders } from "../services/jwtService";
