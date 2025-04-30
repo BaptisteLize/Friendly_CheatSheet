@@ -69,27 +69,19 @@ export async function apiRequest(endpoint, method = "GET", data = null, token = 
     options.body = JSON.stringify(data); // Ajoute les données au corps de la requête si présentes
   }
 
-  const response = await fetch(`${BASE_URL}${endpoint}`, options);
-  const result = await res.json();
-
-  if (!response.ok) {
-    throw result; // on jette directement la réponse du backend qui sera attrapé par le try/catch du store qui utilisera cette fonction
-  }               // et qui pourra donc l'utiliser directement en error.message ou error.details ou les deux
-
-  return result;
-}
-```
-
-### Exemple pour le throw result qui récupèrerait une erreur 
-
-```js
-async function getUserProfile() {
   try {
-    const result = await apiRequest("/profile", "GET", null, getToken());
-    return result;  // Utilisation des données obtenues
+    const response = await fetch(`${BASE_URL}${endpoint}`, options);
+    const result = await res.json();
+
+    if (!response.ok) {
+      throw result; // On jette la réponse backend pour laisser le composant/store gérer l'erreur
+    }               // qui pourra l'utiliser directement en error.message ou error.details
+
+    return result;
+
   } catch (error) {
-    console.error(error.message);  // Si une erreur survient, on l'affiche
-    set({ error: error.message });  // Gestion de l'erreur dans le store (si nécessaire)
+      console.error("Erreur API:", error); // log optionnel
+      throw error; // on relance l'erreur pour la propager
   }
 }
-``` 
+```
