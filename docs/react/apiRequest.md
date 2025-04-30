@@ -1,4 +1,4 @@
-# api.js
+# apiRequest.js
 
 ```js
 import { getAuthHeaders } from "../services/jwtService";
