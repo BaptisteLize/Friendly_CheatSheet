@@ -196,7 +196,7 @@ On définit ici les états initiaux et les fonctions.
 
  - met à jour les données dans le store (et React suit automatiquement)
 
-## 🔹 4. Fonction `register`
+### 🔹 4. Fonction `register`
 
 ```js
   async register(email, password) {
@@ -221,7 +221,7 @@ Même logique que `login`, mais ici on ne stocke pas l'utilisateur ni le token.
 
 Pourquoi ? Pour forcer une connexion manuelle après inscription (choix UX fréquent).
 
-🔹 5. Fonction `fetchUser`
+### 🔹 5. Fonction `fetchUser`
 
 ```js
   async fetchUser() {
@@ -245,7 +245,7 @@ Envoie automatiquement le `token` via `getAuthHeaders()` (géré dans `authApi.j
 
 Si ça échoue : on vide `user` et on stocke l’erreur
 
-## 🔹 6. Fonction `logout`
+### 🔹 6. Fonction `logout`
 
 ```js
   logout() {
@@ -258,7 +258,7 @@ Supprime les données locales
 
 Déconnecte totalement l’utilisateur
 
-## 🔹 7. Fonction clearError
+### 🔹 7. Fonction clearError
 
 ```js
   clearError() {
@@ -302,7 +302,7 @@ useAuthStore = {
 }
 ```
 
-## 🤔 8. Comment l’utiliser dans un composant React ?
+### 🤔 8. Comment l’utiliser dans un composant React ?
 
 Exemple : `LoginForm.jsx`
 
