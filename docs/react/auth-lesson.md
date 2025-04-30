@@ -100,13 +100,13 @@ fetch("/api/protected-route", {
 });
 ```
 
----
-
 #### 💡 À retenir
 
 - `jwtService.js` ne fait **qu’interagir avec le `localStorage`**, rien d’autre.
 - Il **ne connaît rien du contexte global** (authStore, React, etc.) → **100% réutilisable**.
 - Tu peux **tester ses fonctions une par une** si besoin.
+
+---
 
 ## 📄 Fichier apiRequest.js — Décryptage complet
 
@@ -218,6 +218,8 @@ try {
   set({ error: error.message });
 }
 ```
+
+---
 
 ## 🔁 Fichier `authStore.js` — décryptage complet
 
