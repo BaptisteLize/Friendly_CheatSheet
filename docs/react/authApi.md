@@ -49,7 +49,7 @@ export async function fetchProfile() {
 ```js
 import { getToken, getAuthHeaders } from "../services/jwtService";
 
-const BASE_URL = import.meta.env.VITE_API_URL;  // À TESTER POUR VOIR SI ÇA PEUT FONCTIONNER (juste plus simple pour la prod en cas de migr.serv)
+const BASE_URL = import.meta.env.VITE_API_URL;  // À TESTER POUR VOIR SI ÇA PEUT FONCTIONNER (juste plus simple pour la prod)
                                                 // ou fixe : "http://localhost:3000"
 
 /**
