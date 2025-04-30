@@ -116,11 +116,11 @@ import { getAuthHeaders } from "../services/jwtService";
 
 ### 🔍 Étapes détaillées
 
-1. Construction de l’URL
+**1. Construction de l’URL**
 
 - L’`endpoint` (ex: `/login`) est concaténé à la `BASE_URL`.
 
-2. Préparation des options de requête
+**2. Préparation des options de requête**
 
 - `method`: par défaut `"GET"` mais peut être `"POST"`, `"PUT"`, `"DELETE"`, etc.
 
@@ -128,7 +128,7 @@ import { getAuthHeaders } from "../services/jwtService";
   - Le `Content-Type` est systématiquement `application/json`.
   - Le header `Authorization` est ajouté automatiquement si un token est disponible.
 
-3. Ajout éventuel d’un corps à la requête
+**3. Ajout éventuel d’un corps à la requête**
 
 ```js
 if (data) {
@@ -138,19 +138,19 @@ if (data) {
 
 - Si des données sont fournies (ex: login, envoi de formulaire...), elles sont converties en JSON et ajoutées au body.
 
-4. Lancement de la requête avec fetch()
+**4. Lancement de la requête avec fetch()**
 
 ```js
 const response = await fetch(`${BASE_URL}${endpoint}`, options);
 ```
 
-5. Lecture de la réponse JSON
+**5. Lecture de la réponse JSON**
 
 ```js
 const result = await response.json();
 ```
 
-6. Gestion de l’erreur
+**6. Gestion de l’erreur**
 
 ```js
 if (!response.ok) {
@@ -162,7 +162,7 @@ if (!response.ok) {
 
 - Ce throw sera capté dans un try/catch plus haut, typiquement dans un store Zustand ou un composant.
 
-7. Renvoi du résultat en cas de succès
+**7. Renvoi du résultat en cas de succès**
 
 ```js
 return result;
@@ -172,15 +172,15 @@ return result;
 
 ### ✅ Objectifs & Avantages
 
-- 📦 Centralisation : une seule fonction gère tous les appels API du projet.
+- 📦 **Centralisation** : une seule fonction gère tous les appels API du projet.
 
-- 🧼 Clean code : plus de fetch() en double ou de répétition des headers.
+- 🧼 **Clean code** : plus de fetch() en double ou de répétition des headers.
 
-- 🛡️ Sécurité intégrée : le token est automatiquement injecté si l’utilisateur est connecté.
+- 🛡️ **Sécurité intégrée** : le token est automatiquement injecté si l’utilisateur est connecté.
 
-- 🔁 Réutilisable partout : utilisable dans les fichiers authApi.js, userApi.js, les stores Zustand ou même des composants React.
+- 🔁 **Réutilisable partout** : utilisable dans les fichiers authApi.js, userApi.js, les stores Zustand ou même des composants React.
 
-- 🎯 Modularité future : ce fichier peut évoluer facilement pour intégrer des options plus poussées comme :
+- 🎯 **Modularité future** : ce fichier peut évoluer facilement pour intégrer des options plus poussées comme :
 
   - refreshToken
 
