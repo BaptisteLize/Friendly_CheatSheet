@@ -226,7 +226,7 @@ import {
   loginRequest,
   registerRequest,
   fetchProfile,
-} from "../api/authApi";
+} from "../services/authApi";
 ```
 
 ### 🔹 1. Les imports
