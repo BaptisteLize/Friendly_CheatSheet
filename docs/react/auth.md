@@ -106,7 +106,7 @@ fetch("/api/protected-route", {
 - Il **ne connaît rien du contexte global** (authStore, React, etc.) → **100% réutilisable**.
 - Tu peux **tester ses fonctions une par une** si besoin.
 
-## 📄 Fichier authApi.js — Décryptage pédagogique
+## 📄 Fichier authApi.js — Décryptage complet
 
 ### 🔗 Import
 
