@@ -1,4 +1,4 @@
-# Authorization
+# Authentication 
 
 ## 🔐 jwtService.js — Décryptage complet
 
