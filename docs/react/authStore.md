@@ -3,7 +3,7 @@
 ```js
 import { create } from "zustand";
 import { setToken, getToken, clearToken } from "../services/jwtService";
-import { loginRequest, registerRequest, fetchProfile } from "../api/authApi";
+import { loginRequest, registerRequest, fetchProfile } from "../services/authApi";
 
 const useAuthStore = create((set) => ({
   user: null,
