@@ -114,13 +114,13 @@ fetch("/api/protected-route", {
 import { getAuthHeaders } from "../services/jwtService";
 ```
 
-Cette fonction permet de récupérer dynamiquement le token JWT enregistré dans le localStorage.
+- Cette fonction permet de récupérer dynamiquement le token JWT enregistré dans le `localStorage`.
 
-Elle retourne un objet de type { Authorization: "Bearer <token>" } si un token est présent.
+- Elle retourne un objet de type `{ Authorization: "Bearer <token>" }` si un token est présent.
 
-On utilise le spread operator (...getAuthHeaders()) plus bas pour fusionner proprement cet objet avec les autres headers.
+- On utilise le spread operator (`...getAuthHeaders()`) plus bas pour fusionner proprement cet objet avec les autres headers.
 
-### 🔐 Fonction login
+### 🔐 Fonction `login`
 
 ```js
 export async function login(email, password) {
@@ -144,23 +144,23 @@ export async function login(email, password) {
 
 #### 🧠 Objectif
 
-Tenter une connexion utilisateur.
+- Tenter une connexion utilisateur.
 
-Si l’email/mot de passe sont valides, le backend renvoie un token et un user.
+- Si l’email/mot de passe sont valides, le backend renvoie un token et un user.
 
-Sinon, il renvoie une erreur (ex : "identifiants invalides").
+- Sinon, il renvoie une erreur (ex : "identifiants invalides").
 
 #### 🔍 Étapes
-fetch() envoie une requête POST avec l’email et le mot de passe.
+1. `fetch()` envoie une requête `POST` avec l’email et le mot de passe.
 
-response.json() lit la réponse JSON (c’est-à-dire soit { user, token }, soit { message } en cas d’erreur).
+2. `response.json()` lit la réponse JSON (c’est-à-dire soit `{ user, token }`, soit `{ message }` en cas d’erreur).
 
-Si la réponse HTTP (response.ok) est fausse (statut 400 ou 401 par exemple), on jette (throw) directement le corps de réponse (data).
-Cela permet à l’appelant (comme le authStore) de récupérer l’erreur directement dans un bloc try/catch.
+3. Si la réponse HTTP (`response.ok`) est fausse (statut 400 ou 401 par exemple), on jette (throw) directement le corps de réponse (`data`).
+Cela permet à l’appelant (comme le `authStore`) de récupérer l’erreur directement dans un bloc `try/catch`.
 
-Si tout va bien, on retourne le data.
+4. Si tout va bien, on retourne le `data`.
 
-### 📝 Fonction register
+### 📝 Fonction `register`
 
 ```js
 export async function register(email, password) {
@@ -184,17 +184,17 @@ export async function register(email, password) {
 
 #### 🧠 Objectif
 
-Créer un nouvel utilisateur.
+- Créer un nouvel utilisateur.
 
-Très similaire à login en termes de logique.
+- Très similaire à `login` en termes de logique.
 
 #### 🔍 Différence principale
 
-Le backend renvoie souvent juste un message de confirmation, voire un token aussi selon le système.
+- Le backend renvoie souvent juste un message de confirmation, voire un token aussi selon le système.
 
-Le front devra peut-être rediriger l’utilisateur ou afficher un message.
+- Le front devra peut-être rediriger l’utilisateur ou afficher un message.
 
-### 👤 Fonction fetchUserProfile
+### 👤 Fonction `fetchUserProfile`
 
 ```js
 export async function fetchUserProfile() {
@@ -218,21 +218,21 @@ export async function fetchUserProfile() {
 
 #### 🧠 Objectif
 
-Récupérer les informations de l’utilisateur connecté grâce à son token.
+- Récupérer les informations de l’utilisateur connecté grâce à son token.
 
-C’est l’équivalent du /me ou /profile classique dans une API sécurisée.
+- C’est l’équivalent du `/me` ou `/profile` classique dans une API sécurisée.
 
 #### 🔍 Particularité
 
-On ajoute dynamiquement les headers d’authentification avec ...getAuthHeaders() :
+- On ajoute dynamiquement les headers d’authentification avec ...getAuthHeaders() :
 
 ```js
 { Authorization: "Bearer <token>" }
 ```
 
-Si le token est absent ou invalide, le backend renvoie une erreur.
+- Si le token est absent ou invalide, le backend renvoie une erreur.
 
-Si le token est bon, on récupère les infos du user.
+- Si le token est bon, on récupère les infos du user.
 
 ### 🧾 Résumé global
 
@@ -240,7 +240,7 @@ Ce fichier centralise toutes les requêtes HTTP liées à l’authentification.
 
 Chaque fonction fait une requête à l’API REST du backend, gère la réponse et jette (throw) l’erreur si nécessaire.
 
-Le authStore.js capte ces erreurs dans un bloc try/catch et peut ensuite les afficher à l’utilisateur.
+Le `authStore.js` capte ces erreurs dans un bloc `try/catch` et peut ensuite les afficher à l’utilisateur.
 
 On garde une bonne séparation des responsabilités :
 → ici : on gère juste la communication avec l’API
