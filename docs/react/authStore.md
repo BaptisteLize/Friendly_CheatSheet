@@ -5,7 +5,7 @@ import { create } from "zustand";
 import { setToken, getToken, clearToken } from "../services/jwtService";
 import { loginRequest, registerRequest, fetchProfile } from "../services/authApi";
 
-export default const useAuthStore = create((set) => ({
+export const useAuthStore = create((set) => ({
   user: null,
   token: getToken(),
   error: null,
