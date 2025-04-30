@@ -1,6 +1,6 @@
 # apiRequest.js
 
-Rappel :
+**Rappels :**
 
 La méthode JSON.stringify(valeur) convertit une valeur JavaScript en chaîne JSON
 
