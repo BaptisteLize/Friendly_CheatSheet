@@ -1,4 +1,113 @@
-# 🔁 Fichier `authStore.js` — décryptage complet
+# Authorization
+
+## 🔐 services/jwtService.js — Décryptage complet
+
+Ce fichier centralise toutes les interactions avec le `localStorage` concernant le **token JWT**. Cela permet :
+- d’isoler la logique liée à l’authentification,
+- de **ne pas dupliquer du code** dans tous les composants ou stores,
+- et d’avoir un code plus lisible et testable.
+
+---
+
+### 📦 Fonctions exportées
+
+#### `setToken(token)`
+
+```js
+export function setToken(token) {
+  if (token) {
+    localStorage.setItem("jwt_access_token", token);
+  }
+}
+```
+
+**✅ Objectif :**
+Stocke un token JWT (généralement reçu après une connexion) dans le `localStorage`.
+
+**🧠 Pourquoi c’est utile :**
+- Le token est sauvegardé même après un rechargement de page.
+- Il sera utilisé pour envoyer les requêtes sécurisées (routes privées).
+
+---
+
+#### `getToken()`
+
+```js
+export function getToken() {
+  return localStorage.getItem("jwt_access_token");
+}
+```
+
+**✅ Objectif :**
+Récupère le token JWT stocké (s’il existe).
+
+**🧠 Pourquoi c’est utile :**
+- Permet de vérifier si un utilisateur est connecté.
+- Utilisé dans `authStore.js` pour initialiser l’état du `token`.
+- Nécessaire pour ajouter un `Authorization` header dans les appels API.
+
+---
+
+#### `clearToken()`
+
+```js
+export function clearToken() {
+  localStorage.removeItem("jwt_access_token");
+}
+```
+
+**✅ Objectif :**
+Supprime complètement le token du `localStorage` (souvent au logout).
+
+**🧠 Pourquoi c’est utile :**
+- Empêche les futures requêtes sécurisées.
+- Réinitialise la session utilisateur côté client.
+
+---
+
+#### `getAuthHeaders()`
+
+```js
+export function getAuthHeaders() {
+  const token = getToken();
+
+  if (!token) {
+    return {};
+  }
+
+  return {
+    Authorization: `Bearer ${token}`,
+  };
+}
+```
+
+**✅ Objectif :**
+Retourne un objet contenant les headers nécessaires à une requête sécurisée.
+
+**🧠 Pourquoi c’est utile :**
+- Permet de centraliser l’ajout du token dans toutes les requêtes.
+- **Évite la répétition** du même code dans chaque `fetch`.
+
+**🧪 Exemple d’utilisation :**
+```js
+fetch("/api/protected-route", {
+  headers: {
+    "Content-Type": "application/json",
+    ...getAuthHeaders(), // Injecte Authorization si le token est présent
+  }
+});
+```
+
+---
+
+#### 💡 À retenir
+
+- `jwtService.js` ne fait **qu’interagir avec le `localStorage`**, rien d’autre.
+- Il **ne connaît rien du contexte global** (authStore, React, etc.) → **100% réutilisable**.
+- Tu peux **tester ses fonctions une par une** si besoin.
+
+
+## 🔁 Fichier `authStore.js` — décryptage complet
 
 ```js
 import { create } from "zustand";
@@ -14,7 +123,7 @@ import {
 } from "../api/authApi";
 ```
 
-## 🔹 1. Les imports
+### 🔹 1. Les imports
 
 `create` : fonction principale de Zustand pour créer un store
 
@@ -24,7 +133,7 @@ import {
 
 🎯 Avantage : chaque responsabilité est dans son propre fichier → le `store` reste concentré sur la logique métier front.
 
-## 🔹 2. Création du store
+### 🔹 2. Création du store
 
 ```js
 const useAuthStore = create((set) => ({
@@ -36,7 +145,7 @@ const useAuthStore = create((set) => ({
 
 On définit ici les états initiaux et les fonctions.
 
-### 🔸 États initiaux
+#### 🔸 États initiaux
 
 ```js
   user: null,
@@ -52,7 +161,7 @@ On définit ici les états initiaux et les fonctions.
 
 🎯 Pourquoi garder `token` ici si on a déjà `localStorage` ? Parce que React a besoin d’un état observable pour re-render automatiquement. Si on ne le met que dans `localStorage`, il ne peut pas suivre les changements.
 
-## 🔹 3. Fonction `login`
+### 🔹 3. Fonction `login`
 
 ```js
   async login(email, password) {
@@ -73,7 +182,7 @@ On définit ici les états initiaux et les fonctions.
   },
 ```
 
-### 🔍 Étapes
+#### 🔍 Étapes
 
 - On efface les erreurs précédentes
 
