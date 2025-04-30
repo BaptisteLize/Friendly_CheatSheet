@@ -215,15 +215,15 @@ try {
 
 #### ✅ Pourquoi ne pas mettre de try/catch dans apiRequest
 
-**Responsabilité unique :**
+- **Responsabilité unique :**
 
 apiRequest doit uniquement envoyer la requête, parser la réponse et jeter l’erreur si besoin. C’est une fonction utilitaire, pas une gestionnaire métier.
 
-**Contrôle de l’erreur au bon endroit :**
+- **Contrôle de l’erreur au bon endroit :**
 
 L’endroit où tu utilises apiRequest (dans un authStore, userStore, transactionStore, etc.) doit être celui qui capte les erreurs pour afficher un message, rediriger l’utilisateur, changer un état, etc.
 
-**Propagation d'erreur claire :**
+- **Propagation d'erreur claire :**
 
 En jetant (throw) l’erreur, elle peut être attrapée plus haut dans un try/catch avec un contexte plus précis (ex : "je suis sur la page login, donc j'affiche un toast si l’erreur est 401").
 
