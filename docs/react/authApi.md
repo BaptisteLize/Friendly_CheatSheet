@@ -3,7 +3,7 @@
 ```js
 import { getAuthHeaders } from "../services/jwtService";
 
-const BASE_URL = "https://localhost:3000";
+const BASE_URL = "http://localhost:3000";
 
 export async function loginRequest(email, password) {
   const response = await fetch(`${BASE_URL}/login`, {
