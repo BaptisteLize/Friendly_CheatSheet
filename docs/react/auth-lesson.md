@@ -108,7 +108,7 @@ fetch("/api/protected-route", {
 - Il **ne connaît rien du contexte global** (authStore, React, etc.) → **100% réutilisable**.
 - Tu peux **tester ses fonctions une par une** si besoin.
 
-## 📄 Fichier authApi.js — Décryptage complet
+## 📄 Fichier apiRequest.js — Décryptage complet
 
 ### 🔗 Import
 
@@ -122,166 +122,51 @@ import { getAuthHeaders } from "../services/jwtService";
 
 - On utilise le spread operator (`...getAuthHeaders()`) plus bas pour fusionner proprement cet objet avec les autres headers.
 
-### 🔐 Fonction `login`
+### 🔍 Étapes détaillées
+
+1. Construction de l’URL
+
+- L’`endpoint` (ex: `/login`) est concaténé à la `BASE_URL`.
+
+2. Préparation des options
+
+- `method`: par défaut `"GET"` mais peut être `"POST"`, `"PUT"`, `"DELETE"`, etc.
+
+- `headers`: inclut `Content-Type` et potentiellement l’`Authorization` si un token est présent
+
+- `body`: converti en JSON uniquement si des `data` sont fournies
+
+3. Lancement de la requête avec fetch()
+
+4. Lecture de la réponse JSON
+
+5. Gestion de l’erreur
+
+- Si `!response.ok` (ex: 400, 401…), le corps de réponse (`result`) est jeté (throw) pour être attrapé ailleurs
+
+- Si tout va bien, `result` est retourné
+
+### ✅ Objectifs & Avantages
+
+- 📦 Centralisation complète : toutes les règles d’appel API sont concentrées ici
+
+- 🧼 Code clean : plus besoin de répéter les mêmes fetch() partout
+
+- 🛡️ Sécurité intégrée : le token est injecté automatiquement
+
+- 🔁 Réutilisable partout : importable dans tous tes fichiers (authApi.js, userApi.js, stores, etc.)
+
+- 🎯 Modularité : on peut faire évoluer ce fichier facilement (ex : ajout d’un refreshToken, timeout, retry...)
+
+### 🧾 Exemple d’utilisation dans un autre fichier
 
 ```js
+import { apiRequest } from "./api";
+
 export async function login(email, password) {
-  const response = await fetch("/api/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw data;
-  }
-
-  return data;
+  return await apiRequest("/auth/login", "POST", { email, password });
 }
 ```
-
-#### 🧠 Objectif
-
-- Tenter une connexion utilisateur.
-
-- Si l’email/mot de passe sont valides, le backend renvoie un token et un user.
-
-- Sinon, il renvoie une erreur (ex : "identifiants invalides").
-
-#### 🔍 Étapes
-1. `fetch()` envoie une requête `POST` avec l’email et le mot de passe.
-
-2. `response.json()` lit la réponse JSON (c’est-à-dire soit `{ user, token }`, soit `{ message }` en cas d’erreur).
-
-3. Si la réponse HTTP (`response.ok`) est fausse (statut 400 ou 401 par exemple), on jette (throw) directement le corps de réponse (`data`).
-Cela permet à l’appelant (comme le `authStore`) de récupérer l’erreur directement dans un bloc `try/catch`.
-
-4. Si tout va bien, on retourne le `data`.
-
-### 📝 Fonction `register`
-
-```js
-export async function register(email, password) {
-  const response = await fetch("/api/auth/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw data;
-  }
-
-  return data;
-}
-```
-
-#### 🧠 Objectif
-
-- Créer un nouvel utilisateur.
-
-- Très similaire à `login` en termes de logique.
-
-#### 🔍 Différence principale
-
-- Le backend renvoie souvent juste un message de confirmation, voire un token aussi selon le système.
-
-- Le front devra peut-être rediriger l’utilisateur ou afficher un message.
-
-### 👤 Fonction `fetchUserProfile`
-
-```js
-export async function fetchUserProfile() {
-  const response = await fetch("/api/users/profile", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      ...getAuthHeaders(),
-    },
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw data;
-  }
-
-  return data;
-}
-```
-
-#### 🧠 Objectif
-
-- Récupérer les informations de l’utilisateur connecté grâce à son token.
-
-- C’est l’équivalent du `/me` ou `/profile` classique dans une API sécurisée.
-
-#### 🔍 Particularité
-
-- On ajoute dynamiquement les headers d’authentification avec ...getAuthHeaders() :
-
-```js
-{ Authorization: "Bearer <token>" }
-```
-
-- Si le token est absent ou invalide, le backend renvoie une erreur.
-
-- Si le token est bon, on récupère les infos du user.
-
-### 🧾 Résumé global
-
-Ce fichier centralise toutes les requêtes HTTP liées à l’authentification.
-
-Chaque fonction fait une requête à l’API REST du backend, gère la réponse et jette (throw) l’erreur si nécessaire.
-
-Le `authStore.js` capte ces erreurs dans un bloc `try/catch` et peut ensuite les afficher à l’utilisateur.
-
-On garde une bonne séparation des responsabilités :
-→ ici : on gère juste la communication avec l’API
-→ ailleurs (dans le store) : on gère les états, erreurs, redirections, messages...
-
-#### Suppléments d'informations sur le `throw data`
-
-##### ✅ Que fait throw data dans authApi.js ?
-
-Lorsqu'une réponse HTTP n'est pas OK (ex: statut 400, 401…), on fait :
-
-```js
-throw data;
-```
-
-Ici, data contient déjà le response.json(), donc le corps de la réponse du backend, typiquement :
-
-```json
-{ "message": "Mot de passe incorrect" }
-```
-
-##### ✅ Que se passe-t-il dans le authStore.js ?
-
-Dans le try/catch, on capte cette erreur comme suit :
-
-```js
-try {
-  const data = await login(email, password);
-  set({ user: data.user, token: data.token, error: null });
-} catch (error) {
-  set({ error: error });
-}
-```
-
-Tu peux donc ensuite :
-
-- faire un console.error(error.message) pour du debug
-
-- ou utiliser error.message pour afficher un toast dynamique avec le message du backend (ex: "Adresse email inconnue").
 
 ## 🔁 Fichier `authStore.js` — décryptage complet
 
