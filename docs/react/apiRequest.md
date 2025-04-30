@@ -7,7 +7,7 @@ const BASE_URL = import.meta.env.VITE_API_URL; // Peut aussi être fixée en dur
 
 /**
  * Utility function to make any API request.
- * It handles methods, body, headers, auth token, and errors.
+ * It handles methods, body, headers, auth token, and throw errors.
  */
 export async function apiRequest(endpoint, method = "GET", data = null) {
   const options = {
