@@ -1,5 +1,11 @@
 # apiRequest.js
 
+Rappel :
+
+La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON
+
+La méthode .json() produit un objet JavaScript
+
 ```js
 import { getAuthHeaders } from "../services/jwtService";
 
