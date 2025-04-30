@@ -56,7 +56,7 @@ const BASE_URL = import.meta.env.VITE_API_URL;  // À TESTER POUR VOIR SI ÇA PE
  * Utility function to make an API request.
  * It handles HTTP methods, body, headers, and errors.
  */
-export async function apiRequest(endpoint, method = "GET", data = null, token = getToken()) {
+export async function apiRequest(endpoint, method = "GET", data = null, token = getToken()) { // TESTER si besoin de getToken() ou si getAuthHeaders directement suffirait
   const options = {
     method,
     headers: {
