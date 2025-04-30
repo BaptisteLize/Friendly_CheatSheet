@@ -25,7 +25,8 @@ export async function apiRequest(endpoint, method = "GET", data = null) {
 
   // Envoi de la requête à l'API
   const response = await fetch(`${BASE_URL}${endpoint}`, options);
-  const result = await response.json();
+  const result = await response.json(); // Comprendre ici que le résultat sera appelé en cas de réussite ou d'erreur
+                                        // Ce sera pour autant toujours un résultat sous format .json()
 
   // Si la réponse échoue (statut HTTP >= 400), on "jette" l'erreur JSON
   if (!response.ok) {
