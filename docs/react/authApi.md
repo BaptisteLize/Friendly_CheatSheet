@@ -1,50 +1,31 @@
 # authApi.js
 
 ```js
-import { getAuthHeaders } from "../services/jwtService";
+import { apiRequest } from "./api";
 
-const BASE_URL = "http://localhost:3000";
-
-export async function loginRequest(email, password) {
-  const response = await fetch(`${BASE_URL}/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
-  });
-
-  const data = await response.json();
-  if (!response.ok) throw data;
-  return data;
+/**
+ * Login user with email and password.
+ */
+export async function login(email, password) {
+  return await apiRequest("/login", "POST", { email, password });
 }
 
-export async function registerRequest(email, password) {
-  const response = await fetch(`${BASE_URL}/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
-  });
-
-  const data = await response.json();
-  if (!response.ok) throw data;
-  return data;
+/**
+ * Register a new user with email and password.
+ */
+export async function register(email, password) {
+  return await apiRequest("/register", "POST", { email, password });
 }
 
-export async function fetchProfile() {
-  const response = await fetch(`${BASE_URL}/users/profile`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      ...getAuthHeaders(), // le spread operator ici permet de dire au headers "fait comme si le résultat de la fonction getAuthHeaders() faisait déjà partie de ton objet"
-    },
-  });
-
-  const data = await response.json();
-  if (!response.ok) throw data;
-  return data;
+/**
+ * Fetch the currently authenticated user's profile.
+ */
+export async function getUserProfile() {
+  return await apiRequest("/users/profile");
 }
 ```
 
-## Refactorisé
+## api.js
 
 ```js
 import { getToken, getAuthHeaders } from "../services/jwtService";
