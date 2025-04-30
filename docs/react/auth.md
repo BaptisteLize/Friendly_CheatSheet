@@ -246,6 +246,40 @@ On garde une bonne séparation des responsabilités :
 → ici : on gère juste la communication avec l’API
 → ailleurs (dans le store) : on gère les états, erreurs, redirections, messages...
 
+#### Suppléments d'informations sur le `throw data`
+
+##### ✅ Que fait throw data dans authApi.js ?
+
+Lorsqu'une réponse HTTP n'est pas OK (ex: statut 400, 401…), on fait :
+
+```js
+throw data;
+```
+
+Ici, data contient déjà le response.json(), donc le corps de la réponse du backend, typiquement :
+
+```json
+{ "message": "Mot de passe incorrect" }
+```
+
+##### ✅ Que se passe-t-il dans le authStore.js ?
+
+Dans le try/catch, on capte cette erreur comme suit :
+
+```js
+try {
+  const data = await login(email, password);
+  set({ user: data.user, token: data.token, error: null });
+} catch (error) {
+  set({ error: error });
+}
+```
+
+Tu peux donc ensuite :
+
+- faire un console.error(error.message) pour du debug
+
+- ou utiliser error.message pour afficher un toast dynamique avec le message du backend (ex: "Adresse email inconnue").
 
 ## 🔁 Fichier `authStore.js` — décryptage complet
 
