@@ -7,8 +7,6 @@ Ce fichier centralise toutes les interactions avec le `localStorage` concernant 
 - de **ne pas dupliquer du code** dans tous les composants ou stores,
 - et d’avoir un code plus lisible et testable.
 
----
-
 ### 📦 Fonctions exportées
 
 #### `setToken(token)`
@@ -28,8 +26,6 @@ Stocke un token JWT (généralement reçu après une connexion) dans le `localSt
 - Le token est sauvegardé même après un rechargement de page.
 - Il sera utilisé pour envoyer les requêtes sécurisées (routes privées).
 
----
-
 #### `getToken()`
 
 ```js
@@ -46,8 +42,6 @@ Récupère le token JWT stocké (s’il existe).
 - Utilisé dans `authStore.js` pour initialiser l’état du `token`.
 - Nécessaire pour ajouter un `Authorization` header dans les appels API.
 
----
-
 #### `clearToken()`
 
 ```js
@@ -62,8 +56,6 @@ Supprime complètement le token du `localStorage` (souvent au logout).
 **🧠 Pourquoi c’est utile :**
 - Empêche les futures requêtes sécurisées.
 - Réinitialise la session utilisateur côté client.
-
----
 
 #### `getAuthHeaders()`
 
