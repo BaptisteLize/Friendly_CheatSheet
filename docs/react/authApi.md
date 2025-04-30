@@ -74,7 +74,7 @@ export async function apiRequest(endpoint, method = "GET", data = null, token = 
     const result = await res.json();
 
     if (!response.ok) {
-      throw result; // On jette la réponse backend pour laisser le composant/store gérer l'erreur
+      throw result; // On lance la réponse backend pour laisser le composant/store gérer l'erreur
     }               // qui pourra l'utiliser directement en error.message ou error.details
 
     return result;
