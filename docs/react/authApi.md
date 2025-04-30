@@ -81,7 +81,7 @@ export async function apiRequest(endpoint, method = "GET", data = null, token = 
 
   } catch (error) {
       console.error("Erreur API:", error); // log optionnel
-      throw error; // on relance l'erreur pour la propager
+      throw error; // on relance l'erreur attrapée au dessus pour la propager
   }
 }
 ```
