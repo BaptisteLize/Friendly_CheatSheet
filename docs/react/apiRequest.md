@@ -35,23 +35,3 @@ export async function apiRequest(endpoint, method = "GET", data = null) {
   return result;
 }
 ```
-
-## Exemple pour un fichier authApi.js
-
-```js
-import { apiRequest } from "./api";
-
-/**
- * Login user with email and password.
- */
-export async function login(email, password) {
-  return await apiRequest("/login", "POST", { email, password });
-}
-
-/**
- * Register a new user with email and password.
- */
-export async function register(email, password) {
-  return await apiRequest("/register", "POST", { email, password });
-}
-```
