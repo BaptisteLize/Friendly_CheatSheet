@@ -3,7 +3,7 @@
 ```js
 import { getAuthHeaders } from "../services/jwtService";
 
-const BASE_URL = import.meta.env.VITE_API_URL; // Peut aussi être fixé en dur : "http://localhost:3000"
+const BASE_URL = import.meta.env.VITE_API_URL; // Peut aussi être fixée en dur : "http://localhost:3000"
 
 /**
  * Utility function to make any API request.
