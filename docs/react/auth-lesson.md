@@ -118,9 +118,9 @@ import { getAuthHeaders } from "../services/jwtService";
 
 - Cette fonction permet de récupérer dynamiquement le token JWT enregistré dans le `localStorage`.
 
-- Elle retourne un objet de type `{ Authorization: "Bearer <token>" }` si un token est présent.
+- Elle retourne un objet de type `{ Authorization: "Bearer <token>" }` si un **token est présent**, ou un objet vide sinon.
 
-- On utilise le spread operator (`...getAuthHeaders()`) plus bas pour fusionner proprement cet objet avec les autres headers.
+- On utilise le spread operator (`...getAuthHeaders()`) plus bas pour fusionner proprement cet objet avec les autres headers, sans écraser les clés existantes.
 
 ### 🔍 Étapes détaillées
 
@@ -128,43 +128,94 @@ import { getAuthHeaders } from "../services/jwtService";
 
 - L’`endpoint` (ex: `/login`) est concaténé à la `BASE_URL`.
 
-2. Préparation des options
+2. Préparation des options de requête
 
 - `method`: par défaut `"GET"` mais peut être `"POST"`, `"PUT"`, `"DELETE"`, etc.
 
-- `headers`: inclut `Content-Type` et potentiellement l’`Authorization` si un token est présent
+- `headers`:
+  - Le `Content-Type` est systématiquement `application/json`.
+  - Le header `Authorization` est ajouté automatiquement si un token est disponible.
 
-- `body`: converti en JSON uniquement si des `data` sont fournies
+3. Ajout éventuel d’un corps à la requête
 
-3. Lancement de la requête avec fetch()
+```js
+if (data) {
+  options.body = JSON.stringify(data);
+}
+```
 
-4. Lecture de la réponse JSON
+- Si des données sont fournies (ex: login, envoi de formulaire...), elles sont converties en JSON et ajoutées au body.
 
-5. Gestion de l’erreur
+4. Lancement de la requête avec fetch()
 
-- Si `!response.ok` (ex: 400, 401…), le corps de réponse (`result`) est jeté (throw) pour être attrapé ailleurs
+```js
+const response = await fetch(`${BASE_URL}${endpoint}`, options);
+```
 
-- Si tout va bien, `result` est retourné
+5. Lecture de la réponse JSON
+
+```js
+const result = await response.json();
+```
+
+6. Gestion de l’erreur
+
+```js
+if (!response.ok) {
+  throw result;
+}
+```
+
+- Si la réponse a échoué (response.ok === false, soit statut 400, 401, 500, etc.), on jette (throw) directement le corps JSON de la réponse.
+
+- Ce throw sera capté dans un try/catch plus haut, typiquement dans un store Zustand ou un composant.
+
+7. Renvoi du résultat en cas de succès
+
+```js
+return result;
+```
+
+- Si tout va bien, on retourne la donnée (généralement un objet { user, token }, { data }, etc.).
 
 ### ✅ Objectifs & Avantages
 
-- 📦 Centralisation complète : toutes les règles d’appel API sont concentrées ici
+- 📦 Centralisation : une seule fonction gère tous les appels API du projet.
 
-- 🧼 Code clean : plus besoin de répéter les mêmes fetch() partout
+- 🧼 Clean code : plus de fetch() en double ou de répétition des headers.
 
-- 🛡️ Sécurité intégrée : le token est injecté automatiquement
+- 🛡️ Sécurité intégrée : le token est automatiquement injecté si l’utilisateur est connecté.
 
-- 🔁 Réutilisable partout : importable dans tous tes fichiers (authApi.js, userApi.js, stores, etc.)
+- 🔁 Réutilisable partout : utilisable dans les fichiers authApi.js, userApi.js, les stores Zustand ou même des composants React.
 
-- 🎯 Modularité : on peut faire évoluer ce fichier facilement (ex : ajout d’un refreshToken, timeout, retry...)
+- 🎯 Modularité future : ce fichier peut évoluer facilement pour intégrer des options plus poussées comme :
 
-### 🧾 Exemple d’utilisation dans un autre fichier
+  - refreshToken
+
+  - timeout / abortController
+
+  - retries automatiques
+
+  - gestion globale des erreurs réseau
+
+### 🧾 Exemples d’utilisations dans autre fichier
 
 ```js
-import { apiRequest } from "./api";
+import { apiRequest } from "./apiRequest";
 
 export async function login(email, password) {
-  return await apiRequest("/auth/login", "POST", { email, password });
+  return await apiRequest("/login", "POST", { email, password });
+}
+```
+
+Dans un store Zustand, on pourra ensuite faire :
+
+```js
+try {
+  const data = await login(email, password);
+  set({ user: data.user, token: data.token, error: null });
+} catch (error) {
+  set({ error: error.message });
 }
 ```
 
