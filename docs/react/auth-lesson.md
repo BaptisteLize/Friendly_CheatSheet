@@ -221,7 +221,7 @@ apiRequest doit uniquement envoyer la requête, parser la réponse et jeter l’
 
 - **Contrôle de l’erreur au bon endroit :**
 
-L’endroit où tu utilises apiRequest (dans un authStore, userStore, transactionStore, etc.) doit être celui qui capte les erreurs pour afficher un message, rediriger l’utilisateur, changer un état, etc.
+L’endroit où on utilise apiRequest (dans un authStore, userStore, transactionStore, etc.) doit être celui qui capte les erreurs pour afficher un message, rediriger l’utilisateur, changer un état, etc.
 
 - **Propagation d'erreur claire :**
 
