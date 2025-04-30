@@ -32,7 +32,6 @@ export async function apiRequest(endpoint, method = "GET", data = null) {
     throw result; // Cette erreur pourra être directement attrapée dans un bloc try/catch externe
   }
 
-  // Sinon, on retourne le résultat JSON (souvent un objet, un tableau ou un message)
   return result;
 }
 ```
