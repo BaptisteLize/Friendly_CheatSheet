@@ -231,9 +231,9 @@ En jetant (throw) l’erreur, elle peut être attrapée plus haut dans un try/ca
 
 - Ça empêcherait la bonne propagation d’une erreur métier (ex : erreur 403 à traiter dans le store).
 
-- Tu risquerais de devoir dupliquer des setError() ou toast.error() dans plusieurs niveaux.
+- Risque de devoir dupliquer des setError() ou toast.error() dans plusieurs niveaux.
 
-- Tu rendrais la fonction moins prévisible (elle pourrait ne jamais "échouer" en apparence).
+- Rendrait la fonction moins prévisible (elle pourrait ne jamais "échouer" en apparence).
 
 #### ✅ Exemple recommandé dans un store Zustand
 
