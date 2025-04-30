@@ -34,7 +34,7 @@ export async function fetchProfile() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      ...getAuthHeaders(),
+      ...getAuthHeaders(), // le spread operator ici permet de dire au headers "fait comme si le résultat de la fonction getAuthHeaders() faisait déjà partie de ton objet"
     },
   });
 
