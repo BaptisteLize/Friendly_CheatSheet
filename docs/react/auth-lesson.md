@@ -296,11 +296,11 @@ Mais ce n’est **pas nécessaire à ce stade du projet**. Mieux vaut rester sim
 
 #### 📎 Conclusion pour l’équipe
 
-> 👉 Ne pas mettre de `try/catch` dans `apiRequest()` est **un vrai choix de structure** :
->
-> - **C’est volontaire**, pas un oubli.
-> - Cela permet une gestion des erreurs **claire, souple et professionnelle**.
-> - C’est **parfaitement conforme** aux attentes d’un projet React moderne + API REST.
+👉 Ne pas mettre de `try/catch` dans `apiRequest()` est **un vrai choix de structure** :
+
+ - **C’est volontaire**, pas un oubli.
+ -  - Cela permet une gestion des erreurs **claire, souple et professionnelle**.
+ - C’est **parfaitement conforme** aux attentes d’un projet React moderne + API REST.
 
 #### ✅ Exemple recommandé dans un store Zustand
 
