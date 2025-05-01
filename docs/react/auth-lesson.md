@@ -215,25 +215,92 @@ try {
 
 #### ✅ Pourquoi ne pas mettre de try/catch dans apiRequest
 
-- **Responsabilité unique :**
+##### 1. 🎯 **Responsabilité unique (Single Responsibility Principle)**
 
-apiRequest doit uniquement envoyer la requête, parser la réponse et jeter l’erreur si besoin. C’est une fonction utilitaire, pas une gestionnaire métier.
+`apiRequest()` a un seul rôle :  
+➡️ envoyer une requête,  
+➡️ retourner le résultat,  
+➡️ ou **jeter (`throw`) l’erreur JSON** reçue du backend.
 
-- **Contrôle de l’erreur au bon endroit :**
+🔒 Elle **ne décide pas** comment gérer l’erreur (alerte, redirection, console, etc.).
 
-L’endroit où on utilise apiRequest (dans un authStore, userStore, transactionStore, etc.) doit être celui qui capte les erreurs pour afficher un message, rediriger l’utilisateur, changer un état, etc.
+##### 2. 📦 **Réutilisable dans tous les contextes**
 
-- **Propagation d'erreur claire :**
+Grâce à ce choix :
 
-En jetant (throw) l’erreur, elle peut être attrapée plus haut dans un try/catch avec un contexte plus précis (ex : "je suis sur la page login, donc j'affiche un toast si l’erreur est 401").
+- on peut gérer les erreurs dans **les composants React** (ex: affichage de message),
+- ou dans les **stores Zustand** (ex: `set({ error: err.message })`).
 
-#### 👎 Pourquoi un try/catch dans apiRequest serait gênant
+Chaque couche est **libre de réagir comme elle le souhaite**.
 
-- Ça empêcherait la bonne propagation d’une erreur métier (ex : erreur 403 à traiter dans le store).
+##### 3. 🧼 **Code plus clair et modulaire**
 
-- Risque de devoir dupliquer des setError() ou toast.error() dans plusieurs niveaux.
+Avec ce design :
 
-- Rendrait la fonction moins prévisible (elle pourrait ne jamais "échouer" en apparence).
+```js
+// Dans un composant React ou un store Zustand
+try {
+  const user = await apiRequest("/user/me");
+  set({ user });
+} catch (err) {
+  set({ error: err.message });
+}
+```
+
+🟩 Le code reste lisible, testable, et chaque appel peut :
+
+- gérer ses propres erreurs (ex: login vs dashboard),
+- ou les propager à un gestionnaire global.
+
+#### 🧠 Mais… Pourquoi ne pas gérer les erreurs directement dans apiRequest ?
+
+##### 🤔 Mauvaise idée
+
+```js
+// Ce serait une erreur dans notre projet actuel
+try {
+  const res = await fetch(...);
+  const data = await res.json();
+  return data;
+} catch (err) {
+  alert("Erreur !"); // ❌ Mauvais pour la réutilisabilité
+  return null;
+}
+```
+
+📛 Problèmes :
+
+- On ne peut plus gérer l’erreur **à l’endroit où on fait l’appel**.
+- On **casse l'abstraction** : `apiRequest()` devient **trop lourde**, et **non testable**.
+- Difficile à maintenir si on veut **changer l’affichage d’une erreur** dans un cas spécifique.
+
+#### 🛡️ Et si on veut gérer des cas globaux (ex : perte de connexion, 500...) ?
+
+👉 On pourra plus tard :
+
+- Ajouter un **try/catch global dans apiRequest**, juste pour gérer les **erreurs réseau** (pas celles du backend),
+- Intégrer un outil comme **Sentry** pour remonter les erreurs,
+- Ajouter une logique de **refreshToken automatique** si `401 Unauthorized`.
+
+Mais ce n’est **pas nécessaire à ce stade du projet**. Mieux vaut rester simple.
+
+#### ✅ Résumé
+
+| Avantage                         | Description                                                 |
+| -------------------------------- | ----------------------------------------------------------- |
+| 🧼 Code clair                    | apiRequest reste une fonction simple, lisible, réutilisable |
+| 📦 Réutilisable                  | On peut l’utiliser dans n’importe quel store ou composant   |
+| ⚖️ Comportement maîtrisé         | Chaque appel décide lui-même quoi faire en cas d’erreur     |
+| 🎓 Conforme aux bonnes pratiques | Recommandé en React / REST API dans les projets pros        |
+| 🧠 Évolutif                      | On pourra plus tard ajouter du logging, des retries, etc.   |
+
+#### 📎 Conclusion pour l’équipe
+
+> 👉 Ne pas mettre de `try/catch` dans `apiRequest()` est **un vrai choix de structure** :
+>
+> - **C’est volontaire**, pas un oubli.
+> - Cela permet une gestion des erreurs **claire, souple et professionnelle**.
+> - C’est **parfaitement conforme** aux attentes d’un projet React moderne + API REST.
 
 #### ✅ Exemple recommandé dans un store Zustand
 
