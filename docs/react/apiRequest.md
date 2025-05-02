@@ -7,7 +7,7 @@
 - La méthode .json(valeur) produit un objet JavaScript à partir d'une valeur JSON
 
 ```js
-import { IApiRequestParams, TJsonObject } from "../types/index";
+import { THttpMethods } from "../types/index";
 import { getToken } from "../utils/jwtUtils.ts";
 
 const BASE_URL = "http://localhost:3000/";
@@ -16,7 +16,7 @@ const BASE_URL = "http://localhost:3000/";
  * Utility function to make any API request.
  * It handles methods, body, headers, auth token, and throw errors.
  */
-export async function apiRequest({ endpoint, method = "GET", data = null }: IApiRequestParams): Promise<TJsonObject> {
+export async function apiRequest<T>( endpoint: string, method: THttpMethods = "GET", data: T | null = null): Promise<T> {
 
   const token = getToken();
 
