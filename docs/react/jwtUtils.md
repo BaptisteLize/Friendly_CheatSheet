@@ -1,4 +1,4 @@
-# jwtService.js
+# jwtUtils.js
 
 ```js
 /**
