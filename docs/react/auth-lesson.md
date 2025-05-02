@@ -70,7 +70,7 @@ Supprime complètement le token du `localStorage` (souvent au logout).
 ### 🔗 Import
 
 ```js
-import { getAuthHeaders } from "../services/jwtService";
+import { getAuthHeaders } from "../utils/jwtUtils";
 ```
 
 - Cette fonction permet de récupérer dynamiquement le token JWT enregistré dans le `localStorage`.
