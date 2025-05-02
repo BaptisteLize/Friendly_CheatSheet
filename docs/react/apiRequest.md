@@ -1,4 +1,4 @@
-# apiRequest.js
+# apiRequest.ts
 
 **Rappels :**
 
