@@ -1,4 +1,4 @@
-# Authentication 
+# Authentication / Authorization
 
 ## 🔐 jwtUtils.js — Explications
 
