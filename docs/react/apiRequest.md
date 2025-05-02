@@ -22,7 +22,7 @@ export async function apiRequest<T>( endpoint: string, method: THttpMethods = "G
 
   const headers: HeadersInit = {
     "Content-Type": "application/json",
-    ...(token ? { Authorization: `Bearer ${token}` } : {} ), // Ajoute automatiquement la ligne d'auth si un token est présent
+    ...(token ? { Authorization: `Bearer ${token}` } : {} ), // Ajoute la ligne d'auth si un token est présent
   }
 
   const options: RequestInit = { method, headers };
