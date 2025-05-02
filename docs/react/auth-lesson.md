@@ -1,6 +1,6 @@
 # Authentication 
 
-## 🔐 jwtUtils.js — Décryptage complet
+## 🔐 jwtUtils.js — Explications
 
 Ce fichier centralise toutes les interactions avec le `localStorage` concernant le **token JWT**. Cela permet :
 - d’isoler la logique liée à l’authentification,
@@ -65,7 +65,7 @@ Supprime complètement le token du `localStorage` (souvent au logout).
 
 ---
 
-## 📄 Fichier apiRequest.js — Décryptage complet
+## 📄 Fichier apiRequest.js — Explications
 
 ### 🔗 Import
 
@@ -281,7 +281,7 @@ try {
 
 ---
 
-## 🔁 Fichier `authStore.js` — décryptage complet
+## 🔁 Fichier `authStore.js` — Explications
 
 ```js
 import { create } from "zustand";
