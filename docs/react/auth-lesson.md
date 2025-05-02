@@ -1,6 +1,6 @@
 # Authentication 
 
-## 🔐 jwtService.js — Décryptage complet
+## 🔐 jwtUtils.js — Décryptage complet
 
 Ce fichier centralise toutes les interactions avec le `localStorage` concernant le **token JWT**. Cela permet :
 - d’isoler la logique liée à l’authentification,
