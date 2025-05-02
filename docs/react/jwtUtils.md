@@ -25,20 +25,4 @@ export function getToken() {
 export function clearToken() {
   localStorage.removeItem("jwt_access_token");
 }
-
-/**
- * Returns an object containing the Authorization header if a token is available.
- * @returns {Object} - Headers including Authorization if token exists, otherwise an empty object.
- */
-export function getAuthHeaders() {
-  const token = getToken();
-
-  if (!token) {
-    return {};
-  }
-
-  return {
-    Authorization: `Bearer ${token}`,
-  };
-}
 ```
