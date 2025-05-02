@@ -286,7 +286,7 @@ try {
 ```js
 import { create } from "zustand";
 import { setToken, getToken, clearToken } from "../utils/jwtUtils";
-import { loginRequest, registerRequest, fetchProfile } from "../services/authApi";
+import { loginRequest, registerRequest, fetchProfile } from "../services/authServices";
 ```
 
 ### 🔹 1. Les imports
